@@ -29,7 +29,7 @@ namespace StuNote.Student
 
         }
 
-        //Load Courses into the Navigation Tree
+        //Load Courses into Left Navigation Menu
         private async void FMain_Load(object sender, EventArgs e)
         {
             var program = await _courseService.GetEnrolledProgramAsync();

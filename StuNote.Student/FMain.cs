@@ -22,6 +22,7 @@ namespace StuNote.Student
             logger.LogInformation("This line is demonstrate Service Container is working.");
             _courseService = courseService;
             _appName = configuration.GetValue<string>("Title");
+            
         }
         
         private void accordionControlElement6_Click(object sender, EventArgs e)

@@ -14,6 +14,7 @@ namespace StuNote.Logic.Course
             programs = new List<ProgramBto>()
             {
                 //MSC IT Program
+                //Second test goes here
                  new()
                  {
                      Id=100, Name="MSC IT", Number="P001",

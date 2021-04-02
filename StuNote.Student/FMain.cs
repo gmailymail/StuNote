@@ -1,9 +1,12 @@
 ﻿using DevExpress.XtraBars.Navigation;
+using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit.UI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
 using System;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StuNote.Student
 {
@@ -63,6 +66,30 @@ namespace StuNote.Student
             if (element is not null && element.Style==ElementStyle.Item)
             {
                 Text = $"{_appName} - {element.Text}";
+            }
+            if (element is not null && element.Text.StartsWith("Session"))
+            {
+                OpenFileUsingDialog();
+            }
+        }
+
+        private void OpenFileUsingDialog()
+        {
+            try {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Filter = "doc files (*.docx)|*.docx|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    richEditControl1.LoadDocument(openFileDialog.FileName);
+                }
+                else
+                {
+                    XtraMessageBox.Show("Please select a file to load.", "Information", MessageBoxButtons.OK);
+                }
+
+            }
+            catch (Exception ex)
+            { 
             }
         }
     }

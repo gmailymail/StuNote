@@ -1,10 +1,13 @@
 ﻿using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.UI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
 using System;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,6 +18,7 @@ namespace StuNote.Student
         private bool _loaded = false;
         private readonly ICourseService _courseService;
         private readonly string _appName;
+        private string _selectedFileName = "", _selectedSession = "";
 
         public FMain(
             ILogger<FMain> logger, 
@@ -69,6 +73,7 @@ namespace StuNote.Student
             }
             if (element is not null && element.Text.StartsWith("Session"))
             {
+                _selectedSession = element.Text.Trim();
                 OpenFileUsingDialog();
             }
         }
@@ -80,7 +85,8 @@ namespace StuNote.Student
                 openFileDialog.Filter = "doc files (*.docx)|*.docx|All files (*.*)|*.*";
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    richEditControl1.LoadDocument(openFileDialog.FileName);
+                    _selectedFileName = openFileDialog.SafeFileName.Trim();
+                    richEditControl1.LoadDocument(openFileDialog.FileName.Trim());
                 }
                 else
                 {
@@ -90,6 +96,41 @@ namespace StuNote.Student
             }
             catch (Exception ex)
             { 
+            }
+        }
+
+        private void barButtonSaveItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            #region Create Temp Folder for Application
+            //string _tempFolder = ConfigurationManager.AppSettings["AppTempFolder"]; 
+            string _tempFolder = "TempStuNote";
+            string tempDirectoryPath = Path.Combine(Path.GetTempPath(), _tempFolder);
+            if (!Directory.Exists(tempDirectoryPath))
+            {
+                Directory.CreateDirectory(tempDirectoryPath);
+            }
+            #endregion
+            #region remove Special characters in SessionName
+            _selectedSession = Regex.Replace(_selectedSession, @"\s+", "");
+            _selectedSession = Regex.Replace(_selectedSession, @"/", "_");
+            #endregion
+            #region Create Temp Folder for Session under App folder
+            string sessionTempFolder = Path.Combine(tempDirectoryPath, _selectedSession);
+            if (!Directory.Exists(sessionTempFolder))
+            {
+                Directory.CreateDirectory(sessionTempFolder);
+            }
+            #endregion
+
+            if (!string.IsNullOrEmpty(_selectedFileName)) //TODO : Check is there file loaded to richEditControl1
+            {
+                string completeSavePath = Path.Combine(sessionTempFolder, _selectedFileName); //Generate complete path
+                richEditControl1.SaveDocument(completeSavePath, DocumentFormat.OpenXml); //Save File in temp Folder
+
+                XtraMessageBox.Show("Save Path : " + completeSavePath, "Information", MessageBoxButtons.OK); //To remove
+            }
+            else {
+                XtraMessageBox.Show("_selectedFileName cannot be empty", "Information", MessageBoxButtons.OK); //To remove
             }
         }
     }

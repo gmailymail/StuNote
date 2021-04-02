@@ -31,24 +31,24 @@ namespace StuNote.Student
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip15 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem15 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation3 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             this.NavigationMenu = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accMyCourses = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
@@ -334,6 +334,7 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardItem();
             this.floatingObjectSendToBackItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem();
             this.floatingObjectSendBehindTextItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem();
+            this.barButtonSaveItem = new DevExpress.XtraBars.BarButtonItem();
             this.headerFooterToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsRibbonPageCategory();
             this.headerFooterToolsDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignRibbonPage();
             this.headerFooterToolsDesignNavigationRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignNavigationRibbonPageGroup();
@@ -409,7 +410,7 @@ namespace StuNote.Student
             this.NavigationMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accMyCourses});
             this.NavigationMenu.Location = new System.Drawing.Point(0, 265);
-            this.NavigationMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NavigationMenu.Margin = new System.Windows.Forms.Padding(4);
             this.NavigationMenu.Name = "NavigationMenu";
             this.NavigationMenu.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.NavigationMenu.Size = new System.Drawing.Size(483, 489);
@@ -428,7 +429,7 @@ namespace StuNote.Student
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1341, 46);
             this.fluentDesignFormControl1.TabIndex = 2;
@@ -440,7 +441,7 @@ namespace StuNote.Student
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
             this.richEditControl1.Location = new System.Drawing.Point(483, 265);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
             this.richEditControl1.Size = new System.Drawing.Size(858, 489);
@@ -725,10 +726,11 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardSubItem1,
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
-            this.floatingObjectSendBehindTextItem1});
+            this.floatingObjectSendBehindTextItem1,
+            this.barButtonSaveItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 46);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ribbonControl1.MaxItemId = 275;
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.ribbonControl1.MaxItemId = 277;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 495;
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -776,6 +778,7 @@ namespace StuNote.Student
             // 
             // fileSaveItem1
             // 
+            this.fileSaveItem1.Caption = "Save-ToRemove";
             this.fileSaveItem1.Id = 5;
             this.fileSaveItem1.Name = "fileSaveItem1";
             // 
@@ -1221,7 +1224,7 @@ namespace StuNote.Student
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup5});
+            galleryItemGroup1});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(97, 67);
             this.galleryChangeStyleItem1.Id = 77;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
@@ -1649,11 +1652,11 @@ namespace StuNote.Student
             // 
             // navigationNotesItem1
             // 
-            toolTipTitleItem11.Text = "Next Footnote";
-            toolTipItem11.Text = "Jump to next footnote";
-            superToolTip11.Items.Add(toolTipTitleItem11);
-            superToolTip11.Items.Add(toolTipItem11);
-            this.navigationNotesItem1.DropDownSuperTip = superToolTip11;
+            toolTipTitleItem1.Text = "Next Footnote";
+            toolTipItem1.Text = "Jump to next footnote";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.navigationNotesItem1.DropDownSuperTip = superToolTip1;
             this.navigationNotesItem1.Id = 150;
             this.navigationNotesItem1.Name = "navigationNotesItem1";
             // 
@@ -1748,11 +1751,11 @@ namespace StuNote.Student
             // 
             // toggleTrackChangesBarItem1
             // 
-            toolTipTitleItem12.Text = "Track Changes";
-            toolTipItem12.Text = "Keep track of changes made to this document.";
-            superToolTip12.Items.Add(toolTipTitleItem12);
-            superToolTip12.Items.Add(toolTipItem12);
-            this.toggleTrackChangesBarItem1.DropDownSuperTip = superToolTip12;
+            toolTipTitleItem2.Text = "Track Changes";
+            toolTipItem2.Text = "Keep track of changes made to this document.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.toggleTrackChangesBarItem1.DropDownSuperTip = superToolTip2;
             this.toggleTrackChangesBarItem1.Id = 168;
             this.toggleTrackChangesBarItem1.Name = "toggleTrackChangesBarItem1";
             // 
@@ -1773,11 +1776,11 @@ namespace StuNote.Student
             // showMarkupSubItem1
             // 
             this.showMarkupSubItem1.ActAsDropDown = true;
-            toolTipTitleItem13.Text = "Show Markup";
-            toolTipItem13.Text = "Choose what types of markup to show in your document.";
-            superToolTip13.Items.Add(toolTipTitleItem13);
-            superToolTip13.Items.Add(toolTipItem13);
-            this.showMarkupSubItem1.DropDownSuperTip = superToolTip13;
+            toolTipTitleItem3.Text = "Show Markup";
+            toolTipItem3.Text = "Choose what types of markup to show in your document.";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.showMarkupSubItem1.DropDownSuperTip = superToolTip3;
             this.showMarkupSubItem1.Id = 170;
             this.showMarkupSubItem1.Name = "showMarkupSubItem1";
             this.showMarkupSubItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText;
@@ -1789,21 +1792,21 @@ namespace StuNote.Student
             // 
             // acceptAndMoveToNextSubItem1
             // 
-            toolTipTitleItem14.Text = "Accept";
-            toolTipItem14.Text = "Click for additional options, such as accepting all the changes at once.";
-            superToolTip14.Items.Add(toolTipTitleItem14);
-            superToolTip14.Items.Add(toolTipItem14);
-            this.acceptAndMoveToNextSubItem1.DropDownSuperTip = superToolTip14;
+            toolTipTitleItem4.Text = "Accept";
+            toolTipItem4.Text = "Click for additional options, such as accepting all the changes at once.";
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.acceptAndMoveToNextSubItem1.DropDownSuperTip = superToolTip4;
             this.acceptAndMoveToNextSubItem1.Id = 172;
             this.acceptAndMoveToNextSubItem1.Name = "acceptAndMoveToNextSubItem1";
             // 
             // rejectAndMoveToNextSubItem1
             // 
-            toolTipTitleItem15.Text = "Reject";
-            toolTipItem15.Text = "Click for additional options, such as rejecting all the changes at once.";
-            superToolTip15.Items.Add(toolTipTitleItem15);
-            superToolTip15.Items.Add(toolTipItem15);
-            this.rejectAndMoveToNextSubItem1.DropDownSuperTip = superToolTip15;
+            toolTipTitleItem5.Text = "Reject";
+            toolTipItem5.Text = "Click for additional options, such as rejecting all the changes at once.";
+            superToolTip5.Items.Add(toolTipTitleItem5);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.rejectAndMoveToNextSubItem1.DropDownSuperTip = superToolTip5;
             this.rejectAndMoveToNextSubItem1.Id = 173;
             this.rejectAndMoveToNextSubItem1.Name = "rejectAndMoveToNextSubItem1";
             // 
@@ -1937,7 +1940,7 @@ namespace StuNote.Student
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup6});
+            galleryItemGroup2});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(97, 67);
             this.galleryChangeTableStyleItem1.Id = 197;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
@@ -2413,6 +2416,14 @@ namespace StuNote.Student
             this.floatingObjectSendBehindTextItem1.Id = 274;
             this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
+            // barButtonSaveItem
+            // 
+            this.barButtonSaveItem.Caption = "Save";
+            this.barButtonSaveItem.Id = 276;
+            this.barButtonSaveItem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonSaveItem.ImageOptions.SvgImage")));
+            this.barButtonSaveItem.Name = "barButtonSaveItem";
+            this.barButtonSaveItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSaveItem_ItemClick);
+            // 
             // headerFooterToolsRibbonPageCategory1
             // 
             this.headerFooterToolsRibbonPageCategory1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(176)))), ((int)(((byte)(35)))));
@@ -2604,11 +2615,12 @@ namespace StuNote.Student
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.barButtonSaveItem);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
             // 
             // infoRibbonPageGroup1
@@ -2627,12 +2639,12 @@ namespace StuNote.Student
             this.stylesRibbonPageGroup1,
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation3.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation3.GroupName = null;
-            reduceOperation3.ItemLinkIndex = 0;
-            reduceOperation3.ItemLinksCount = 0;
-            reduceOperation3.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation3);
+            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation1.GroupName = null;
+            reduceOperation1.ItemLinkIndex = 0;
+            reduceOperation1.ItemLinksCount = 0;
+            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
             // 
             // clipboardRibbonPageGroup1
             // 
@@ -3176,7 +3188,7 @@ namespace StuNote.Student
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMain";
             this.NavigationControl = this.NavigationMenu;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3541,5 +3553,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup showRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup zoomRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
+        private DevExpress.XtraBars.BarButtonItem barButtonSaveItem;
     }
 }

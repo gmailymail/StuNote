@@ -57,9 +57,7 @@ namespace StuNote.Student
             this.undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             this.redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             this.fileNewItem1 = new DevExpress.XtraRichEdit.UI.FileNewItem();
-            this.fileOpenItem1 = new DevExpress.XtraRichEdit.UI.FileOpenItem();
             this.fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
-            this.fileSaveAsItem1 = new DevExpress.XtraRichEdit.UI.FileSaveAsItem();
             this.quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             this.printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
             this.printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
@@ -334,7 +332,6 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBackwardItem();
             this.floatingObjectSendToBackItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendToBackItem();
             this.floatingObjectSendBehindTextItem1 = new DevExpress.XtraRichEdit.UI.FloatingObjectSendBehindTextItem();
-            this.barButtonSaveItem = new DevExpress.XtraBars.BarButtonItem();
             this.headerFooterToolsRibbonPageCategory1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsRibbonPageCategory();
             this.headerFooterToolsDesignRibbonPage1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignRibbonPage();
             this.headerFooterToolsDesignNavigationRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.HeaderFooterToolsDesignNavigationRibbonPageGroup();
@@ -409,11 +406,10 @@ namespace StuNote.Student
             this.NavigationMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavigationMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accMyCourses});
-            this.NavigationMenu.Location = new System.Drawing.Point(0, 265);
-            this.NavigationMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.NavigationMenu.Location = new System.Drawing.Point(0, 181);
             this.NavigationMenu.Name = "NavigationMenu";
             this.NavigationMenu.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.NavigationMenu.Size = new System.Drawing.Size(483, 489);
+            this.NavigationMenu.Size = new System.Drawing.Size(322, 335);
             this.NavigationMenu.TabIndex = 1;
             this.NavigationMenu.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             this.NavigationMenu.ElementClick += new DevExpress.XtraBars.Navigation.ElementClickEventHandler(this.NavigationMenu_ElementClick);
@@ -429,9 +425,8 @@ namespace StuNote.Student
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1341, 46);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(894, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -440,11 +435,10 @@ namespace StuNote.Student
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
-            this.richEditControl1.Location = new System.Drawing.Point(483, 265);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.richEditControl1.Location = new System.Drawing.Point(322, 181);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(858, 489);
+            this.richEditControl1.Size = new System.Drawing.Size(572, 335);
             this.richEditControl1.TabIndex = 3;
             // 
             // ribbonControl1
@@ -456,9 +450,7 @@ namespace StuNote.Student
             this.undoItem1,
             this.redoItem1,
             this.fileNewItem1,
-            this.fileOpenItem1,
             this.fileSaveItem1,
-            this.fileSaveAsItem1,
             this.quickPrintItem1,
             this.printItem1,
             this.printPreviewItem1,
@@ -726,13 +718,10 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardSubItem1,
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
-            this.floatingObjectSendBehindTextItem1,
-            this.barButtonSaveItem});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 46);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.floatingObjectSendBehindTextItem1});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 31);
             this.ribbonControl1.MaxItemId = 277;
             this.ribbonControl1.Name = "ribbonControl1";
-            this.ribbonControl1.OptionsMenuMinWidth = 495;
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.headerFooterToolsRibbonPageCategory1,
             this.tableToolsRibbonPageCategory1,
@@ -754,7 +743,7 @@ namespace StuNote.Student
             this.repositoryItemBorderLineWeight1,
             this.repositoryItemFloatingObjectOutlineWeight1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
-            this.ribbonControl1.Size = new System.Drawing.Size(1341, 219);
+            this.ribbonControl1.Size = new System.Drawing.Size(894, 150);
             // 
             // undoItem1
             // 
@@ -771,22 +760,11 @@ namespace StuNote.Student
             this.fileNewItem1.Id = 3;
             this.fileNewItem1.Name = "fileNewItem1";
             // 
-            // fileOpenItem1
-            // 
-            this.fileOpenItem1.Id = 4;
-            this.fileOpenItem1.Name = "fileOpenItem1";
-            // 
             // fileSaveItem1
             // 
             this.fileSaveItem1.Caption = "Save-ToRemove";
             this.fileSaveItem1.Id = 5;
             this.fileSaveItem1.Name = "fileSaveItem1";
-            // 
-            // fileSaveAsItem1
-            // 
-            this.fileSaveAsItem1.Id = 6;
-            this.fileSaveAsItem1.Name = "fileSaveAsItem1";
-            this.fileSaveAsItem1.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             // 
             // quickPrintItem1
             // 
@@ -1225,7 +1203,7 @@ namespace StuNote.Student
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup1});
-            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(97, 67);
+            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeStyleItem1.Id = 77;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
@@ -1941,7 +1919,7 @@ namespace StuNote.Student
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             galleryItemGroup2});
-            this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(97, 67);
+            this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableStyleItem1.Id = 197;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
             this.galleryChangeTableStyleItem1.Name = "galleryChangeTableStyleItem1";
@@ -2416,14 +2394,6 @@ namespace StuNote.Student
             this.floatingObjectSendBehindTextItem1.Id = 274;
             this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
-            // barButtonSaveItem
-            // 
-            this.barButtonSaveItem.Caption = "Save";
-            this.barButtonSaveItem.Id = 276;
-            this.barButtonSaveItem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonSaveItem.ImageOptions.SvgImage")));
-            this.barButtonSaveItem.Name = "barButtonSaveItem";
-            this.barButtonSaveItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonSaveItem_ItemClick);
-            // 
             // headerFooterToolsRibbonPageCategory1
             // 
             this.headerFooterToolsRibbonPageCategory1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(176)))), ((int)(((byte)(35)))));
@@ -2614,13 +2584,10 @@ namespace StuNote.Student
             this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.barButtonSaveItem);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
             // 
             // infoRibbonPageGroup1
@@ -2912,9 +2879,7 @@ namespace StuNote.Student
             this.richEditBarController1.BarItems.Add(this.undoItem1);
             this.richEditBarController1.BarItems.Add(this.redoItem1);
             this.richEditBarController1.BarItems.Add(this.fileNewItem1);
-            this.richEditBarController1.BarItems.Add(this.fileOpenItem1);
             this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
-            this.richEditBarController1.BarItems.Add(this.fileSaveAsItem1);
             this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
             this.richEditBarController1.BarItems.Add(this.printItem1);
             this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
@@ -3180,15 +3145,14 @@ namespace StuNote.Student
             // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 754);
+            this.ClientSize = new System.Drawing.Size(894, 516);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.NavigationMenu);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMain";
             this.NavigationControl = this.NavigationMenu;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -3219,9 +3183,7 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
         private DevExpress.XtraRichEdit.UI.RedoItem redoItem1;
         private DevExpress.XtraRichEdit.UI.FileNewItem fileNewItem1;
-        private DevExpress.XtraRichEdit.UI.FileOpenItem fileOpenItem1;
         private DevExpress.XtraRichEdit.UI.FileSaveItem fileSaveItem1;
-        private DevExpress.XtraRichEdit.UI.FileSaveAsItem fileSaveAsItem1;
         private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
         private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
         private DevExpress.XtraRichEdit.UI.PrintPreviewItem printPreviewItem1;
@@ -3553,6 +3515,5 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup showRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup zoomRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
-        private DevExpress.XtraBars.BarButtonItem barButtonSaveItem;
     }
 }

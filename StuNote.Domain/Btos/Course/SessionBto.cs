@@ -9,6 +9,9 @@ namespace StuNote.Domain.Btos.Course
     public sealed record SessionBto() : CourseBtoBase
     {
         public DateTime Date { get; set; }
+
+        public int ModuleId { get; set; }
+
     }
 
 }

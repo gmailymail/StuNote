@@ -22,6 +22,6 @@ namespace StuNote.Domain.Services
         /// <returns></returns>
         Task<bool> SaveNotes(SessionBto Session, byte[] Notes);
 
-        Task<bool> OpenNotes(SessionBto Session);
+        Task<byte[]> OpenNotes(SessionBto Session);
     }
 }

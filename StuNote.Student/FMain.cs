@@ -1,37 +1,57 @@
 ﻿using DevExpress.XtraBars.Navigation;
-using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit;
-using DevExpress.XtraRichEdit.UI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using StuNote.Domain;
+using StuNote.Domain.Btos.Course;
 using StuNote.Domain.Services;
 using System;
-using System.IO;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StuNote.Student
 {
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private bool _loaded = false;
+        private readonly ILogger<FMain> _logger;
         private readonly ICourseService _courseService;
+        private readonly IStorageLocatorFactoryService _storageFactory;
         private readonly string _appName;
-        private string _selectedFileName = "", _selectedSession = "";
+        private bool _saving=false;
+        AccordionControlElement element;
 
         public FMain(
             ILogger<FMain> logger, 
             ICourseService courseService,
-            IConfiguration configuration)
+            IConfiguration configuration,
+            IStorageLocatorFactoryService storageFactory)
         {
             InitializeComponent();
             logger.LogInformation("This line is demonstrate Service Container is working.");
+            _logger = logger;
             _courseService = courseService;
+            _storageFactory = storageFactory;
             _appName = configuration.GetValue<string>("Title");
-            
+            richEditControl1.ContentChanged += RichEditControl1_ContentChanged;        
         }
-        
+
+        private async void RichEditControl1_ContentChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!_saving)
+                {
+                    _saving = true;
+                    await SaveNotes(element);
+                    _saving = false;
+                }
+            }
+            catch (Exception)
+            {
+                _saving = false;
+            }                                      
+        }
+
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
 
@@ -55,7 +75,8 @@ namespace StuNote.Student
                         accSem.Elements.Add(accMod);
                         foreach (var ss in m.Sessions)
                         {
-                            AccordionControlElement accSess = new() {Style=ElementStyle.Item, Text = $"Session {ss.Number} - {ss.Date.ToShortDateString()}" };
+                            ss.ModuleId = m.Id;//This is a dirty trick. Traditionally Session.ModuleId is loaded during Load Data Logic.
+                            AccordionControlElement accSess = new() { Tag=ss, Style=ElementStyle.Item, Text = $"Session {ss.Number} - {ss.Date.ToShortDateString()}" };
                             accMod.Elements.Add(accSess);
                         }
                     }
@@ -64,73 +85,70 @@ namespace StuNote.Student
             _loaded = true;
         }
 
-        private void NavigationMenu_ElementClick(object sender, ElementClickEventArgs e)
+        private async void NavigationMenu_ElementClick(object sender, ElementClickEventArgs e)
         {
-            AccordionControlElement element = e.Element as AccordionControlElement;
-            if (element is not null && element.Style==ElementStyle.Item)
+            try
             {
-                Text = $"{_appName} - {element.Text}";
+                richEditControl1.ContentChanged -= RichEditControl1_ContentChanged;
+                element = e.Element;
+                if (element is not null && element.Style == ElementStyle.Item)
+                {
+                    Text = $"{_appName} - {element.Text}";
+
+                    //Get the Local File Storage service using IStorageLocatorFactoryService
+                    var fileStorage = _storageFactory.GetStorageService(StorageType.LocalFile);
+
+                    //Get the Session stored in element.Tag
+                    var sessionBto = element.Tag as SessionBto;
+                    var bytes = await fileStorage.OpenNotes(sessionBto);
+                    if (bytes is null)//There is no file stored related to this session.
+                    {
+                        var position = richEditControl1.Document.CaretPosition;
+                        richEditControl1.CreateNewDocument(false);
+                        richEditControl1.Document.InsertText(position, element.Text);
+                    }
+                        
+                    else
+                        richEditControl1.LoadDocument(bytes,DocumentFormat.OpenXml);
+                }
             }
-            if (element is not null && element.Text.StartsWith("Session"))
+            //Handle errors in an intuitive way. Perhaps, updating a Statusbar or some alertbox.
+            //But for our project purposes, we will Log Error
+            catch (Exception ex)
             {
-                _selectedSession = element.Text.Trim();
-                OpenFileUsingDialog();
+                _logger.LogError(ex, "Error while Loading notes");               
+            }
+            finally
+            {
+                richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
             }
         }
 
-        private void OpenFileUsingDialog()
-        {
-            try {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "doc files (*.docx)|*.docx|All files (*.*)|*.*";
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    _selectedFileName = openFileDialog.SafeFileName.Trim();
-                    richEditControl1.LoadDocument(openFileDialog.FileName.Trim());
-                }
-                else
-                {
-                    XtraMessageBox.Show("Please select a file to load.", "Information", MessageBoxButtons.OK);
-                }
+        private async void barButtonSaveItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+            => await SaveNotes(element);
 
+        private async Task SaveNotes(AccordionControlElement element)
+        {
+            try
+            {
+                if (element is not null && element.Style == ElementStyle.Item)
+                {
+                    //DocmBytes will the content of the TextBox in OpenXML format
+                    var notes = richEditControl1.DocmBytes;
+                    //Get the Local File Storage service using IStorageLocatorFactoryService
+                    var fileStorage = _storageFactory.GetStorageService(StorageType.LocalFile);
+                    //SessionBto is stored in element.Tag
+                    var sessionBto = element.Tag as SessionBto;
+
+                    //Call SaveNotes
+                    await fileStorage.SaveNotes(sessionBto, notes);
+                }
             }
             catch (Exception ex)
-            { 
-            }
-        }
-
-        private void barButtonSaveItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            #region Create Temp Folder for Application
-            //string _tempFolder = ConfigurationManager.AppSettings["AppTempFolder"]; 
-            string _tempFolder = "TempStuNote";
-            string tempDirectoryPath = Path.Combine(Path.GetTempPath(), _tempFolder);
-            if (!Directory.Exists(tempDirectoryPath))
             {
-                Directory.CreateDirectory(tempDirectoryPath);
-            }
-            #endregion
-            #region remove Special characters in SessionName
-            _selectedSession = Regex.Replace(_selectedSession, @"\s+", "");
-            _selectedSession = Regex.Replace(_selectedSession, @"/", "_");
-            #endregion
-            #region Create Temp Folder for Session under App folder
-            string sessionTempFolder = Path.Combine(tempDirectoryPath, _selectedSession);
-            if (!Directory.Exists(sessionTempFolder))
-            {
-                Directory.CreateDirectory(sessionTempFolder);
-            }
-            #endregion
-
-            if (!string.IsNullOrEmpty(_selectedFileName)) //TODO : Check is there file loaded to richEditControl1
-            {
-                string completeSavePath = Path.Combine(sessionTempFolder, _selectedFileName); //Generate complete path
-                richEditControl1.SaveDocument(completeSavePath, DocumentFormat.OpenXml); //Save File in temp Folder
-
-                XtraMessageBox.Show("Save Path : " + completeSavePath, "Information", MessageBoxButtons.OK); //To remove
-            }
-            else {
-                XtraMessageBox.Show("_selectedFileName cannot be empty", "Information", MessageBoxButtons.OK); //To remove
+                _logger.LogError(ex, "Error while saving notes");
+                //Handle errors in an intuitive way. Perhaps, updating a Statusbar or some alertbox.
+                //But for our project purposes, we will Log Error
             }
         }
     }

@@ -15,11 +15,12 @@ namespace StuNote.Infrastructure.Storage
 
         public AzureStorageService(ILogger<AzureStorageService> logger) => _logger = logger;
 
-        public async Task<bool> OpenNotes(SessionBto Session)
+        public async Task<byte[]> OpenNotes(SessionBto Session)
         {
+            byte[] returnValue = null;
             _logger.LogInformation("AzureStorageService.OpenNotes() method is invoked.");
             await Task.CompletedTask;
-            return true;
+            return returnValue;
         }
        
         public async Task<bool> SaveNotes(SessionBto Session, byte[] Notes)

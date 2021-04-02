@@ -35,6 +35,7 @@ namespace StuNote.Student
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;        
         }
 
+        //Handle Save everytime there is a change
         private async void RichEditControl1_ContentChanged(object sender, EventArgs e)
         {
             try
@@ -51,12 +52,6 @@ namespace StuNote.Student
                 _saving = false;
             }                                      
         }
-
-        private void accordionControlElement6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         //Load Courses into Left Navigation Menu
         private async void FMain_Load(object sender, EventArgs e)
         {
@@ -89,7 +84,6 @@ namespace StuNote.Student
         {
             try
             {
-                richEditControl1.ContentChanged -= RichEditControl1_ContentChanged;
                 element = e.Element;
                 if (element is not null && element.Style == ElementStyle.Item)
                 {
@@ -118,14 +112,7 @@ namespace StuNote.Student
             {
                 _logger.LogError(ex, "Error while Loading notes");               
             }
-            finally
-            {
-                richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            }
         }
-
-        private async void barButtonSaveItem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-            => await SaveNotes(element);
 
         private async Task SaveNotes(AccordionControlElement element)
         {

@@ -1,4 +1,5 @@
-﻿using DevExpress.Pdf.Native.BouncyCastle.Asn1.X509;
+﻿using DevExpress.LookAndFeel;
+using DevExpress.Pdf.Native.BouncyCastle.Asn1.X509;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,11 +36,8 @@ namespace StuNote.Student
             
             //Setup the service container
             var services = serviceScop.ServiceProvider;
-            
-            //Build the servicer Provider
-            //using var serviceProvider = services.getre();
-
-            //Get the Main 
+           
+            //Get the Main             
             FMain fMain = services.GetRequiredService<FMain>();
 
             Application.Run(fMain);

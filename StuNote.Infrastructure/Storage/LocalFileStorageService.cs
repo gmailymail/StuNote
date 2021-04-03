@@ -1,16 +1,24 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using StuNote.Domain.Btos.Course;
 using StuNote.Domain.Services;
 using System.IO;
 using System.Threading.Tasks;
 
 namespace StuNote.Infrastructure.Storage
-{
-    //Test Comment by Shawn
+{    
     public class LocalFileStorageService : IStorageService
     {
         private readonly ILogger<LocalFileStorageService> _logger;
-        public LocalFileStorageService(ILogger<LocalFileStorageService> logger) => _logger = logger;
+        private readonly IConfiguration _configuration;
+
+        public LocalFileStorageService(
+            ILogger<LocalFileStorageService> logger,
+            IConfiguration configuration)
+        {
+            _logger = logger;
+            _configuration = configuration;
+        }
 
         public async Task<byte[]> OpenNotes(SessionBto Session)
         {
@@ -25,8 +33,8 @@ namespace StuNote.Infrastructure.Storage
 
         public async Task<bool> SaveNotes(SessionBto Session, byte[] Notes)
         {
-            
-            string completeSavePath = GetFullPath(Session); //Get complete path
+            //Get full path
+            string completeSavePath = GetFullPath(Session); 
 
             //Save file
             File.WriteAllBytes(completeSavePath, Notes);
@@ -38,7 +46,8 @@ namespace StuNote.Infrastructure.Storage
 
         private string GetFileStoredFolder()
         {
-            string _tempFolder = "TempStuNote";
+            //Folder is stored in appsettings.json
+            string _tempFolder = _configuration.GetValue<string>("AppTempFolder");
             string tempDirectoryPath = Path.Combine(Path.GetTempPath(), _tempFolder);
             if (!Directory.Exists(tempDirectoryPath))
                 Directory.CreateDirectory(tempDirectoryPath);

@@ -7,7 +7,9 @@ using StuNote.Domain.Btos.Course;
 using StuNote.Domain.Services;
 using System;
 using System.Threading.Tasks;
-
+using System.Speech.Recognition;
+using System.Speech.Synthesis;
+using NAudio.Wave;
 namespace StuNote.Student
 {
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -20,6 +22,10 @@ namespace StuNote.Student
         private bool _saving=false;
         AccordionControlElement element;
 
+        private WaveIn waveIn = null;
+        private BufferedWaveProvider waveProvider = null;
+        private WaveOut waveOut = null;
+
         public FMain(
             ILogger<FMain> logger, 
             ICourseService courseService,
@@ -31,8 +37,9 @@ namespace StuNote.Student
             _courseService = courseService;
             _storageFactory = storageFactory;
             _appName = configuration.GetValue<string>("Title");
-            richEditControl1.ContentChanged += RichEditControl1_ContentChanged;        
-        }
+            richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
+            initAudio();
+        }        
 
         //Handle Save everytime there is a change
         private async void RichEditControl1_ContentChanged(object sender, EventArgs e)
@@ -154,6 +161,78 @@ namespace StuNote.Student
             }
         }
 
+        private void initAudio()
+        //private void StartBtn_Click(object sender, EventArgs e)
+        {
+            if (waveIn != null)
+                return;
+
+            // create wave input from mic
+            waveIn = new WaveIn(this.Handle);
+            waveIn.BufferMilliseconds = 25;
+            //waveIn.RecordingStopped += waveIn_RecordingStopped;
+            waveIn.DataAvailable += waveIn_DataAvailable;
+
+            // create wave provider
+            waveProvider = new BufferedWaveProvider(waveIn.WaveFormat);
+
+            // create wave output to speakers
+            waveOut = new WaveOut();
+            waveOut.DesiredLatency = 100;
+            waveOut.Init(waveProvider);
+            //waveOut.PlaybackStopped += wavePlayer_PlaybackStopped;
+
+            // start recording and playback
+            waveIn.StartRecording();
+            waveOut.Play();
+        }
+
+        void waveIn_DataAvailable(object sender, WaveInEventArgs e)
+        {
+            // add received data to waveProvider buffer
+            if (waveProvider != null)
+                waveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
+        }
+
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+            if (waveIn != null)
+                waveIn.StopRecording();
+        }
+
+        void waveIn_RecordingStopped(object sender, StoppedEventArgs e)
+        {
+            // stop playback
+            if (waveOut != null)
+                waveOut.Stop();
+
+            // dispose of wave input
+            if (waveIn != null)
+            {
+                waveIn.Dispose();
+                waveIn = null;
+            }
+
+            // drop wave provider
+            waveProvider = null;
+        }
+
+        void wavePlayer_PlaybackStopped(object sender, StoppedEventArgs e)
+        {
+            // stop recording
+            if (waveIn != null)
+                waveIn.StopRecording();
+
+            // dispose of wave output
+            if (waveOut != null)
+            {
+                waveOut.Dispose();
+                waveOut = null;
+            }
+        }
+
         #endregion Helper Methods
+
+
     }
 }

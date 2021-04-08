@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
 using StuNote.Infrastructure.Storage;
@@ -19,7 +18,6 @@ namespace StuNote.Student
                 configure.AddDebug();
             });
             
-
             //Add WinForms to the service
             RegisterForms(services);
 
@@ -60,8 +58,6 @@ namespace StuNote.Student
         {
             services.AddScoped<ICourseService, DummyCourseService>();
             services.AddScoped<ISurveyResponseService, SignalRSurveyResponseService>();
-            //ISurveyResponseService
-            //services.AddScoped<ISurveyRequestService, dum>();
         }
     }
 

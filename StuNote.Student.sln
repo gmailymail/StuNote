@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuNote.Logic.Teacher", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuNote.Admin", "StuNote.Admin\StuNote.Admin.csproj", "{686B349F-3865-461B-87A6-6B51F15A15F2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuNote.Server.Data", "StuNote.Server.Data\StuNote.Server.Data.csproj", "{73103B23-9688-4DD6-B351-3E9796DB58B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{686B349F-3865-461B-87A6-6B51F15A15F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{686B349F-3865-461B-87A6-6B51F15A15F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{686B349F-3865-461B-87A6-6B51F15A15F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73103B23-9688-4DD6-B351-3E9796DB58B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73103B23-9688-4DD6-B351-3E9796DB58B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73103B23-9688-4DD6-B351-3E9796DB58B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73103B23-9688-4DD6-B351-3E9796DB58B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{7B591837-5CE7-416E-9DEF-33C660B4A3C7} = {31EAE5EE-7D96-4C87-95F9-BD03718857FA}
 		{F547AF91-ABA5-4492-89BE-3C4B10A03E61} = {B0EF6E87-FF2D-4E40-B805-9D6A380A581B}
 		{686B349F-3865-461B-87A6-6B51F15A15F2} = {31EAE5EE-7D96-4C87-95F9-BD03718857FA}
+		{73103B23-9688-4DD6-B351-3E9796DB58B5} = {31EAE5EE-7D96-4C87-95F9-BD03718857FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1000309-4A26-46B2-B2A4-B27AC57520D0}

@@ -308,7 +308,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StuNote.Application\StuNote.Logic.csproj">
-      <Project>{20F60251-6C08-4DD4-B86D-F86F5B9CA242}</Project>
+      <Project>{20f60251-6c08-4dd4-b86d-f86f5b9ca242}</Project>
       <Name>StuNote.Logic</Name>
     </ProjectReference>
     <ProjectReference Include="..\StuNote.Domain\StuNote.Domain.csproj">

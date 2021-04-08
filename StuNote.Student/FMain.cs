@@ -7,10 +7,9 @@ using StuNote.Domain.Btos.Course;
 using StuNote.Domain.Services;
 using System;
 using System.Threading.Tasks;
-using System.Speech.Recognition;
-using System.Speech.Synthesis;
 using NAudio.Wave;
 using Microsoft.AspNet.SignalR.Client;
+using StuNote.Domain.Btos.Survey;
 
 namespace StuNote.Student
 {
@@ -20,6 +19,7 @@ namespace StuNote.Student
         private readonly ILogger<FMain> _logger;
         private readonly ICourseService _courseService;
         private readonly IStorageLocatorFactoryService _storageFactory;
+        private readonly ISurveyResponseService _surveyResponse;
         private readonly string _appName;
         private bool _saving=false;
         AccordionControlElement element;
@@ -28,24 +28,48 @@ namespace StuNote.Student
         private BufferedWaveProvider waveProvider = null;
         private WaveOut waveOut = null;
 
+        /// <summary>
+        /// SignalR receives its messages in a separate thread. Therefore,
+        /// A delegate is necessary to update UI thread.
+        /// </summary>
+        /// <param name="survey"></param>
+        private delegate void DelReceivedSurvey(SurveyRequestBto survey);
+        /// <summary>
+        /// To use delegate an instance must be created.
+        /// </summary>
+        DelReceivedSurvey _receivedSurvey;
+        
         public FMain(
             ILogger<FMain> logger, 
             ICourseService courseService,
             IConfiguration configuration,
-            IStorageLocatorFactoryService storageFactory)
+            IStorageLocatorFactoryService storageFactory,
+            ISurveyResponseService surveyResponse)
         {
             InitializeComponent();
             _logger = logger;
             _courseService = courseService;
             _storageFactory = storageFactory;
+            _surveyResponse = surveyResponse;
             _appName = configuration.GetValue<string>("Title");
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            initAudio();            
-            //survey.ResponseReceived += Survey_ResponseReceived;
+            initAudio();
+            _receivedSurvey = HandleReceivedSurvey;
+
+            _surveyResponse.SurveyReceived += _surveyRequest_SurveyReceived;
         }
 
-        private void Survey_ResponseReceived(object sender, Domain.Btos.Survey.SurveyResponseBto e)
+        /// <summary>
+        /// This event is fired everytime a survey is received from the server.
+        /// Handle appropriately. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e">instance of SurveyRequestBto</param>
+        private void _surveyRequest_SurveyReceived(object sender, SurveyRequestBto e)
         {
+            _logger.LogInformation($"Received a Survey : {e.Question}");
+            if (richEditControl1.InvokeRequired)
+                richEditControl1.Invoke(_receivedSurvey, e);                    
         }
 
         //Handle Save everytime there is a change
@@ -168,6 +192,24 @@ namespace StuNote.Student
             }
         }
 
+        /// <summary>
+        /// This method is called to handle everytime a survey is received.
+        /// Change this method to display a Form Control.
+        /// </summary>
+        /// <param name="survey"></param>
+        private void HandleReceivedSurvey(SurveyRequestBto survey)
+        {
+            string textWithNewLine(string text) => $"{text}{Environment.NewLine}";
+
+            var position = richEditControl1.Document.CaretPosition;
+            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Question));
+            position = richEditControl1.Document.CaretPosition;
+            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Answer1));
+            position = richEditControl1.Document.CaretPosition;
+            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Answer2));
+        }
+
+        #region Audio Recognition
         private void initAudio()
         //private void StartBtn_Click(object sender, EventArgs e)
         {
@@ -237,6 +279,7 @@ namespace StuNote.Student
                 waveOut = null;
             }
         }
+        #endregion Audio Recognition
 
         #endregion Helper Methods
 

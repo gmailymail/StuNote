@@ -62,6 +62,7 @@
     <Compile Include="Services\IStorageLocatorFactoryService.cs" />
     <Compile Include="Services\IStorageService.cs" />
     <Compile Include="Services\ISurveyRequestService.cs" />
+    <Compile Include="Services\ISurveyResponseService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

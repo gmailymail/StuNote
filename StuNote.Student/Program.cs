@@ -27,13 +27,13 @@ namespace StuNote.Student
                     builder.AddJsonFile("appsettings.json");
                 })
                 //Configure Domain and Infrastructure services
-                .ConfigureServices(async (s,e)=>
+                .ConfigureServices((s,e)=>
                 {
                     //Register all the services
                     Startup.ConfigureServices(e);
 
                     //Configure and Register SignalR
-                    await RegisterSignalRServices(s.Configuration, e);
+                    RegisterSignalRServices(s.Configuration, e);
                 });
 
             //Build the host container
@@ -57,7 +57,7 @@ namespace StuNote.Student
         /// <param name="configuration"></param>
         /// <param name="services"></param>
         /// <returns></returns>
-        private async static Task RegisterSignalRServices(
+        private static void RegisterSignalRServices(
             IConfiguration configuration, 
             IServiceCollection services)
         {
@@ -66,10 +66,8 @@ namespace StuNote.Student
             string hubName = configuration.GetValue<string>("SignalRHubName");
             HubConnection connection = new(signalRServer);
             hub = connection.CreateHubProxy(hubName);
-            await connection.Start();
-            //await Task.CompletedTask;
             services.AddScoped(s => hub);
-            await hub.Invoke("SendSurvey", new SurveyRequestBto() {  Question="Hello Question"});
+            connection.Start().Wait();
         }
     }
 }

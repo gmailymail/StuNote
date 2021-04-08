@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{31EAE5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuNote.SignalRHub", "StuNote.SignalRHub\StuNote.SignalRHub.csproj", "{7B591837-5CE7-416E-9DEF-33C660B4A3C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuNote.Logic.Teacher", "StuNote.Logic.Teacher\StuNote.Logic.Teacher.csproj", "{F547AF91-ABA5-4492-89BE-3C4B10A03E61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{7B591837-5CE7-416E-9DEF-33C660B4A3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B591837-5CE7-416E-9DEF-33C660B4A3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B591837-5CE7-416E-9DEF-33C660B4A3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F547AF91-ABA5-4492-89BE-3C4B10A03E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F547AF91-ABA5-4492-89BE-3C4B10A03E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F547AF91-ABA5-4492-89BE-3C4B10A03E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F547AF91-ABA5-4492-89BE-3C4B10A03E61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{20F60251-6C08-4DD4-B86D-F86F5B9CA242} = {B0EF6E87-FF2D-4E40-B805-9D6A380A581B}
 		{562BAFC9-E2F4-4DBF-A8D7-60891EE4DCED} = {B0EF6E87-FF2D-4E40-B805-9D6A380A581B}
 		{7B591837-5CE7-416E-9DEF-33C660B4A3C7} = {31EAE5EE-7D96-4C87-95F9-BD03718857FA}
+		{F547AF91-ABA5-4492-89BE-3C4B10A03E61} = {B0EF6E87-FF2D-4E40-B805-9D6A380A581B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C1000309-4A26-46B2-B2A4-B27AC57520D0}

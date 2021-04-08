@@ -55,10 +55,11 @@ namespace StuNote.Student
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
             _appName = configuration.GetValue<string>("Title");           
-            initAudio();
+            //implement Audio feature
+            //initAudio();
             _receivedSurvey = HandleReceivedSurvey;
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            _surveyResponse.SurveyReceived += surveyReceived;            
+            _surveyResponse.SurveyReceived += surveyReceived;
         }
 
         /// <summary>

@@ -21,17 +21,35 @@ namespace StuNote.Teacher
         {
             InitializeComponent();
             _surveyRequest = surveyRequest;
+            _surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
+        }
+
+        /// <summary>
+        /// Handle this event, everytime a student response to the survey
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void _surveyRequest_ResponseReceived(object sender, SurveyResponseBto e)
+        {
+           
         }
 
         private async void elementPublishSurveys_Click(object sender, EventArgs e)
         {
+            
             SurveyRequestBto survey = new()
             {
                 Question = "Do you like MSc IT in ICBT?",
                 Answer1 = "Yes",
                 Answer2 = "No"
             };
+
             await _surveyRequest.SendAsync(survey);
+        }
+
+        private void elementSignedStudents_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

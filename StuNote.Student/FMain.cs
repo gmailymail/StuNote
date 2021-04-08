@@ -24,6 +24,9 @@ namespace StuNote.Student
         private bool _saving=false;
         AccordionControlElement element;
 
+        /// <summary>
+        /// Required instances for Mic capture.
+        /// </summary>
         private WaveIn waveIn = null;
         private BufferedWaveProvider waveProvider = null;
         private WaveOut waveOut = null;
@@ -51,12 +54,11 @@ namespace StuNote.Student
             _courseService = courseService;
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
-            _appName = configuration.GetValue<string>("Title");
+            _appName = configuration.GetValue<string>("Title");           
+            initAudio();            
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            initAudio();
-            _receivedSurvey = HandleReceivedSurvey;
-
             _surveyResponse.SurveyReceived += _surveyRequest_SurveyReceived;
+            _receivedSurvey = HandleReceivedSurvey;
         }
 
         /// <summary>
@@ -282,7 +284,5 @@ namespace StuNote.Student
         #endregion Audio Recognition
 
         #endregion Helper Methods
-
-
     }
 }

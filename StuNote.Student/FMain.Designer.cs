@@ -406,10 +406,10 @@ namespace StuNote.Student
             this.NavigationMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.NavigationMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accMyCourses});
-            this.NavigationMenu.Location = new System.Drawing.Point(0, 181);
+            this.NavigationMenu.Location = new System.Drawing.Point(0, 165);
             this.NavigationMenu.Name = "NavigationMenu";
             this.NavigationMenu.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.NavigationMenu.Size = new System.Drawing.Size(322, 335);
+            this.NavigationMenu.Size = new System.Drawing.Size(322, 350);
             this.NavigationMenu.TabIndex = 1;
             this.NavigationMenu.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             this.NavigationMenu.ElementClick += new DevExpress.XtraBars.Navigation.ElementClickEventHandler(this.NavigationMenu_ElementClick);
@@ -426,7 +426,7 @@ namespace StuNote.Student
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(894, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(892, 41);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -435,10 +435,10 @@ namespace StuNote.Student
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
-            this.richEditControl1.Location = new System.Drawing.Point(322, 181);
+            this.richEditControl1.Location = new System.Drawing.Point(322, 165);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(572, 335);
+            this.richEditControl1.Size = new System.Drawing.Size(570, 350);
             this.richEditControl1.TabIndex = 3;
             // 
             // ribbonControl1
@@ -719,7 +719,7 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
             this.floatingObjectSendBehindTextItem1});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 31);
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 41);
             this.ribbonControl1.MaxItemId = 277;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -742,8 +742,9 @@ namespace StuNote.Student
             this.repositoryItemBorderLineStyle1,
             this.repositoryItemBorderLineWeight1,
             this.repositoryItemFloatingObjectOutlineWeight1});
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
-            this.ribbonControl1.Size = new System.Drawing.Size(894, 150);
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
+            this.ribbonControl1.Size = new System.Drawing.Size(892, 124);
+            this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // undoItem1
             // 
@@ -3147,7 +3148,7 @@ namespace StuNote.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 516);
+            this.ClientSize = new System.Drawing.Size(892, 515);
             this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.NavigationMenu);
             this.Controls.Add(this.ribbonControl1);

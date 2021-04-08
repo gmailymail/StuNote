@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using NAudio.Wave;
+using Microsoft.AspNet.SignalR.Client;
+
 namespace StuNote.Student
 {
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
@@ -38,8 +40,13 @@ namespace StuNote.Student
             _storageFactory = storageFactory;
             _appName = configuration.GetValue<string>("Title");
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            initAudio();
-        }        
+            initAudio();            
+            //survey.ResponseReceived += Survey_ResponseReceived;
+        }
+
+        private void Survey_ResponseReceived(object sender, Domain.Btos.Survey.SurveyResponseBto e)
+        {
+        }
 
         //Handle Save everytime there is a change
         private async void RichEditControl1_ContentChanged(object sender, EventArgs e)

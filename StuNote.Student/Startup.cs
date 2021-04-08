@@ -58,6 +58,7 @@ namespace StuNote.Student
         private static void RegisterBusinessServices(IServiceCollection services)
         {
             services.AddScoped<ICourseService, DummyCourseService>();
+            //services.AddScoped<ISurveyRequestService, dum>();
         }
     }
 

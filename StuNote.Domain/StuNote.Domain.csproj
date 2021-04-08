@@ -54,11 +54,14 @@
     <Compile Include="Btos\Person\PersonBto.cs" />
     <Compile Include="Btos\Person\StudentBto.cs" />
     <Compile Include="Btos\Person\TeacherBto.cs" />
+    <Compile Include="Btos\Survey\SurveyRequestBto.cs" />
+    <Compile Include="Btos\Survey\SurveyResponseBto.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICourseService.cs" />
     <Compile Include="Services\IStorageLocatorFactoryService.cs" />
     <Compile Include="Services\IStorageService.cs" />
+    <Compile Include="Services\ISurveyRequestService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

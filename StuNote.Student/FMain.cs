@@ -55,10 +55,10 @@ namespace StuNote.Student
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
             _appName = configuration.GetValue<string>("Title");           
-            initAudio();            
-            richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
-            _surveyResponse.SurveyReceived += _surveyRequest_SurveyReceived;
+            initAudio();
             _receivedSurvey = HandleReceivedSurvey;
+            richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
+            _surveyResponse.SurveyReceived += surveyReceived;            
         }
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace StuNote.Student
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e">instance of SurveyRequestBto</param>
-        private void _surveyRequest_SurveyReceived(object sender, SurveyRequestBto e)
+        private void surveyReceived(object sender, SurveyRequestBto e)
         {
             _logger.LogInformation($"Received a Survey : {e.Question}");
             if (richEditControl1.InvokeRequired)

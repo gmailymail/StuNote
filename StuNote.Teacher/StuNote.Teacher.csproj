@@ -243,6 +243,10 @@
       <Project>{ab43da35-7d02-46f6-8a31-3328a5cc6420}</Project>
       <Name>StuNote.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StuNote.Infrastructure\StuNote.Infrastructure.csproj">
+      <Project>{562BAFC9-E2F4-4DBF-A8D7-60891EE4DCED}</Project>
+      <Name>StuNote.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\StuNote.Logic.Teacher\StuNote.Logic.Teacher.csproj">
       <Project>{f547af91-aba5-4492-89be-3c4b10a03e61}</Project>
       <Name>StuNote.Logic.Teacher</Name>

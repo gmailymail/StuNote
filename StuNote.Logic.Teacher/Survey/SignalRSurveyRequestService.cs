@@ -18,6 +18,7 @@ namespace StuNote.Logic.Teacher.Survey
         {
             _logger = logger;
             _hub = hub;
+            _hub.On<SurveyResponseBto>("publishSurveyAnswer", (response) => OnSurveyResponseReceived(response));
         }
 
         public event EventHandler<SurveyResponseBto> ResponseReceived;
@@ -30,10 +31,9 @@ namespace StuNote.Logic.Teacher.Survey
         }
         
         #region Helper Methods
-        protected virtual void OnSurveyResponseReceived(SurveyResponseBto survey)
-        {
-            ResponseReceived?.Invoke(this, survey);
-        }
+        
+        protected virtual void OnSurveyResponseReceived(SurveyResponseBto survey) => ResponseReceived?.Invoke(this, survey);
+
         #endregion Helper Methods
     }
 }

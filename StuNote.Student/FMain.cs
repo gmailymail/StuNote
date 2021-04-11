@@ -42,12 +42,11 @@ namespace StuNote.Student
         /// </summary>
         DelReceivedSurvey _receivedSurvey;
         
-        public FMain(
-            ILogger<FMain> logger, 
-            ICourseService courseService,
-            IConfiguration configuration,
-            IStorageLocatorFactoryService storageFactory,
-            ISurveyResponseService surveyResponse)
+        public FMain(ILogger<FMain> logger,
+                     ICourseService courseService,
+                     IConfiguration configuration,
+                     IStorageLocatorFactoryService storageFactory,
+                     ISurveyResponseService surveyResponse)
         {
             InitializeComponent();
             _logger = logger;
@@ -202,6 +201,7 @@ namespace StuNote.Student
         /// <param name="survey"></param>
         private void HandleReceivedSurvey(SurveyRequestBto survey)
         {
+            //Helper method
             string textWithNewLine(string text) => $"{text}{Environment.NewLine}";
 
             var position = richEditControl1.Document.CaretPosition;

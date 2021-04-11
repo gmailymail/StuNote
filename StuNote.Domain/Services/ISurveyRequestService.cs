@@ -10,8 +10,16 @@ namespace StuNote.Domain.Services
     /// </summary>
     public interface ISurveyRequestService
     {
+        /// <summary>
+        /// Publish Surveys to students.
+        /// </summary>
+        /// <param name="requestBto"></param>
+        /// <returns></returns>
         Task<bool> SendAsync(SurveyRequestBto requestBto);
 
+        /// <summary>
+        /// Event is triggerd when students respond to survey.
+        /// </summary>
         event EventHandler<SurveyResponseBto> ResponseReceived;
     }
 }

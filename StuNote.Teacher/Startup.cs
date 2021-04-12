@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
+using StuNote.Infrastructure;
 using StuNote.Logic.Teacher.Survey;
 
 namespace StuNote.Teacher
@@ -56,7 +57,7 @@ namespace StuNote.Teacher
         private static void RegisterBusinessServices(IServiceCollection services)
         {
             services.AddScoped<ISurveyRequestService, SignalRSurveyRequestService>();
-            //services.AddScoped<ISurveyRequestService, dum>();
+            services.AddSingleton<ISignInService, SignInService>();
         }
     }
 

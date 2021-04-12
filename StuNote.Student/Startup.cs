@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
+using StuNote.Infrastructure;
 using StuNote.Infrastructure.Storage;
 using StuNote.Logic.Course;
 using StuNote.Logic.Survey;
@@ -58,6 +59,7 @@ namespace StuNote.Student
         {
             services.AddScoped<ICourseService, DummyCourseService>();
             services.AddScoped<ISurveyResponseService, SignalRSurveyResponseService>();
+            services.AddSingleton<ISignInService, SignInService>();
         }
     }
 

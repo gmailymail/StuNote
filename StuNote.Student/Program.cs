@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using StuNote.Domain.Btos.Survey;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,13 +26,13 @@ namespace StuNote.Student
                     builder.AddJsonFile("appsettings.json");
                 })
                 //Configure Domain and Infrastructure services
-                .ConfigureServices((s,e)=>
+                .ConfigureServices(async (s,e)=>
                 {
                     //Register all the services
                     Startup.ConfigureServices(e);
 
                     //Configure and Register SignalR
-                    RegisterSignalRServices(s.Configuration, e);
+                    await RegisterSignalRServices(s.Configuration, e);
                 });
 
             //Build the host container
@@ -57,9 +56,8 @@ namespace StuNote.Student
         /// <param name="configuration"></param>
         /// <param name="services"></param>
         /// <returns></returns>
-        private static void RegisterSignalRServices(
-            IConfiguration configuration, 
-            IServiceCollection services)
+        private async static Task RegisterSignalRServices(IConfiguration configuration,
+                                                          IServiceCollection services)
         {
             IHubProxy hub;
             string signalRServer = configuration.GetValue<string>("SignalRServer");
@@ -67,7 +65,7 @@ namespace StuNote.Student
             HubConnection connection = new(signalRServer);
             hub = connection.CreateHubProxy(hubName);
             services.AddScoped(s => hub);
-            connection.Start().Wait();
+            await connection.Start();
         }
     }
 }

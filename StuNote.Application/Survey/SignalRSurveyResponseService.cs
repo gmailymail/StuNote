@@ -23,20 +23,16 @@ namespace StuNote.Logic.Survey
 
         public event EventHandler<SurveyRequestBto> SurveyReceived;
 
-        public Task<bool> SendAsync(SurveyResponseBto responseBto)
+        public async Task<bool> SendAsync(SurveyResponseBto responseBto)
         {
-            throw new NotImplementedException();
+            await _hub.Invoke("SendSurveyResponse", responseBto);
+            return true;
         }
 
-        private void OnSurveyReceived(SurveyRequestBto requestBto)
-        {
-            SurveyRequestBto bto = new()
-            {
-                Question = requestBto.Question,
-                Answer1 = requestBto.Answer1,
-                Answer2 = requestBto.Answer2
-            };
-            SurveyReceived?.Invoke(this, bto);
-        }
+        #region Helper Methods
+
+        private void OnSurveyReceived(SurveyRequestBto requestBto) => SurveyReceived?.Invoke(this, requestBto);
+
+        #endregion Helper Methods
     }
 }

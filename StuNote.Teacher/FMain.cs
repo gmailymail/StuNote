@@ -1,17 +1,7 @@
-﻿using DevExpress.XtraBars;
-using Microsoft.AspNet.SignalR.Client;
-using StuNote.Domain;
-using StuNote.Domain.Btos.Survey;
+﻿using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using StuNote.Teacher.UIControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace StuNote.Teacher
 {

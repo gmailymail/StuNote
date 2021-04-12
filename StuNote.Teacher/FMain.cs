@@ -1,19 +1,25 @@
-﻿using StuNote.Domain.Btos.Survey;
+﻿using StuNote.Domain;
+using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using StuNote.Teacher.UIControl;
 using System;
+using System.Windows.Forms;
 
 namespace StuNote.Teacher
 {
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private readonly ISurveyRequestService _surveyRequest;
+        private readonly UControlCreateSurvey _uControlCreateSurvey;
         public SurveyRequestQuestionBto questionBto;
 
-        public FMain(ISurveyRequestService surveyRequest)
+        public FMain(
+            ISurveyRequestService surveyRequest,
+            UControlCreateSurvey uControlCreateSurvey)
         {
             InitializeComponent();
             _surveyRequest = surveyRequest;
+            _uControlCreateSurvey = uControlCreateSurvey;
             _surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
         }
 
@@ -24,36 +30,13 @@ namespace StuNote.Teacher
         /// <param name="e"></param>
         private void _surveyRequest_ResponseReceived(object sender, SurveyResponseBto e)
         {
-           
+          
         }
 
-        private async void elementPublishSurveys_Click(object sender, EventArgs e)
-        {
-            //UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
-            //this.MainContainer.Controls.Add(ucCreateSurv);
-            //ucCreateSurv.Dock = DockStyle.Fill;
-
-            //SurveyRequestBto survey = new()
-            //{
-            //    Question = "Do you like MSc IT in ICBT?",
-            //    Answer1 = "Yes",
-            //    Answer2 = "No"
-            //};
-
-            //await _surveyRequest.SendAsync(survey);
-
-            UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
-            this.MainContainer.Controls.Add(ucCreateSurv);
-            ucCreateSurv.Dock = DockStyle.Fill;
-
-            SurveyRequestQuestionBto question = new()
-            {
-                QuestionType = (int)QuestionTypes.YesNo,
-                Question = "TestQuestion",
-                SelectedAnswerID = 1
-            };
-
-            await _surveyRequest.SendAsync2(question);
+        private void elementPublishSurveys_Click(object sender, EventArgs e)
+        {           
+            this.MainContainer.Controls.Add(_uControlCreateSurvey);
+            _uControlCreateSurvey.Dock = DockStyle.Fill;
         }
 
         private void elementSignedStudents_Click(object sender, EventArgs e)
@@ -63,8 +46,8 @@ namespace StuNote.Teacher
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-            UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
-            this.MainContainer.Controls.Add(ucCreateSurv);
+            //UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
+            //this.MainContainer.Controls.Add(ucCreateSurv);
         }
     }
 }

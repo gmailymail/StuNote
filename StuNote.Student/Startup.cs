@@ -36,6 +36,7 @@ namespace StuNote.Student
         private static void RegisterForms(IServiceCollection services)
         {
             services.AddScoped<FMain>();
+            services.AddScoped<FormSurveyAnswer>();
         }
 
         /// <summary>

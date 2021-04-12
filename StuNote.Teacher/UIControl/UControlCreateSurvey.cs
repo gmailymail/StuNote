@@ -16,30 +16,34 @@ namespace StuNote.Teacher.UIControl
 {
     public partial class UControlCreateSurvey : DevExpress.XtraEditors.XtraUserControl
     {
-        public UControlCreateSurvey()
+        private readonly ISurveyRequestService _surveyRequest;
+
+        public UControlCreateSurvey(ISurveyRequestService surveyRequestService)
         {
             InitializeComponent();
+            _surveyRequest = surveyRequestService;
         }
 
         private void UControlCreateSurvey_Load(object sender, EventArgs e)
         {
         }
 
-        private void BtnSubmitQuestion_Click(object sender, EventArgs e)
+        private async void BtnSubmitQuestion_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(mEditYNQuestionText.Text.Trim()))
+            if (!string.IsNullOrEmpty(mEditYNQuestionText.Text.Trim()) || string.IsNullOrEmpty(textEditAnswer1.Text.Trim()) || string.IsNullOrEmpty(textEditAnswer2.Text.Trim()))
             {
-                SurveyRequestQuestionBto question = new()
+                SurveyRequestBto survey = new()
                 {
-                    QuestionType = (int)QuestionTypes.YesNo,
                     Question = mEditYNQuestionText.Text.Trim(),
-                    SelectedAnswerID = radioGroupYNQuestAnswer.SelectedIndex
+                    Answer1 = textEditAnswer1.Text.Trim(),
+                    Answer2 = textEditAnswer2.Text.Trim()
                 };
+                await _surveyRequest.SendAsync(survey);
             }
             else
             {
                 //TODO : Error Message for null values
-                XtraMessageBox.Show("Enter question text.");
+                XtraMessageBox.Show("Enter question text and two answers.");
             }
         }
     }

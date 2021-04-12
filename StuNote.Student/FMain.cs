@@ -20,8 +20,9 @@ namespace StuNote.Student
         private readonly ICourseService _courseService;
         private readonly IStorageLocatorFactoryService _storageFactory;
         private readonly ISurveyResponseService _surveyResponse;
+        private readonly FormSurveyAnswer _fSurvAnswer;
         private readonly string _appName;
-        private bool _saving=false;
+        private bool _saving = false;
         AccordionControlElement element;
 
         /// <summary>
@@ -41,19 +42,21 @@ namespace StuNote.Student
         /// To use delegate an instance must be created.
         /// </summary>
         DelReceivedSurvey _receivedSurvey;
-        
+
         public FMain(ILogger<FMain> logger,
                      ICourseService courseService,
                      IConfiguration configuration,
                      IStorageLocatorFactoryService storageFactory,
-                     ISurveyResponseService surveyResponse)
+                     ISurveyResponseService surveyResponse,
+                     FormSurveyAnswer fSurvAnswer)
         {
             InitializeComponent();
             _logger = logger;
             _courseService = courseService;
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
-            _appName = configuration.GetValue<string>("Title");           
+            _fSurvAnswer = fSurvAnswer;
+            _appName = configuration.GetValue<string>("Title");
             //implement Audio feature
             //initAudio();
             _receivedSurvey = HandleReceivedSurvey;
@@ -70,11 +73,8 @@ namespace StuNote.Student
         private void surveyReceived(object sender, SurveyRequestBto e)
         {
             _logger.LogInformation($"Received a Survey : {e.Question}");
-            if (richEditControl1.InvokeRequired)
-                richEditControl1.Invoke(_receivedSurvey, e);
-
-            FormSurveyAnswer fSurvAnswer = new FormSurveyAnswer();
-            fSurvAnswer.Show();
+            if (InvokeRequired)
+                Invoke(_receivedSurvey, e);
         }
 
         //Handle Save everytime there is a change
@@ -93,7 +93,7 @@ namespace StuNote.Student
             catch (Exception)
             {
                 _saving = false;
-            }                                      
+            }
         }
 
         //Load Courses into Left Navigation Menu
@@ -154,19 +154,19 @@ namespace StuNote.Student
 
                 //There is no file stored related to this session.
                 if (bytes is null)
-                {                    
+                {
                     richEditControl1.CreateNewDocument(false);
                     var position = richEditControl1.Document.CaretPosition;
                     richEditControl1.Document.InsertText(position, element.Text);
                 }
                 else
                     richEditControl1.LoadDocument(bytes, DocumentFormat.OpenXml);
-            }            
+            }
             catch (Exception ex)
             {
                 //Handle errors in an intuitive way. Perhaps, updating a Statusbar or some alertbox.
                 //But for our project purposes, we will Log Error
-                _logger.LogError(ex, "Error while Loading notes");               
+                _logger.LogError(ex, "Error while Loading notes");
             }
         }
 
@@ -193,7 +193,7 @@ namespace StuNote.Student
             {
                 //Handle errors in an intuitive way. Perhaps, updating a Statusbar or some alertbox.
                 //But for our project purposes, we will Log Error
-                _logger.LogError(ex, "Error while saving notes");               
+                _logger.LogError(ex, "Error while saving notes");
             }
         }
 
@@ -204,15 +204,12 @@ namespace StuNote.Student
         /// <param name="survey"></param>
         private void HandleReceivedSurvey(SurveyRequestBto survey)
         {
-            //Helper method
-            string textWithNewLine(string text) => $"{text}{Environment.NewLine}";
+            _fSurvAnswer.StuSurveyQuestion.Text = survey.Question;
+            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[0].Description = survey.Answer1;
+            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[1].Description = survey.Answer1;
+            if (_fSurvAnswer.Visible is false)
+                _fSurvAnswer.Show(this);
 
-            var position = richEditControl1.Document.CaretPosition;
-            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Question));
-            position = richEditControl1.Document.CaretPosition;
-            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Answer1));
-            position = richEditControl1.Document.CaretPosition;
-            richEditControl1.Document.InsertText(position, textWithNewLine(survey.Answer2));
         }
 
         #region Audio Recognition

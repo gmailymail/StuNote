@@ -30,13 +30,6 @@ namespace StuNote.Logic.Teacher.Survey
             return true;
         }
 
-        public async Task<bool> SendAsync2(SurveyRequestQuestionBto requestBto)
-        {
-            _logger.LogInformation("Call SignalR to send the Request");
-            await _hub.Invoke("SendSurvey", requestBto);
-            return true;
-        }
-
         #region Helper Methods
         
         protected virtual void OnSurveyResponseReceived(SurveyResponseBto survey) => ResponseReceived?.Invoke(this, survey);

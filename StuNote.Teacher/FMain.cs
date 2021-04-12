@@ -11,7 +11,6 @@ namespace StuNote.Teacher
     {
         private readonly ISurveyRequestService _surveyRequest;
         private readonly UControlCreateSurvey _uControlCreateSurvey;
-        public SurveyRequestQuestionBto questionBto;
 
         public FMain(
             ISurveyRequestService surveyRequest,
@@ -42,12 +41,6 @@ namespace StuNote.Teacher
         private void elementSignedStudents_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void accordionControlElement2_Click(object sender, EventArgs e)
-        {
-            //UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
-            //this.MainContainer.Controls.Add(ucCreateSurv);
         }
     }
 }

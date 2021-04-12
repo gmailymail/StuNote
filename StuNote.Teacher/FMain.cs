@@ -1,7 +1,9 @@
 ﻿using DevExpress.XtraBars;
 using Microsoft.AspNet.SignalR.Client;
+using StuNote.Domain;
 using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
+using StuNote.Teacher.UIControl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace StuNote.Teacher
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private readonly ISurveyRequestService _surveyRequest;
+        public SurveyRequestQuestionBto questionBto;
 
         public FMain(ISurveyRequestService surveyRequest)
         {
@@ -36,20 +39,42 @@ namespace StuNote.Teacher
 
         private async void elementPublishSurveys_Click(object sender, EventArgs e)
         {
-            
-            SurveyRequestBto survey = new()
+            //UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
+            //this.MainContainer.Controls.Add(ucCreateSurv);
+            //ucCreateSurv.Dock = DockStyle.Fill;
+
+            //SurveyRequestBto survey = new()
+            //{
+            //    Question = "Do you like MSc IT in ICBT?",
+            //    Answer1 = "Yes",
+            //    Answer2 = "No"
+            //};
+
+            //await _surveyRequest.SendAsync(survey);
+
+            UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
+            this.MainContainer.Controls.Add(ucCreateSurv);
+            ucCreateSurv.Dock = DockStyle.Fill;
+
+            SurveyRequestQuestionBto question = new()
             {
-                Question = "Do you like MSc IT in ICBT?",
-                Answer1 = "Yes",
-                Answer2 = "No"
+                QuestionType = (int)QuestionTypes.YesNo,
+                Question = "TestQuestion",
+                SelectedAnswerID = 1
             };
 
-            await _surveyRequest.SendAsync(survey);
+            await _surveyRequest.SendAsync2(question);
         }
 
         private void elementSignedStudents_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void accordionControlElement2_Click(object sender, EventArgs e)
+        {
+            UControlCreateSurvey ucCreateSurv = new UControlCreateSurvey();
+            this.MainContainer.Controls.Add(ucCreateSurv);
         }
     }
 }

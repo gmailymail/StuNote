@@ -12,6 +12,8 @@ namespace StuNote.Domain.Services
     {
         Task<bool> SendAsync(SurveyRequestBto requestBto);
 
+        Task<bool> SendAsync2(SurveyRequestQuestionBto requestBto);
+
         event EventHandler<SurveyResponseBto> ResponseReceived;
     }
 }

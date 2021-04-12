@@ -72,7 +72,10 @@ namespace StuNote.Student
         {
             _logger.LogInformation($"Received a Survey : {e.Question}");
             if (richEditControl1.InvokeRequired)
-                richEditControl1.Invoke(_receivedSurvey, e);                    
+                richEditControl1.Invoke(_receivedSurvey, e);
+
+            FormSurveyAnswer fSurvAnswer = new FormSurveyAnswer();
+            fSurvAnswer.Show();
         }
 
         //Handle Save everytime there is a change

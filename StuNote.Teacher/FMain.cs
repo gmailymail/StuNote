@@ -3,6 +3,7 @@ using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using StuNote.Teacher.UIControl;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace StuNote.Teacher
@@ -11,6 +12,7 @@ namespace StuNote.Teacher
     {
         private readonly ISurveyRequestService _surveyRequest;
         private readonly UControlCreateSurvey _uControlCreateSurvey;
+        private List<SurveyResponseBto> _studentResponses = new List<SurveyResponseBto>();
 
         public FMain(
             ISurveyRequestService surveyRequest,
@@ -29,7 +31,10 @@ namespace StuNote.Teacher
         /// <param name="e"></param>
         private void _surveyRequest_ResponseReceived(object sender, SurveyResponseBto e)
         {
-          
+            SurveyResponseBto oneResponse = new SurveyResponseBto() {
+                Answer = e.Answer.Trim()
+            };
+            _studentResponses.Add(oneResponse);
         }
 
         private void elementPublishSurveys_Click(object sender, EventArgs e)

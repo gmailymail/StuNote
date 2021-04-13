@@ -206,7 +206,7 @@ namespace StuNote.Student
         {
             _fSurvAnswer.StuSurveyQuestion.Text = survey.Question;
             _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[0].Description = survey.Answer1;
-            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[1].Description = survey.Answer1;
+            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[1].Description = survey.Answer2;
             if (_fSurvAnswer.Visible is false)
                 _fSurvAnswer.Show(this);
 

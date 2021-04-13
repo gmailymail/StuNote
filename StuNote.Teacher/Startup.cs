@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
 using StuNote.Infrastructure;
 using StuNote.Logic.Teacher.Survey;
+using StuNote.Teacher.UIControl;
 
 namespace StuNote.Teacher
 {
@@ -34,6 +35,7 @@ namespace StuNote.Teacher
         private static void RegisterForms(IServiceCollection services)
         {
             services.AddScoped<FMain>();
+            services.AddScoped<UControlCreateSurvey>();
         }
 
         /// <summary>

@@ -46,9 +46,10 @@ namespace StuNote.Teacher
             // MainContainer
             // 
             this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainContainer.Location = new System.Drawing.Point(260, 41);
+            this.MainContainer.Location = new System.Drawing.Point(390, 60);
+            this.MainContainer.Margin = new System.Windows.Forms.Padding(4);
             this.MainContainer.Name = "MainContainer";
-            this.MainContainer.Size = new System.Drawing.Size(915, 585);
+            this.MainContainer.Size = new System.Drawing.Size(1372, 855);
             this.MainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -56,10 +57,11 @@ namespace StuNote.Teacher
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 41);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 60);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 585);
+            this.accordionControl1.Size = new System.Drawing.Size(390, 855);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -98,8 +100,9 @@ namespace StuNote.Teacher
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1175, 41);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1762, 60);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -110,14 +113,15 @@ namespace StuNote.Teacher
             // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 626);
+            this.ClientSize = new System.Drawing.Size(1762, 915);
             this.ControlContainer = this.MainContainer;
             this.Controls.Add(this.MainContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMain";
             this.NavigationControl = this.accordionControl1;
             this.Text = "StuNote Teacher 365";

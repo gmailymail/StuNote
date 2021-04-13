@@ -29,7 +29,7 @@ namespace StuNote.Logic.Teacher.Survey
             await _hub.Invoke("SendSurvey", requestBto);
             return true;
         }
-        
+
         #region Helper Methods
         
         protected virtual void OnSurveyResponseReceived(SurveyResponseBto survey) => ResponseReceived?.Invoke(this, survey);

@@ -1,17 +1,26 @@
-﻿using StuNote.Domain.Btos.Survey;
+﻿using StuNote.Domain;
+using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
+using StuNote.Teacher.UIControl;
 using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace StuNote.Teacher
 {
     public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private readonly ISurveyRequestService _surveyRequest;
+        private readonly UControlCreateSurvey _uControlCreateSurvey;
+        private List<SurveyResponseBto> _studentResponses = new List<SurveyResponseBto>();
 
-        public FMain(ISurveyRequestService surveyRequest)
+        public FMain(
+            ISurveyRequestService surveyRequest,
+            UControlCreateSurvey uControlCreateSurvey)
         {
             InitializeComponent();
             _surveyRequest = surveyRequest;
+            _uControlCreateSurvey = uControlCreateSurvey;
             _surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
         }
 
@@ -22,20 +31,16 @@ namespace StuNote.Teacher
         /// <param name="e"></param>
         private void _surveyRequest_ResponseReceived(object sender, SurveyResponseBto e)
         {
-           
+            SurveyResponseBto oneResponse = new SurveyResponseBto() {
+                Answer = e.Answer.Trim()
+            };
+            _studentResponses.Add(oneResponse);
         }
 
-        private async void elementPublishSurveys_Click(object sender, EventArgs e)
-        {
-            
-            SurveyRequestBto survey = new()
-            {
-                Question = "Do you like MSc IT in ICBT?",
-                Answer1 = "Yes",
-                Answer2 = "No"
-            };
-
-            await _surveyRequest.SendAsync(survey);
+        private void elementPublishSurveys_Click(object sender, EventArgs e)
+        {           
+            this.MainContainer.Controls.Add(_uControlCreateSurvey);
+            _uControlCreateSurvey.Dock = DockStyle.Fill;
         }
 
         private void elementSignedStudents_Click(object sender, EventArgs e)

@@ -4,6 +4,8 @@ using StuNote.Domain.Services;
 using StuNote.Teacher.UIControl;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace StuNote.Teacher
@@ -38,9 +40,16 @@ namespace StuNote.Teacher
         }
 
         private void elementPublishSurveys_Click(object sender, EventArgs e)
-        {           
-            this.MainContainer.Controls.Add(_uControlCreateSurvey);
-            _uControlCreateSurvey.Dock = DockStyle.Fill;
+        {
+            var controls = MainContainer.Controls.Find("UControlCreateSurvey",true);
+
+            if (controls.Count() is 0)
+            {
+                MainContainer.Controls.Add(_uControlCreateSurvey);
+                _uControlCreateSurvey.Dock = DockStyle.Fill;
+            }
+                
+            MainContainer.Controls.SetChildIndex(_uControlCreateSurvey, 0);            
         }
 
         private void elementSignedStudents_Click(object sender, EventArgs e)

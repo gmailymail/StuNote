@@ -18,7 +18,6 @@ namespace StuNote.Teacher
                 configure.AddDebug();
             });
             
-
             //Add WinForms to the service
             RegisterForms(services);
 
@@ -45,11 +44,7 @@ namespace StuNote.Teacher
         /// <param name="services"></param>
         private static void RegisterInfrastructureServices(IServiceCollection services)
         {
-            //services.AddScoped<AzureStorageService>();
-            //services.AddScoped<LocalFileStorageService>();
-            //services.AddScoped<IStorageService, LocalFileStorageService>(s=>s.GetRequiredService<LocalFileStorageService>());
-            //services.AddScoped<IStorageService, AzureStorageService>(s => s.GetRequiredService<AzureStorageService>());
-            //services.AddScoped<IStorageLocatorFactoryService, StorageLocatorFactoryService>();
+
         }
 
         /// <summary>
@@ -58,9 +53,8 @@ namespace StuNote.Teacher
         /// <param name="services"></param>
         private static void RegisterBusinessServices(IServiceCollection services)
         {
-            services.AddScoped<ISurveyRequestService, SignalRSurveyRequestService>();
+            services.AddSingleton<ISurveyRequestService, SignalRSurveyRequestService>();
             services.AddSingleton<ISignInService, SignInService>();
         }
     }
-
 }

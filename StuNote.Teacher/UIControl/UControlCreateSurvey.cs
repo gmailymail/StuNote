@@ -46,5 +46,9 @@ namespace StuNote.Teacher.UIControl
                 XtraMessageBox.Show("Enter question text and two answers.");
             }
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

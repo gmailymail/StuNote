@@ -12,7 +12,7 @@ namespace StuNote.Teacher
     {
         private readonly ISurveyRequestService _surveyRequest;
         private readonly UControlCreateSurvey _uControlCreateSurvey;
-        private List<SurveyResponseBto> _studentResponses = new List<SurveyResponseBto>();
+        private List<SurveyStudentResponseBto> _studentResponses = new List<SurveyStudentResponseBto>();
 
         public FMain(
             ISurveyRequestService surveyRequest,
@@ -31,7 +31,7 @@ namespace StuNote.Teacher
         /// <param name="e"></param>
         private void _surveyRequest_ResponseReceived(object sender, SurveyResponseBto e)
         {
-            SurveyResponseBto oneResponse = new SurveyResponseBto() {
+            SurveyStudentResponseBto oneResponse = new SurveyStudentResponseBto() {
                 Answer = e.Answer.Trim()
             };
             _studentResponses.Add(oneResponse);

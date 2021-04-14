@@ -56,6 +56,7 @@
     <Compile Include="Btos\Person\TeacherBto.cs" />
     <Compile Include="Btos\Survey\SurveyRequestBto.cs" />
     <Compile Include="Btos\Survey\SurveyResponseBto.cs" />
+    <Compile Include="Btos\Survey\SurveyStudentResponseBto.cs" />
     <Compile Include="Btos\UserBto.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

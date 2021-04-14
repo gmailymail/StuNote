@@ -53,7 +53,7 @@ namespace StuNote.Teacher
         /// <param name="services"></param>
         private static void RegisterBusinessServices(IServiceCollection services)
         {
-            services.AddScoped<ISurveyRequestService, SignalRSurveyRequestService>();
+            services.AddSingleton<ISurveyRequestService, SignalRSurveyRequestService>();
             services.AddSingleton<ISignInService, SignInService>();
         }
     }

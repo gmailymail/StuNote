@@ -199,19 +199,13 @@ namespace StuNote.Student
 
         /// <summary>
         /// This method is called to handle everytime a survey is received.
-        /// Change this method to display a Form Control.
         /// </summary>
         /// <param name="survey"></param>
         private void HandleReceivedSurvey(SurveyRequestBto survey)
-        {
-            _fSurvAnswer.StuSurveyQuestion.Text = survey.Question;
-            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[0].Description = survey.Answer1;
-            _fSurvAnswer.radioGroupStudentAnswer.Properties.Items[1].Description = survey.Answer2;
+        {          
             if (_fSurvAnswer.Visible is false)
-                _fSurvAnswer.Show(this);
-
-        }
-
+                _fSurvAnswer.ShowDialog(this);
+        }        
         #region Audio Recognition
         private void initAudio()
         //private void StartBtn_Click(object sender, EventArgs e)

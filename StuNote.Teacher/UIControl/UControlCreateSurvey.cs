@@ -30,6 +30,10 @@ namespace StuNote.Teacher.UIControl
             _delUpdateUI = updateAnswerDashBoard;
         }
 
+        public UControlCreateSurvey()
+        {
+        }
+
         /// <summary>
         /// Handle this event, everytime a student response to the survey
         /// </summary>
@@ -88,11 +92,18 @@ namespace StuNote.Teacher.UIControl
             int totalResponses = _studentResponses.Count;
             int answerOneCount = _studentResponses.Count(x => x.Answer == textEditAnswer1.Text.Trim());
             int answerTwoCount = _studentResponses.Count(x => x.Answer == textEditAnswer2.Text.Trim());
-            double answerOnePercentage = (answerOneCount * 100f / totalResponses);
-            double answerTwoPercentage = (answerTwoCount * 100f / totalResponses);
+            double answerOnePercentage = CalculatePercentage(answerOneCount , totalResponses);
+            double answerTwoPercentage = CalculatePercentage(answerTwoCount, totalResponses);
             responseText1.Text = "Response count : " + answerOneCount.ToString() + " out of " + totalResponses.ToString() + ". ( Percentage :" + Math.Round(answerOnePercentage, 2).ToString() + "% )";
             responseText2.Text = "Response count : " + answerTwoCount.ToString() + " out of " + totalResponses.ToString() + ". ( Percentage :" + Math.Round(answerTwoPercentage, 2).ToString() + "% )";
         }
+
+        public double CalculatePercentage(int answerCount, int totalResponses)
+        {
+            double answerPercentage = (answerCount * 100f / totalResponses);
+            return answerPercentage;
+        }
+
 
         private void ResetControllers()
         {

@@ -48,7 +48,8 @@ namespace StuNote.Student
                      IConfiguration configuration,
                      IStorageLocatorFactoryService storageFactory,
                      ISurveyResponseService surveyResponse,
-                     FormSurveyAnswer fSurvAnswer)
+                     FormSurveyAnswer fSurvAnswer,
+                     IQuestionResponseService questionResponse)
         {
             InitializeComponent();
             _logger = logger;
@@ -62,6 +63,14 @@ namespace StuNote.Student
             _receivedSurvey = HandleReceivedSurvey;
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
             _surveyResponse.SurveyReceived += surveyReceived;
+            questionResponse.QuestionReceived += async (s, e) =>
+            {
+                await questionResponse.SendAsync(new Domain.Btos.Question.QuestionResponseBto
+                {
+                    StudentId = "email.com",
+                    SelectedAnswer = 1
+                }) ;
+            };
         }
 
         /// <summary>

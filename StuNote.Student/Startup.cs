@@ -4,6 +4,7 @@ using StuNote.Domain.Services;
 using StuNote.Infrastructure;
 using StuNote.Infrastructure.Storage;
 using StuNote.Logic.Course;
+using StuNote.Logic.Question;
 using StuNote.Logic.Survey;
 
 namespace StuNote.Student
@@ -60,6 +61,7 @@ namespace StuNote.Student
         {
             services.AddScoped<ICourseService, DummyCourseService>();
             services.AddSingleton<ISurveyResponseService, SignalRSurveyResponseService>();
+            services.AddSingleton<IQuestionResponseService, SignalRQuestionResponseService>();
             services.AddSingleton<ISignInService, SignInService>();
         }
     }

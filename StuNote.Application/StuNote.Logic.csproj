@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Course\DummyCourseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question\SignalRQuestionResponseService.cs" />
     <Compile Include="Survey\SignalRSurveyResponseService.cs" />
   </ItemGroup>
   <ItemGroup>

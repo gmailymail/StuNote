@@ -1,11 +1,9 @@
-﻿using StuNote.Domain;
-using StuNote.Domain.Btos.Survey;
+﻿using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using StuNote.Teacher.UIControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace StuNote.Teacher
@@ -14,16 +12,24 @@ namespace StuNote.Teacher
     {
         private readonly ISurveyRequestService _surveyRequest;
         private readonly UControlCreateSurvey _uControlCreateSurvey;
+        private readonly IQuestionRequestService _questionRequest;
         private List<SurveyResponseBto> _studentResponses = new List<SurveyResponseBto>();
 
         public FMain(
             ISurveyRequestService surveyRequest,
-            UControlCreateSurvey uControlCreateSurvey)
+            UControlCreateSurvey uControlCreateSurvey,
+            IQuestionRequestService questionRequest)
         {
             InitializeComponent();
             _surveyRequest = surveyRequest;
             _uControlCreateSurvey = uControlCreateSurvey;
+            _questionRequest = questionRequest;
             _surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
+            
+            questionRequest.AnswerReceived += (s, e) =>
+            {
+
+            };
         }
 
         /// <summary>
@@ -55,6 +61,19 @@ namespace StuNote.Teacher
         private void elementSignedStudents_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private async void elementQuestionAnswers_Click(object sender, EventArgs e)
+        {
+            await _questionRequest.SendAsync(new Domain.Btos.Question.QuestionRequestBto
+            {
+                Question = "What is 2 + 2",
+                Answer1 = "6",
+                Answer2 = "3",
+                Answer3 = "4",
+                Answer4 = "8",
+                CorrectAnswer = 2
+            });
         }
     }
 }

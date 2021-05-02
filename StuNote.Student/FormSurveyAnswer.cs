@@ -8,32 +8,22 @@ namespace StuNote.Student
     {
         private readonly ISurveyResponseService _survey;
 
-        /// <summary>
-        /// SignalR receives its messages in a separate thread. Therefore,
-        /// A delegate is necessary to update UI thread.
-        /// </summary>
-        /// <param name="survey"></param>
-        private delegate void DelReceivedSurvey(SurveyRequestBto survey);
-        /// <summary>
-        /// To use delegate an instance must be created.
-        /// </summary>
-        DelReceivedSurvey _receivedSurvey;
-
-        public FormSurveyAnswer(
-            ISurveyResponseService survey)
+        public FormSurveyAnswer(ISurveyResponseService survey)
         {
             InitializeComponent();
-            _survey = survey;
-            _receivedSurvey = HandleReceivedSurvey;
-            _survey.SurveyReceived += survey_SurveyReceived;
-        }
 
-        private void survey_SurveyReceived(object sender, SurveyRequestBto e)
-        {
-            if (InvokeRequired)
-                Invoke(_receivedSurvey, e);
-            else
-                HandleReceivedSurvey(e);
+            _survey = survey;
+
+            _survey.SurveyReceived += (o, e) =>
+            {
+                if (InvokeRequired)
+                    Invoke((Action)delegate ()
+                    {
+                        HandleReceivedSurvey(e);
+                    });
+                else
+                    HandleReceivedSurvey(e);
+            };
         }
 
         private async void buttonSubmit_Click(object sender, EventArgs e)

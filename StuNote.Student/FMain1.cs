@@ -1,28 +1,34 @@
-﻿using DevExpress.XtraBars.Navigation;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraRichEdit;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NAudio.Wave;
 using StuNote.Domain;
 using StuNote.Domain.Btos.Course;
-using StuNote.Domain.Services;
-using System;
-using System.Threading.Tasks;
-using NAudio.Wave;
-using Microsoft.AspNet.SignalR.Client;
-using StuNote.Domain.Btos.Survey;
-using Microsoft.Extensions.DependencyInjection;
-using StuNote.Student.UIControl;
 using StuNote.Domain.Btos.Infrastructure;
+using StuNote.Domain.Btos.Survey;
+using StuNote.Domain.Services;
 using StuNote.Domain.Services.Infrastructure;
+using StuNote.Student.UIControl;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StuNote.Student
 {
-    public partial class FMain : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
+    public partial class FMain1 : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private bool _loaded = false;
-        private readonly ILogger<FMain> _logger;
+        private readonly ILogger<FMain1> _logger;
         private readonly ICourseService _courseService;
         private readonly IStorageLocatorFactoryService _storageFactory;
         private readonly ISurveyResponseService _surveyResponse;
@@ -53,7 +59,7 @@ namespace StuNote.Student
         /// </summary>
         DelReceivedSurvey _receivedSurvey;
 
-        public FMain(ILogger<FMain> logger,
+        public FMain1(ILogger<FMain1> logger,
                      ICourseService courseService,
                      IConfiguration configuration,
                      IStorageLocatorFactoryService storageFactory,
@@ -65,7 +71,7 @@ namespace StuNote.Student
                      ICaptureScreenService captureScreenService,
                      IImageToTextService imageToText)
         {
-            
+
             InitializeComponent();
             _logger = logger;
             _courseService = courseService;
@@ -183,8 +189,7 @@ namespace StuNote.Student
                 var sessionBto = element.Tag as SessionBto;
 
                 //Load data from the file.
-                var bytes = await fileStorage.OpenNotes(sessionBto);
-                using Stream stream = new MemoryStream(bytes);
+                var bytes = await fileStorage.OpenNotes(sessionBto);                
 
                 //There is no file stored related to this session.
                 if (bytes is null)
@@ -194,7 +199,10 @@ namespace StuNote.Student
                     richEditControl1.Document.InsertText(position, element.Text);
                 }
                 else
+                {
+                    using Stream stream = new MemoryStream(bytes);
                     richEditControl1.LoadDocument(stream, DocumentFormat.OpenXml);
+                }                    
             }
             catch (Exception ex)
             {
@@ -236,14 +244,14 @@ namespace StuNote.Student
         /// </summary>
         /// <param name="survey"></param>
         private void HandleReceivedSurvey(SurveyRequestBto survey)
-        {          
+        {
             if (_fSurvAnswer.Visible is false)
                 _fSurvAnswer.ShowDialog(this);
-        }        
+        }
         #region Audio Recognition
         private void initAudio()
         //private void StartBtn_Click(object sender, EventArgs e)
-        {            
+        {
             if (waveIn != null)
                 return;
 
@@ -272,7 +280,7 @@ namespace StuNote.Student
             // add received data to waveProvider buffer
             if (waveProvider != null)
                 _logger.LogInformation($"Audio is being monitored on {DateTime.Now}");
-                //waveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
+            //waveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
         }
 
         private void StopBtn_Click(object sender, EventArgs e)
@@ -322,7 +330,7 @@ namespace StuNote.Student
 
         private Image CaptureScreen()
         {
-            var image = _captureScreenService.CaptureScreen(SelectedLectureWindow.HandleWindow);           
+            var image = _captureScreenService.CaptureScreen(SelectedLectureWindow.HandleWindow);
             return image;
         }
 
@@ -347,7 +355,7 @@ namespace StuNote.Student
 
         private async void buttonCaptureText_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
             richEditControl1.Document.ContentChanged -= RichEditControl1_ContentChanged;
             var image = CaptureScreen();
             var text = _imageToText.ReadText(image);

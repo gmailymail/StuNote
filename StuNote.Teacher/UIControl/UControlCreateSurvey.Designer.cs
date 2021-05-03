@@ -144,7 +144,7 @@ namespace StuNote.Teacher.UIControl
             simpleContextButton1.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
             simpleContextButton1.Caption = "Yes No";
             simpleContextButton1.Id = new System.Guid("2377ad4d-0131-4a02-bdd0-8ca792bf4feb");
-            simpleContextButton1.ImageOptionsCollection.ItemNormal.UseDefaultImage = true;
+            //simpleContextButton1.ImageOptionsCollection.ItemNormal.UseDefaultImage = true;
             simpleContextButton1.Name = "simpleContxtBtnYesNo";
             this.comboBoxEdit1.Properties.ContextButtons.Add(simpleContextButton1);
             this.comboBoxEdit1.Size = new System.Drawing.Size(613, 52);

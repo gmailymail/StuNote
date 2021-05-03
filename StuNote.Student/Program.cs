@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace StuNote.Student
@@ -17,7 +18,9 @@ namespace StuNote.Student
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+
             //Prepare Host Container
             var host = Host.CreateDefaultBuilder()
                 //Configure appsettings.json Application Settings 
@@ -45,9 +48,15 @@ namespace StuNote.Student
             var services = serviceScop.ServiceProvider;
 
             //Get FMain     
-            FMain fMain = services.GetRequiredService<FMain>();
+            FMain1 fMain = services.GetRequiredService<FMain1>();
+            
+            Application.Run(fMain);             
+        }
 
-            Application.Run(fMain);            
+        private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            var ex = e.ExceptionObject as Exception;
+            MessageBox.Show(ex.Message);
         }
 
         /// <summary>

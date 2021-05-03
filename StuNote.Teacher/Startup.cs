@@ -35,7 +35,7 @@ namespace StuNote.Teacher
         /// <param name="services"></param>
         private static void RegisterForms(IServiceCollection services)
         {
-            services.AddScoped<FMain>();
+            services.AddScoped<FMain2>();
             services.AddScoped<UControlCreateSurvey>();
         }
 

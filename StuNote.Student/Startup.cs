@@ -39,7 +39,7 @@ namespace StuNote.Student
         /// <param name="services"></param>
         private static void RegisterForms(IServiceCollection services)
         {
-            services.AddSingleton<FMain>();
+            services.AddSingleton<FMain1>();
             services.AddScoped<FormSurveyAnswer>();
             services.AddSingleton<FormWindowSelector>();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace StuNote.Student
 {
-    partial class FMain
+    partial class FMain1
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,19 @@ namespace StuNote.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation3 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
-            this.NavigationMenu = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accMyCourses = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.ButtonScreenShot = new DevExpress.XtraBars.BarButtonItem();
-            this.buttonCaptureScreenShot = new DevExpress.XtraBars.BarButtonItem();
-            this.buttonCaptureText = new DevExpress.XtraBars.BarButtonItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain1));
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.undoItem1 = new DevExpress.XtraRichEdit.UI.UndoItem();
             this.redoItem1 = new DevExpress.XtraRichEdit.UI.RedoItem();
             this.fileNewItem1 = new DevExpress.XtraRichEdit.UI.FileNewItem();
+            this.fileOpenItem1 = new DevExpress.XtraRichEdit.UI.FileOpenItem();
             this.fileSaveItem1 = new DevExpress.XtraRichEdit.UI.FileSaveItem();
+            this.fileSaveAsItem1 = new DevExpress.XtraRichEdit.UI.FileSaveAsItem();
             this.quickPrintItem1 = new DevExpress.XtraRichEdit.UI.QuickPrintItem();
             this.printItem1 = new DevExpress.XtraRichEdit.UI.PrintItem();
             this.printPreviewItem1 = new DevExpress.XtraRichEdit.UI.PrintPreviewItem();
@@ -186,6 +184,8 @@ namespace StuNote.Student
             this.deleteAllCommentsItem1 = new DevExpress.XtraRichEdit.UI.DeleteAllCommentsItem();
             this.previousCommentItem1 = new DevExpress.XtraRichEdit.UI.PreviousCommentItem();
             this.nextCommentItem1 = new DevExpress.XtraRichEdit.UI.NextCommentItem();
+            this.changeCommentItem1 = new DevExpress.XtraRichEdit.UI.ChangeCommentItem();
+            this.reviewersItem1 = new DevExpress.XtraRichEdit.UI.ReviewersItem();
             this.reviewingPaneItem1 = new DevExpress.XtraRichEdit.UI.ReviewingPaneItem();
             this.switchToSimpleViewItem1 = new DevExpress.XtraRichEdit.UI.SwitchToSimpleViewItem();
             this.switchToDraftViewItem1 = new DevExpress.XtraRichEdit.UI.SwitchToDraftViewItem();
@@ -309,8 +309,6 @@ namespace StuNote.Student
             this.floatingPictureToolsFormatPage1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsFormatPage();
             this.floatingPictureToolsShapeStylesPageGroup1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsShapeStylesPageGroup();
             this.floatingPictureToolsArrangePageGroup1 = new DevExpress.XtraRichEdit.UI.FloatingPictureToolsArrangePageGroup();
-            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.fileRibbonPage1 = new DevExpress.XtraRichEdit.UI.FileRibbonPage();
             this.commonRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.CommonRibbonPageGroup();
             this.infoRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.InfoRibbonPageGroup();
@@ -345,73 +343,44 @@ namespace StuNote.Student
             this.documentViewsRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.DocumentViewsRibbonPageGroup();
             this.showRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup();
             this.zoomRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.accMyCourses = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(this.components);
-            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.NavigationMenu)).BeginInit();
+            this.fluentDesignFormContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineStyle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             this.SuspendLayout();
             // 
-            // NavigationMenu
+            // fluentDesignFormContainer1
             // 
-            this.NavigationMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NavigationMenu.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accMyCourses});
-            this.NavigationMenu.Location = new System.Drawing.Point(0, 0);
-            this.NavigationMenu.Name = "NavigationMenu";
-            this.NavigationMenu.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.NavigationMenu.Size = new System.Drawing.Size(322, 517);
-            this.NavigationMenu.TabIndex = 1;
-            this.NavigationMenu.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            this.NavigationMenu.ElementClick += new DevExpress.XtraBars.Navigation.ElementClickEventHandler(this.NavigationMenu_ElementClick);
-            // 
-            // accMyCourses
-            // 
-            this.accMyCourses.Expanded = true;
-            this.accMyCourses.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accMyCourses.ImageOptions.SvgImage")));
-            this.accMyCourses.Name = "accMyCourses";
-            this.accMyCourses.Text = "My Courses";
-            // 
-            // ButtonScreenShot
-            // 
-            this.ButtonScreenShot.Caption = "Select Lecture Screen";
-            this.ButtonScreenShot.Id = 0;
-            this.ButtonScreenShot.Name = "ButtonScreenShot";
-            this.ButtonScreenShot.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ButtonScreenShot_ItemClick);
-            // 
-            // buttonCaptureScreenShot
-            // 
-            this.buttonCaptureScreenShot.Caption = "Take Screen Shot";
-            this.buttonCaptureScreenShot.Id = 0;
-            this.buttonCaptureScreenShot.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S));
-            this.buttonCaptureScreenShot.Name = "buttonCaptureScreenShot";
-            this.buttonCaptureScreenShot.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            this.buttonCaptureScreenShot.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCaptureScreenShot_ItemClick);
-            // 
-            // buttonCaptureText
-            // 
-            this.buttonCaptureText.Caption = "Screenshot and Text";
-            this.buttonCaptureText.Id = 0;
-            this.buttonCaptureText.Name = "buttonCaptureText";
-            this.buttonCaptureText.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCaptureText_ItemClick);
+            this.fluentDesignFormContainer1.Controls.Add(this.richEditControl1);
+            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 192);
+            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1034, 467);
+            this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // richEditControl1
             // 
             this.richEditControl1.ActiveViewType = DevExpress.XtraRichEdit.RichEditViewType.Simple;
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
-            this.richEditControl1.Location = new System.Drawing.Point(322, 120);
+            this.richEditControl1.Location = new System.Drawing.Point(0, 0);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(575, 397);
-            this.richEditControl1.TabIndex = 3;
+            this.richEditControl1.Size = new System.Drawing.Size(1034, 467);
+            this.richEditControl1.TabIndex = 4;
             // 
             // ribbonControl1
             // 
@@ -421,7 +390,9 @@ namespace StuNote.Student
             this.undoItem1,
             this.redoItem1,
             this.fileNewItem1,
+            this.fileOpenItem1,
             this.fileSaveItem1,
+            this.fileSaveAsItem1,
             this.quickPrintItem1,
             this.printItem1,
             this.printPreviewItem1,
@@ -561,6 +532,8 @@ namespace StuNote.Student
             this.deleteAllCommentsItem1,
             this.previousCommentItem1,
             this.nextCommentItem1,
+            this.changeCommentItem1,
+            this.reviewersItem1,
             this.reviewingPaneItem1,
             this.switchToSimpleViewItem1,
             this.switchToDraftViewItem1,
@@ -661,8 +634,8 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
             this.floatingObjectSendBehindTextItem1});
-            this.ribbonControl1.Location = new System.Drawing.Point(322, 0);
-            this.ribbonControl1.MaxItemId = 277;
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 40);
+            this.ribbonControl1.MaxItemId = 248;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.headerFooterToolsRibbonPageCategory1,
@@ -676,16 +649,14 @@ namespace StuNote.Student
             this.referencesRibbonPage1,
             this.mailingsRibbonPage1,
             this.reviewRibbonPage1,
-            this.viewRibbonPage1,
-            this.ribbonPage1});
+            this.viewRibbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1,
             this.repositoryItemBorderLineStyle1,
             this.repositoryItemBorderLineWeight1,
             this.repositoryItemFloatingObjectOutlineWeight1});
-            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.MacOffice;
-            this.ribbonControl1.Size = new System.Drawing.Size(575, 120);
+            this.ribbonControl1.Size = new System.Drawing.Size(1294, 152);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // undoItem1
@@ -703,11 +674,20 @@ namespace StuNote.Student
             this.fileNewItem1.Id = 3;
             this.fileNewItem1.Name = "fileNewItem1";
             // 
+            // fileOpenItem1
+            // 
+            this.fileOpenItem1.Id = 4;
+            this.fileOpenItem1.Name = "fileOpenItem1";
+            // 
             // fileSaveItem1
             // 
-            this.fileSaveItem1.Caption = "Save-ToRemove";
             this.fileSaveItem1.Id = 5;
             this.fileSaveItem1.Name = "fileSaveItem1";
+            // 
+            // fileSaveAsItem1
+            // 
+            this.fileSaveAsItem1.Id = 6;
+            this.fileSaveAsItem1.Name = "fileSaveAsItem1";
             // 
             // quickPrintItem1
             // 
@@ -726,32 +706,32 @@ namespace StuNote.Student
             // 
             // showDocumentPropertiesFormItem1
             // 
-            this.showDocumentPropertiesFormItem1.Id = 11;
+            this.showDocumentPropertiesFormItem1.Id = 10;
             this.showDocumentPropertiesFormItem1.Name = "showDocumentPropertiesFormItem1";
             // 
             // pasteItem1
             // 
-            this.pasteItem1.Id = 19;
+            this.pasteItem1.Id = 18;
             this.pasteItem1.Name = "pasteItem1";
             // 
             // cutItem1
             // 
-            this.cutItem1.Id = 20;
+            this.cutItem1.Id = 19;
             this.cutItem1.Name = "cutItem1";
             // 
             // copyItem1
             // 
-            this.copyItem1.Id = 21;
+            this.copyItem1.Id = 20;
             this.copyItem1.Name = "copyItem1";
             // 
             // pasteSpecialItem1
             // 
-            this.pasteSpecialItem1.Id = 22;
+            this.pasteSpecialItem1.Id = 21;
             this.pasteSpecialItem1.Name = "pasteSpecialItem1";
             // 
             // barButtonGroup1
             // 
-            this.barButtonGroup1.Id = 12;
+            this.barButtonGroup1.Id = 11;
             this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1, "FF");
             this.barButtonGroup1.ItemLinks.Add(this.changeFontSizeItem1);
             this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1, "FG");
@@ -762,7 +742,7 @@ namespace StuNote.Student
             // changeFontNameItem1
             // 
             this.changeFontNameItem1.Edit = this.repositoryItemFontEdit1;
-            this.changeFontNameItem1.Id = 23;
+            this.changeFontNameItem1.Id = 22;
             this.changeFontNameItem1.Name = "changeFontNameItem1";
             // 
             // repositoryItemFontEdit1
@@ -775,7 +755,7 @@ namespace StuNote.Student
             // changeFontSizeItem1
             // 
             this.changeFontSizeItem1.Edit = this.repositoryItemRichEditFontSizeEdit1;
-            this.changeFontSizeItem1.Id = 24;
+            this.changeFontSizeItem1.Id = 23;
             this.changeFontSizeItem1.Name = "changeFontSizeItem1";
             // 
             // repositoryItemRichEditFontSizeEdit1
@@ -788,17 +768,17 @@ namespace StuNote.Student
             // 
             // fontSizeIncreaseItem1
             // 
-            this.fontSizeIncreaseItem1.Id = 25;
+            this.fontSizeIncreaseItem1.Id = 24;
             this.fontSizeIncreaseItem1.Name = "fontSizeIncreaseItem1";
             // 
             // fontSizeDecreaseItem1
             // 
-            this.fontSizeDecreaseItem1.Id = 26;
+            this.fontSizeDecreaseItem1.Id = 25;
             this.fontSizeDecreaseItem1.Name = "fontSizeDecreaseItem1";
             // 
             // barButtonGroup2
             // 
-            this.barButtonGroup2.Id = 13;
+            this.barButtonGroup2.Id = 12;
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontBoldItem1);
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontItalicItem1);
             this.barButtonGroup2.ItemLinks.Add(this.toggleFontUnderlineItem1);
@@ -812,47 +792,47 @@ namespace StuNote.Student
             // 
             // toggleFontBoldItem1
             // 
-            this.toggleFontBoldItem1.Id = 27;
+            this.toggleFontBoldItem1.Id = 26;
             this.toggleFontBoldItem1.Name = "toggleFontBoldItem1";
             // 
             // toggleFontItalicItem1
             // 
-            this.toggleFontItalicItem1.Id = 28;
+            this.toggleFontItalicItem1.Id = 27;
             this.toggleFontItalicItem1.Name = "toggleFontItalicItem1";
             // 
             // toggleFontUnderlineItem1
             // 
-            this.toggleFontUnderlineItem1.Id = 29;
+            this.toggleFontUnderlineItem1.Id = 28;
             this.toggleFontUnderlineItem1.Name = "toggleFontUnderlineItem1";
             // 
             // toggleFontDoubleUnderlineItem1
             // 
-            this.toggleFontDoubleUnderlineItem1.Id = 30;
+            this.toggleFontDoubleUnderlineItem1.Id = 29;
             this.toggleFontDoubleUnderlineItem1.Name = "toggleFontDoubleUnderlineItem1";
             // 
             // toggleFontStrikeoutItem1
             // 
-            this.toggleFontStrikeoutItem1.Id = 31;
+            this.toggleFontStrikeoutItem1.Id = 30;
             this.toggleFontStrikeoutItem1.Name = "toggleFontStrikeoutItem1";
             // 
             // toggleFontDoubleStrikeoutItem1
             // 
-            this.toggleFontDoubleStrikeoutItem1.Id = 32;
+            this.toggleFontDoubleStrikeoutItem1.Id = 31;
             this.toggleFontDoubleStrikeoutItem1.Name = "toggleFontDoubleStrikeoutItem1";
             // 
             // toggleFontSuperscriptItem1
             // 
-            this.toggleFontSuperscriptItem1.Id = 33;
+            this.toggleFontSuperscriptItem1.Id = 32;
             this.toggleFontSuperscriptItem1.Name = "toggleFontSuperscriptItem1";
             // 
             // toggleFontSubscriptItem1
             // 
-            this.toggleFontSubscriptItem1.Id = 34;
+            this.toggleFontSubscriptItem1.Id = 33;
             this.toggleFontSubscriptItem1.Name = "toggleFontSubscriptItem1";
             // 
             // barButtonGroup3
             // 
-            this.barButtonGroup3.Id = 14;
+            this.barButtonGroup3.Id = 13;
             this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1, "FC");
             this.barButtonGroup3.ItemLinks.Add(this.changeFontHighlightColorItem1, "I");
             this.barButtonGroup3.Name = "barButtonGroup3";
@@ -860,17 +840,17 @@ namespace StuNote.Student
             // 
             // changeFontColorItem1
             // 
-            this.changeFontColorItem1.Id = 35;
+            this.changeFontColorItem1.Id = 34;
             this.changeFontColorItem1.Name = "changeFontColorItem1";
             // 
             // changeFontHighlightColorItem1
             // 
-            this.changeFontHighlightColorItem1.Id = 36;
+            this.changeFontHighlightColorItem1.Id = 35;
             this.changeFontHighlightColorItem1.Name = "changeFontHighlightColorItem1";
             // 
             // changeTextCaseItem1
             // 
-            this.changeTextCaseItem1.Id = 37;
+            this.changeTextCaseItem1.Id = 36;
             this.changeTextCaseItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.makeTextUpperCaseItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.makeTextLowerCaseItem1),
@@ -880,32 +860,32 @@ namespace StuNote.Student
             // 
             // makeTextUpperCaseItem1
             // 
-            this.makeTextUpperCaseItem1.Id = 38;
+            this.makeTextUpperCaseItem1.Id = 37;
             this.makeTextUpperCaseItem1.Name = "makeTextUpperCaseItem1";
             // 
             // makeTextLowerCaseItem1
             // 
-            this.makeTextLowerCaseItem1.Id = 39;
+            this.makeTextLowerCaseItem1.Id = 38;
             this.makeTextLowerCaseItem1.Name = "makeTextLowerCaseItem1";
             // 
             // capitalizeEachWordCaseItem1
             // 
-            this.capitalizeEachWordCaseItem1.Id = 40;
+            this.capitalizeEachWordCaseItem1.Id = 39;
             this.capitalizeEachWordCaseItem1.Name = "capitalizeEachWordCaseItem1";
             // 
             // toggleTextCaseItem1
             // 
-            this.toggleTextCaseItem1.Id = 41;
+            this.toggleTextCaseItem1.Id = 40;
             this.toggleTextCaseItem1.Name = "toggleTextCaseItem1";
             // 
             // clearFormattingItem1
             // 
-            this.clearFormattingItem1.Id = 42;
+            this.clearFormattingItem1.Id = 41;
             this.clearFormattingItem1.Name = "clearFormattingItem1";
             // 
             // barButtonGroup4
             // 
-            this.barButtonGroup4.Id = 15;
+            this.barButtonGroup4.Id = 14;
             this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1, "U");
             this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1, "N");
             this.barButtonGroup4.ItemLinks.Add(this.toggleMultiLevelListItem1, "M");
@@ -914,22 +894,22 @@ namespace StuNote.Student
             // 
             // toggleBulletedListItem1
             // 
-            this.toggleBulletedListItem1.Id = 43;
+            this.toggleBulletedListItem1.Id = 42;
             this.toggleBulletedListItem1.Name = "toggleBulletedListItem1";
             // 
             // toggleNumberingListItem1
             // 
-            this.toggleNumberingListItem1.Id = 44;
+            this.toggleNumberingListItem1.Id = 43;
             this.toggleNumberingListItem1.Name = "toggleNumberingListItem1";
             // 
             // toggleMultiLevelListItem1
             // 
-            this.toggleMultiLevelListItem1.Id = 45;
+            this.toggleMultiLevelListItem1.Id = 44;
             this.toggleMultiLevelListItem1.Name = "toggleMultiLevelListItem1";
             // 
             // barButtonGroup5
             // 
-            this.barButtonGroup5.Id = 16;
+            this.barButtonGroup5.Id = 15;
             this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1, "AO");
             this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1, "AI");
             this.barButtonGroup5.ItemLinks.Add(this.toggleParagraphLeftToRightItem1);
@@ -940,32 +920,32 @@ namespace StuNote.Student
             // 
             // decreaseIndentItem1
             // 
-            this.decreaseIndentItem1.Id = 46;
+            this.decreaseIndentItem1.Id = 45;
             this.decreaseIndentItem1.Name = "decreaseIndentItem1";
             // 
             // increaseIndentItem1
             // 
-            this.increaseIndentItem1.Id = 47;
+            this.increaseIndentItem1.Id = 46;
             this.increaseIndentItem1.Name = "increaseIndentItem1";
             // 
             // toggleParagraphLeftToRightItem1
             // 
-            this.toggleParagraphLeftToRightItem1.Id = 53;
+            this.toggleParagraphLeftToRightItem1.Id = 47;
             this.toggleParagraphLeftToRightItem1.Name = "toggleParagraphLeftToRightItem1";
             // 
             // toggleParagraphRightToLeftItem1
             // 
-            this.toggleParagraphRightToLeftItem1.Id = 54;
+            this.toggleParagraphRightToLeftItem1.Id = 48;
             this.toggleParagraphRightToLeftItem1.Name = "toggleParagraphRightToLeftItem1";
             // 
             // toggleShowWhitespaceItem1
             // 
-            this.toggleShowWhitespaceItem1.Id = 66;
+            this.toggleShowWhitespaceItem1.Id = 53;
             this.toggleShowWhitespaceItem1.Name = "toggleShowWhitespaceItem1";
             // 
             // barButtonGroup6
             // 
-            this.barButtonGroup6.Id = 17;
+            this.barButtonGroup6.Id = 16;
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1, "AL");
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1, "AC");
             this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1, "AR");
@@ -975,27 +955,27 @@ namespace StuNote.Student
             // 
             // toggleParagraphAlignmentLeftItem1
             // 
-            this.toggleParagraphAlignmentLeftItem1.Id = 55;
+            this.toggleParagraphAlignmentLeftItem1.Id = 49;
             this.toggleParagraphAlignmentLeftItem1.Name = "toggleParagraphAlignmentLeftItem1";
             // 
             // toggleParagraphAlignmentCenterItem1
             // 
-            this.toggleParagraphAlignmentCenterItem1.Id = 56;
+            this.toggleParagraphAlignmentCenterItem1.Id = 50;
             this.toggleParagraphAlignmentCenterItem1.Name = "toggleParagraphAlignmentCenterItem1";
             // 
             // toggleParagraphAlignmentRightItem1
             // 
-            this.toggleParagraphAlignmentRightItem1.Id = 57;
+            this.toggleParagraphAlignmentRightItem1.Id = 51;
             this.toggleParagraphAlignmentRightItem1.Name = "toggleParagraphAlignmentRightItem1";
             // 
             // toggleParagraphAlignmentJustifyItem1
             // 
-            this.toggleParagraphAlignmentJustifyItem1.Id = 58;
+            this.toggleParagraphAlignmentJustifyItem1.Id = 52;
             this.toggleParagraphAlignmentJustifyItem1.Name = "toggleParagraphAlignmentJustifyItem1";
             // 
             // barButtonGroup7
             // 
-            this.barButtonGroup7.Id = 18;
+            this.barButtonGroup7.Id = 17;
             this.barButtonGroup7.ItemLinks.Add(this.changeParagraphLineSpacingItem1, "K");
             this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1, "H");
             this.barButtonGroup7.Name = "barButtonGroup7";
@@ -1003,7 +983,7 @@ namespace StuNote.Student
             // 
             // changeParagraphLineSpacingItem1
             // 
-            this.changeParagraphLineSpacingItem1.Id = 67;
+            this.changeParagraphLineSpacingItem1.Id = 54;
             this.changeParagraphLineSpacingItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setSingleParagraphSpacingItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setSesquialteralParagraphSpacingItem1),
@@ -1017,47 +997,47 @@ namespace StuNote.Student
             // 
             // setSingleParagraphSpacingItem1
             // 
-            this.setSingleParagraphSpacingItem1.Id = 68;
+            this.setSingleParagraphSpacingItem1.Id = 55;
             this.setSingleParagraphSpacingItem1.Name = "setSingleParagraphSpacingItem1";
             // 
             // setSesquialteralParagraphSpacingItem1
             // 
-            this.setSesquialteralParagraphSpacingItem1.Id = 69;
+            this.setSesquialteralParagraphSpacingItem1.Id = 56;
             this.setSesquialteralParagraphSpacingItem1.Name = "setSesquialteralParagraphSpacingItem1";
             // 
             // setDoubleParagraphSpacingItem1
             // 
-            this.setDoubleParagraphSpacingItem1.Id = 70;
+            this.setDoubleParagraphSpacingItem1.Id = 57;
             this.setDoubleParagraphSpacingItem1.Name = "setDoubleParagraphSpacingItem1";
             // 
             // showLineSpacingFormItem1
             // 
-            this.showLineSpacingFormItem1.Id = 71;
+            this.showLineSpacingFormItem1.Id = 58;
             this.showLineSpacingFormItem1.Name = "showLineSpacingFormItem1";
             // 
             // addSpacingBeforeParagraphItem1
             // 
-            this.addSpacingBeforeParagraphItem1.Id = 72;
+            this.addSpacingBeforeParagraphItem1.Id = 59;
             this.addSpacingBeforeParagraphItem1.Name = "addSpacingBeforeParagraphItem1";
             // 
             // removeSpacingBeforeParagraphItem1
             // 
-            this.removeSpacingBeforeParagraphItem1.Id = 73;
+            this.removeSpacingBeforeParagraphItem1.Id = 60;
             this.removeSpacingBeforeParagraphItem1.Name = "removeSpacingBeforeParagraphItem1";
             // 
             // addSpacingAfterParagraphItem1
             // 
-            this.addSpacingAfterParagraphItem1.Id = 74;
+            this.addSpacingAfterParagraphItem1.Id = 61;
             this.addSpacingAfterParagraphItem1.Name = "addSpacingAfterParagraphItem1";
             // 
             // removeSpacingAfterParagraphItem1
             // 
-            this.removeSpacingAfterParagraphItem1.Id = 75;
+            this.removeSpacingAfterParagraphItem1.Id = 62;
             this.removeSpacingAfterParagraphItem1.Name = "removeSpacingAfterParagraphItem1";
             // 
             // changeParagraphBackColorItem1
             // 
-            this.changeParagraphBackColorItem1.Id = 76;
+            this.changeParagraphBackColorItem1.Id = 63;
             this.changeParagraphBackColorItem1.Name = "changeParagraphBackColorItem1";
             // 
             // galleryChangeStyleItem1
@@ -1067,79 +1047,79 @@ namespace StuNote.Student
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup5});
+            galleryItemGroup1});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
-            this.galleryChangeStyleItem1.Id = 77;
+            this.galleryChangeStyleItem1.Id = 64;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
             // findItem1
             // 
-            this.findItem1.Id = 78;
+            this.findItem1.Id = 65;
             this.findItem1.Name = "findItem1";
             // 
             // replaceItem1
             // 
-            this.replaceItem1.Id = 79;
+            this.replaceItem1.Id = 66;
             this.replaceItem1.Name = "replaceItem1";
             // 
             // insertPageBreakItem21
             // 
-            this.insertPageBreakItem21.Id = 80;
+            this.insertPageBreakItem21.Id = 67;
             this.insertPageBreakItem21.Name = "insertPageBreakItem21";
             // 
             // insertTableItem1
             // 
-            this.insertTableItem1.Id = 81;
+            this.insertTableItem1.Id = 68;
             this.insertTableItem1.Name = "insertTableItem1";
             // 
             // insertFloatingPictureItem1
             // 
-            this.insertFloatingPictureItem1.Id = 82;
+            this.insertFloatingPictureItem1.Id = 69;
             this.insertFloatingPictureItem1.Name = "insertFloatingPictureItem1";
             // 
             // insertBookmarkItem1
             // 
-            this.insertBookmarkItem1.Id = 83;
+            this.insertBookmarkItem1.Id = 70;
             this.insertBookmarkItem1.Name = "insertBookmarkItem1";
             // 
             // insertHyperlinkItem1
             // 
-            this.insertHyperlinkItem1.Id = 84;
+            this.insertHyperlinkItem1.Id = 71;
             this.insertHyperlinkItem1.Name = "insertHyperlinkItem1";
             // 
             // editPageHeaderItem1
             // 
-            this.editPageHeaderItem1.Id = 85;
+            this.editPageHeaderItem1.Id = 72;
             this.editPageHeaderItem1.Name = "editPageHeaderItem1";
             // 
             // editPageFooterItem1
             // 
-            this.editPageFooterItem1.Id = 86;
+            this.editPageFooterItem1.Id = 73;
             this.editPageFooterItem1.Name = "editPageFooterItem1";
             // 
             // insertPageNumberItem1
             // 
-            this.insertPageNumberItem1.Id = 87;
+            this.insertPageNumberItem1.Id = 74;
             this.insertPageNumberItem1.Name = "insertPageNumberItem1";
             // 
             // insertPageCountItem1
             // 
-            this.insertPageCountItem1.Id = 88;
+            this.insertPageCountItem1.Id = 75;
             this.insertPageCountItem1.Name = "insertPageCountItem1";
             // 
             // insertTextBoxItem1
             // 
-            this.insertTextBoxItem1.Id = 89;
+            this.insertTextBoxItem1.Id = 76;
             this.insertTextBoxItem1.Name = "insertTextBoxItem1";
             // 
             // insertSymbolItem1
             // 
-            this.insertSymbolItem1.Id = 91;
+            this.insertSymbolItem1.Id = 77;
             this.insertSymbolItem1.Name = "insertSymbolItem1";
             // 
             // changeSectionPageMarginsItem1
             // 
-            this.changeSectionPageMarginsItem1.Id = 92;
+            this.changeSectionPageMarginsItem1.Id = 78;
             this.changeSectionPageMarginsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setNormalSectionPageMarginsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setNarrowSectionPageMarginsItem1),
@@ -1150,32 +1130,32 @@ namespace StuNote.Student
             // 
             // setNormalSectionPageMarginsItem1
             // 
-            this.setNormalSectionPageMarginsItem1.Id = 93;
+            this.setNormalSectionPageMarginsItem1.Id = 79;
             this.setNormalSectionPageMarginsItem1.Name = "setNormalSectionPageMarginsItem1";
             // 
             // setNarrowSectionPageMarginsItem1
             // 
-            this.setNarrowSectionPageMarginsItem1.Id = 94;
+            this.setNarrowSectionPageMarginsItem1.Id = 80;
             this.setNarrowSectionPageMarginsItem1.Name = "setNarrowSectionPageMarginsItem1";
             // 
             // setModerateSectionPageMarginsItem1
             // 
-            this.setModerateSectionPageMarginsItem1.Id = 95;
+            this.setModerateSectionPageMarginsItem1.Id = 81;
             this.setModerateSectionPageMarginsItem1.Name = "setModerateSectionPageMarginsItem1";
             // 
             // setWideSectionPageMarginsItem1
             // 
-            this.setWideSectionPageMarginsItem1.Id = 96;
+            this.setWideSectionPageMarginsItem1.Id = 82;
             this.setWideSectionPageMarginsItem1.Name = "setWideSectionPageMarginsItem1";
             // 
             // showPageMarginsSetupFormItem1
             // 
-            this.showPageMarginsSetupFormItem1.Id = 97;
+            this.showPageMarginsSetupFormItem1.Id = 83;
             this.showPageMarginsSetupFormItem1.Name = "showPageMarginsSetupFormItem1";
             // 
             // changeSectionPageOrientationItem1
             // 
-            this.changeSectionPageOrientationItem1.Id = 98;
+            this.changeSectionPageOrientationItem1.Id = 84;
             this.changeSectionPageOrientationItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setPortraitPageOrientationItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setLandscapePageOrientationItem1)});
@@ -1183,22 +1163,22 @@ namespace StuNote.Student
             // 
             // setPortraitPageOrientationItem1
             // 
-            this.setPortraitPageOrientationItem1.Id = 99;
+            this.setPortraitPageOrientationItem1.Id = 85;
             this.setPortraitPageOrientationItem1.Name = "setPortraitPageOrientationItem1";
             // 
             // setLandscapePageOrientationItem1
             // 
-            this.setLandscapePageOrientationItem1.Id = 100;
+            this.setLandscapePageOrientationItem1.Id = 86;
             this.setLandscapePageOrientationItem1.Name = "setLandscapePageOrientationItem1";
             // 
             // changeSectionPaperKindItem1
             // 
-            this.changeSectionPaperKindItem1.Id = 101;
+            this.changeSectionPaperKindItem1.Id = 87;
             this.changeSectionPaperKindItem1.Name = "changeSectionPaperKindItem1";
             // 
             // changeSectionColumnsItem1
             // 
-            this.changeSectionColumnsItem1.Id = 102;
+            this.changeSectionColumnsItem1.Id = 88;
             this.changeSectionColumnsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setSectionOneColumnItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setSectionTwoColumnsItem1),
@@ -1208,27 +1188,27 @@ namespace StuNote.Student
             // 
             // setSectionOneColumnItem1
             // 
-            this.setSectionOneColumnItem1.Id = 103;
+            this.setSectionOneColumnItem1.Id = 89;
             this.setSectionOneColumnItem1.Name = "setSectionOneColumnItem1";
             // 
             // setSectionTwoColumnsItem1
             // 
-            this.setSectionTwoColumnsItem1.Id = 104;
+            this.setSectionTwoColumnsItem1.Id = 90;
             this.setSectionTwoColumnsItem1.Name = "setSectionTwoColumnsItem1";
             // 
             // setSectionThreeColumnsItem1
             // 
-            this.setSectionThreeColumnsItem1.Id = 105;
+            this.setSectionThreeColumnsItem1.Id = 91;
             this.setSectionThreeColumnsItem1.Name = "setSectionThreeColumnsItem1";
             // 
             // showColumnsSetupFormItem1
             // 
-            this.showColumnsSetupFormItem1.Id = 106;
+            this.showColumnsSetupFormItem1.Id = 92;
             this.showColumnsSetupFormItem1.Name = "showColumnsSetupFormItem1";
             // 
             // insertBreakItem1
             // 
-            this.insertBreakItem1.Id = 107;
+            this.insertBreakItem1.Id = 93;
             this.insertBreakItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, this.insertPageBreakItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "B", ""),
             new DevExpress.XtraBars.LinkPersistInfo(this.insertColumnBreakItem1),
@@ -1240,37 +1220,37 @@ namespace StuNote.Student
             // 
             // insertPageBreakItem1
             // 
-            this.insertPageBreakItem1.Id = 108;
+            this.insertPageBreakItem1.Id = 94;
             this.insertPageBreakItem1.Name = "insertPageBreakItem1";
             // 
             // insertColumnBreakItem1
             // 
-            this.insertColumnBreakItem1.Id = 109;
+            this.insertColumnBreakItem1.Id = 95;
             this.insertColumnBreakItem1.Name = "insertColumnBreakItem1";
             // 
             // insertSectionBreakNextPageItem1
             // 
-            this.insertSectionBreakNextPageItem1.Id = 110;
+            this.insertSectionBreakNextPageItem1.Id = 96;
             this.insertSectionBreakNextPageItem1.Name = "insertSectionBreakNextPageItem1";
             // 
             // insertSectionBreakContinuousItem1
             // 
-            this.insertSectionBreakContinuousItem1.Id = 111;
+            this.insertSectionBreakContinuousItem1.Id = 97;
             this.insertSectionBreakContinuousItem1.Name = "insertSectionBreakContinuousItem1";
             // 
             // insertSectionBreakEvenPageItem1
             // 
-            this.insertSectionBreakEvenPageItem1.Id = 112;
+            this.insertSectionBreakEvenPageItem1.Id = 98;
             this.insertSectionBreakEvenPageItem1.Name = "insertSectionBreakEvenPageItem1";
             // 
             // insertSectionBreakOddPageItem1
             // 
-            this.insertSectionBreakOddPageItem1.Id = 113;
+            this.insertSectionBreakOddPageItem1.Id = 99;
             this.insertSectionBreakOddPageItem1.Name = "insertSectionBreakOddPageItem1";
             // 
             // changeSectionLineNumberingItem1
             // 
-            this.changeSectionLineNumberingItem1.Id = 114;
+            this.changeSectionLineNumberingItem1.Id = 100;
             this.changeSectionLineNumberingItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setSectionLineNumberingNoneItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setSectionLineNumberingContinuousItem1),
@@ -1282,52 +1262,52 @@ namespace StuNote.Student
             // 
             // setSectionLineNumberingNoneItem1
             // 
-            this.setSectionLineNumberingNoneItem1.Id = 115;
+            this.setSectionLineNumberingNoneItem1.Id = 101;
             this.setSectionLineNumberingNoneItem1.Name = "setSectionLineNumberingNoneItem1";
             // 
             // setSectionLineNumberingContinuousItem1
             // 
-            this.setSectionLineNumberingContinuousItem1.Id = 116;
+            this.setSectionLineNumberingContinuousItem1.Id = 102;
             this.setSectionLineNumberingContinuousItem1.Name = "setSectionLineNumberingContinuousItem1";
             // 
             // setSectionLineNumberingRestartNewPageItem1
             // 
-            this.setSectionLineNumberingRestartNewPageItem1.Id = 117;
+            this.setSectionLineNumberingRestartNewPageItem1.Id = 103;
             this.setSectionLineNumberingRestartNewPageItem1.Name = "setSectionLineNumberingRestartNewPageItem1";
             // 
             // setSectionLineNumberingRestartNewSectionItem1
             // 
-            this.setSectionLineNumberingRestartNewSectionItem1.Id = 118;
+            this.setSectionLineNumberingRestartNewSectionItem1.Id = 104;
             this.setSectionLineNumberingRestartNewSectionItem1.Name = "setSectionLineNumberingRestartNewSectionItem1";
             // 
             // toggleParagraphSuppressLineNumbersItem1
             // 
-            this.toggleParagraphSuppressLineNumbersItem1.Id = 119;
+            this.toggleParagraphSuppressLineNumbersItem1.Id = 105;
             this.toggleParagraphSuppressLineNumbersItem1.Name = "toggleParagraphSuppressLineNumbersItem1";
             // 
             // showLineNumberingFormItem1
             // 
-            this.showLineNumberingFormItem1.Id = 120;
+            this.showLineNumberingFormItem1.Id = 106;
             this.showLineNumberingFormItem1.Name = "showLineNumberingFormItem1";
             // 
             // changePageColorItem1
             // 
-            this.changePageColorItem1.Id = 125;
+            this.changePageColorItem1.Id = 107;
             this.changePageColorItem1.Name = "changePageColorItem1";
             // 
             // insertTableOfContentsItem1
             // 
-            this.insertTableOfContentsItem1.Id = 126;
+            this.insertTableOfContentsItem1.Id = 108;
             this.insertTableOfContentsItem1.Name = "insertTableOfContentsItem1";
             // 
             // updateTableOfContentsItem1
             // 
-            this.updateTableOfContentsItem1.Id = 127;
+            this.updateTableOfContentsItem1.Id = 109;
             this.updateTableOfContentsItem1.Name = "updateTableOfContentsItem1";
             // 
             // addParagraphsToTableOfContentItem1
             // 
-            this.addParagraphsToTableOfContentItem1.Id = 128;
+            this.addParagraphsToTableOfContentItem1.Id = 110;
             this.addParagraphsToTableOfContentItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setParagraphHeadingLevelItem2),
@@ -1343,67 +1323,67 @@ namespace StuNote.Student
             // 
             // setParagraphHeadingLevelItem1
             // 
-            this.setParagraphHeadingLevelItem1.Id = 129;
+            this.setParagraphHeadingLevelItem1.Id = 111;
             this.setParagraphHeadingLevelItem1.Name = "setParagraphHeadingLevelItem1";
             this.setParagraphHeadingLevelItem1.OutlineLevel = 0;
             // 
             // setParagraphHeadingLevelItem2
             // 
-            this.setParagraphHeadingLevelItem2.Id = 130;
+            this.setParagraphHeadingLevelItem2.Id = 112;
             this.setParagraphHeadingLevelItem2.Name = "setParagraphHeadingLevelItem2";
             this.setParagraphHeadingLevelItem2.OutlineLevel = 1;
             // 
             // setParagraphHeadingLevelItem3
             // 
-            this.setParagraphHeadingLevelItem3.Id = 131;
+            this.setParagraphHeadingLevelItem3.Id = 113;
             this.setParagraphHeadingLevelItem3.Name = "setParagraphHeadingLevelItem3";
             this.setParagraphHeadingLevelItem3.OutlineLevel = 2;
             // 
             // setParagraphHeadingLevelItem4
             // 
-            this.setParagraphHeadingLevelItem4.Id = 132;
+            this.setParagraphHeadingLevelItem4.Id = 114;
             this.setParagraphHeadingLevelItem4.Name = "setParagraphHeadingLevelItem4";
             this.setParagraphHeadingLevelItem4.OutlineLevel = 3;
             // 
             // setParagraphHeadingLevelItem5
             // 
-            this.setParagraphHeadingLevelItem5.Id = 133;
+            this.setParagraphHeadingLevelItem5.Id = 115;
             this.setParagraphHeadingLevelItem5.Name = "setParagraphHeadingLevelItem5";
             this.setParagraphHeadingLevelItem5.OutlineLevel = 4;
             // 
             // setParagraphHeadingLevelItem6
             // 
-            this.setParagraphHeadingLevelItem6.Id = 134;
+            this.setParagraphHeadingLevelItem6.Id = 116;
             this.setParagraphHeadingLevelItem6.Name = "setParagraphHeadingLevelItem6";
             this.setParagraphHeadingLevelItem6.OutlineLevel = 5;
             // 
             // setParagraphHeadingLevelItem7
             // 
-            this.setParagraphHeadingLevelItem7.Id = 135;
+            this.setParagraphHeadingLevelItem7.Id = 117;
             this.setParagraphHeadingLevelItem7.Name = "setParagraphHeadingLevelItem7";
             this.setParagraphHeadingLevelItem7.OutlineLevel = 6;
             // 
             // setParagraphHeadingLevelItem8
             // 
-            this.setParagraphHeadingLevelItem8.Id = 136;
+            this.setParagraphHeadingLevelItem8.Id = 118;
             this.setParagraphHeadingLevelItem8.Name = "setParagraphHeadingLevelItem8";
             this.setParagraphHeadingLevelItem8.OutlineLevel = 7;
             // 
             // setParagraphHeadingLevelItem9
             // 
-            this.setParagraphHeadingLevelItem9.Id = 137;
+            this.setParagraphHeadingLevelItem9.Id = 119;
             this.setParagraphHeadingLevelItem9.Name = "setParagraphHeadingLevelItem9";
             this.setParagraphHeadingLevelItem9.OutlineLevel = 8;
             // 
             // setParagraphHeadingLevelItem10
             // 
-            this.setParagraphHeadingLevelItem10.Id = 138;
+            this.setParagraphHeadingLevelItem10.Id = 120;
             this.setParagraphHeadingLevelItem10.Name = "setParagraphHeadingLevelItem10";
             this.setParagraphHeadingLevelItem10.OutlineLevel = 9;
             // 
             // insertCaptionPlaceholderItem1
             // 
-            this.insertCaptionPlaceholderItem1.Id = 139;
+            this.insertCaptionPlaceholderItem1.Id = 121;
             this.insertCaptionPlaceholderItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.insertFiguresCaptionItems1),
             new DevExpress.XtraBars.LinkPersistInfo(this.insertTablesCaptionItems1),
@@ -1412,22 +1392,22 @@ namespace StuNote.Student
             // 
             // insertFiguresCaptionItems1
             // 
-            this.insertFiguresCaptionItems1.Id = 140;
+            this.insertFiguresCaptionItems1.Id = 122;
             this.insertFiguresCaptionItems1.Name = "insertFiguresCaptionItems1";
             // 
             // insertTablesCaptionItems1
             // 
-            this.insertTablesCaptionItems1.Id = 141;
+            this.insertTablesCaptionItems1.Id = 123;
             this.insertTablesCaptionItems1.Name = "insertTablesCaptionItems1";
             // 
             // insertEquationsCaptionItems1
             // 
-            this.insertEquationsCaptionItems1.Id = 142;
+            this.insertEquationsCaptionItems1.Id = 124;
             this.insertEquationsCaptionItems1.Name = "insertEquationsCaptionItems1";
             // 
             // insertTableOfFiguresPlaceholderItem1
             // 
-            this.insertTableOfFiguresPlaceholderItem1.Id = 143;
+            this.insertTableOfFiguresPlaceholderItem1.Id = 125;
             this.insertTableOfFiguresPlaceholderItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.insertTableOfFiguresItems1),
             new DevExpress.XtraBars.LinkPersistInfo(this.insertTableOfTablesItems1),
@@ -1436,77 +1416,77 @@ namespace StuNote.Student
             // 
             // insertTableOfFiguresItems1
             // 
-            this.insertTableOfFiguresItems1.Id = 144;
+            this.insertTableOfFiguresItems1.Id = 126;
             this.insertTableOfFiguresItems1.Name = "insertTableOfFiguresItems1";
             // 
             // insertTableOfTablesItems1
             // 
-            this.insertTableOfTablesItems1.Id = 145;
+            this.insertTableOfTablesItems1.Id = 127;
             this.insertTableOfTablesItems1.Name = "insertTableOfTablesItems1";
             // 
             // insertTableOfEquationsItems1
             // 
-            this.insertTableOfEquationsItems1.Id = 146;
+            this.insertTableOfEquationsItems1.Id = 128;
             this.insertTableOfEquationsItems1.Name = "insertTableOfEquationsItems1";
             // 
             // updateTableOfFiguresItem1
             // 
-            this.updateTableOfFiguresItem1.Id = 147;
+            this.updateTableOfFiguresItem1.Id = 129;
             this.updateTableOfFiguresItem1.Name = "updateTableOfFiguresItem1";
             // 
             // insertMergeFieldItem1
             // 
-            this.insertMergeFieldItem1.Id = 152;
+            this.insertMergeFieldItem1.Id = 130;
             this.insertMergeFieldItem1.Name = "insertMergeFieldItem1";
             // 
             // showAllFieldCodesItem1
             // 
-            this.showAllFieldCodesItem1.Id = 153;
+            this.showAllFieldCodesItem1.Id = 131;
             this.showAllFieldCodesItem1.Name = "showAllFieldCodesItem1";
             // 
             // showAllFieldResultsItem1
             // 
-            this.showAllFieldResultsItem1.Id = 154;
+            this.showAllFieldResultsItem1.Id = 132;
             this.showAllFieldResultsItem1.Name = "showAllFieldResultsItem1";
             // 
             // toggleViewMergedDataItem1
             // 
-            this.toggleViewMergedDataItem1.Id = 155;
+            this.toggleViewMergedDataItem1.Id = 133;
             this.toggleViewMergedDataItem1.Name = "toggleViewMergedDataItem1";
             // 
             // checkSpellingItem1
             // 
-            this.checkSpellingItem1.Id = 156;
+            this.checkSpellingItem1.Id = 134;
             this.checkSpellingItem1.Name = "checkSpellingItem1";
             // 
             // changeLanguageItem1
             // 
-            this.changeLanguageItem1.Id = 157;
+            this.changeLanguageItem1.Id = 135;
             this.changeLanguageItem1.Name = "changeLanguageItem1";
             // 
             // protectDocumentItem1
             // 
-            this.protectDocumentItem1.Id = 158;
+            this.protectDocumentItem1.Id = 136;
             this.protectDocumentItem1.Name = "protectDocumentItem1";
             // 
             // changeRangeEditingPermissionsItem1
             // 
-            this.changeRangeEditingPermissionsItem1.Id = 159;
+            this.changeRangeEditingPermissionsItem1.Id = 137;
             this.changeRangeEditingPermissionsItem1.Name = "changeRangeEditingPermissionsItem1";
             // 
             // unprotectDocumentItem1
             // 
-            this.unprotectDocumentItem1.Id = 160;
+            this.unprotectDocumentItem1.Id = 138;
             this.unprotectDocumentItem1.Name = "unprotectDocumentItem1";
             // 
             // newCommentItem1
             // 
-            this.newCommentItem1.Id = 161;
+            this.newCommentItem1.Id = 139;
             this.newCommentItem1.Name = "newCommentItem1";
             // 
             // deleteCommentsItem1
             // 
-            this.deleteCommentsItem1.Id = 162;
+            this.deleteCommentsItem1.Id = 140;
             this.deleteCommentsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteOneCommentItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteAllCommentsShownItem1),
@@ -1515,143 +1495,153 @@ namespace StuNote.Student
             // 
             // deleteOneCommentItem1
             // 
-            this.deleteOneCommentItem1.Id = 163;
+            this.deleteOneCommentItem1.Id = 141;
             this.deleteOneCommentItem1.Name = "deleteOneCommentItem1";
             // 
             // deleteAllCommentsShownItem1
             // 
-            this.deleteAllCommentsShownItem1.Id = 164;
+            this.deleteAllCommentsShownItem1.Id = 142;
             this.deleteAllCommentsShownItem1.Name = "deleteAllCommentsShownItem1";
             // 
             // deleteAllCommentsItem1
             // 
-            this.deleteAllCommentsItem1.Id = 165;
+            this.deleteAllCommentsItem1.Id = 143;
             this.deleteAllCommentsItem1.Name = "deleteAllCommentsItem1";
             // 
             // previousCommentItem1
             // 
-            this.previousCommentItem1.Id = 166;
+            this.previousCommentItem1.Id = 144;
             this.previousCommentItem1.Name = "previousCommentItem1";
             // 
             // nextCommentItem1
             // 
-            this.nextCommentItem1.Id = 167;
+            this.nextCommentItem1.Id = 145;
             this.nextCommentItem1.Name = "nextCommentItem1";
+            // 
+            // changeCommentItem1
+            // 
+            this.changeCommentItem1.Id = 146;
+            this.changeCommentItem1.Name = "changeCommentItem1";
+            // 
+            // reviewersItem1
+            // 
+            this.reviewersItem1.Id = 147;
+            this.reviewersItem1.Name = "reviewersItem1";
             // 
             // reviewingPaneItem1
             // 
-            this.reviewingPaneItem1.Id = 171;
+            this.reviewingPaneItem1.Id = 148;
             this.reviewingPaneItem1.Name = "reviewingPaneItem1";
             // 
             // switchToSimpleViewItem1
             // 
-            this.switchToSimpleViewItem1.Id = 176;
+            this.switchToSimpleViewItem1.Id = 149;
             this.switchToSimpleViewItem1.Name = "switchToSimpleViewItem1";
             // 
             // switchToDraftViewItem1
             // 
-            this.switchToDraftViewItem1.Id = 177;
+            this.switchToDraftViewItem1.Id = 150;
             this.switchToDraftViewItem1.Name = "switchToDraftViewItem1";
             // 
             // switchToPrintLayoutViewItem1
             // 
-            this.switchToPrintLayoutViewItem1.Id = 178;
+            this.switchToPrintLayoutViewItem1.Id = 151;
             this.switchToPrintLayoutViewItem1.Name = "switchToPrintLayoutViewItem1";
             // 
             // toggleShowHorizontalRulerItem1
             // 
-            this.toggleShowHorizontalRulerItem1.Id = 179;
+            this.toggleShowHorizontalRulerItem1.Id = 152;
             this.toggleShowHorizontalRulerItem1.Name = "toggleShowHorizontalRulerItem1";
             // 
             // toggleShowVerticalRulerItem1
             // 
-            this.toggleShowVerticalRulerItem1.Id = 180;
+            this.toggleShowVerticalRulerItem1.Id = 153;
             this.toggleShowVerticalRulerItem1.Name = "toggleShowVerticalRulerItem1";
             // 
             // zoomOutItem1
             // 
-            this.zoomOutItem1.Id = 181;
+            this.zoomOutItem1.Id = 154;
             this.zoomOutItem1.Name = "zoomOutItem1";
             // 
             // zoomInItem1
             // 
-            this.zoomInItem1.Id = 182;
+            this.zoomInItem1.Id = 155;
             this.zoomInItem1.Name = "zoomInItem1";
             // 
             // goToPageHeaderItem1
             // 
-            this.goToPageHeaderItem1.Id = 183;
+            this.goToPageHeaderItem1.Id = 156;
             this.goToPageHeaderItem1.Name = "goToPageHeaderItem1";
             // 
             // goToPageFooterItem1
             // 
-            this.goToPageFooterItem1.Id = 184;
+            this.goToPageFooterItem1.Id = 157;
             this.goToPageFooterItem1.Name = "goToPageFooterItem1";
             // 
             // goToNextHeaderFooterItem1
             // 
-            this.goToNextHeaderFooterItem1.Id = 185;
+            this.goToNextHeaderFooterItem1.Id = 158;
             this.goToNextHeaderFooterItem1.Name = "goToNextHeaderFooterItem1";
             // 
             // goToPreviousHeaderFooterItem1
             // 
-            this.goToPreviousHeaderFooterItem1.Id = 186;
+            this.goToPreviousHeaderFooterItem1.Id = 159;
             this.goToPreviousHeaderFooterItem1.Name = "goToPreviousHeaderFooterItem1";
             // 
             // toggleLinkToPreviousItem1
             // 
-            this.toggleLinkToPreviousItem1.Id = 187;
+            this.toggleLinkToPreviousItem1.Id = 160;
             this.toggleLinkToPreviousItem1.Name = "toggleLinkToPreviousItem1";
             // 
             // toggleDifferentFirstPageItem1
             // 
-            this.toggleDifferentFirstPageItem1.Id = 188;
+            this.toggleDifferentFirstPageItem1.Id = 161;
             this.toggleDifferentFirstPageItem1.Name = "toggleDifferentFirstPageItem1";
             // 
             // toggleDifferentOddAndEvenPagesItem1
             // 
-            this.toggleDifferentOddAndEvenPagesItem1.Id = 189;
+            this.toggleDifferentOddAndEvenPagesItem1.Id = 162;
             this.toggleDifferentOddAndEvenPagesItem1.Name = "toggleDifferentOddAndEvenPagesItem1";
             // 
             // closePageHeaderFooterItem1
             // 
-            this.closePageHeaderFooterItem1.Id = 190;
+            this.closePageHeaderFooterItem1.Id = 163;
             this.closePageHeaderFooterItem1.Name = "closePageHeaderFooterItem1";
             // 
             // toggleFirstRowItem1
             // 
             this.toggleFirstRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleFirstRowItem1.Id = 191;
+            this.toggleFirstRowItem1.Id = 164;
             this.toggleFirstRowItem1.Name = "toggleFirstRowItem1";
             // 
             // toggleLastRowItem1
             // 
             this.toggleLastRowItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleLastRowItem1.Id = 192;
+            this.toggleLastRowItem1.Id = 165;
             this.toggleLastRowItem1.Name = "toggleLastRowItem1";
             // 
             // toggleBandedRowsItem1
             // 
             this.toggleBandedRowsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleBandedRowsItem1.Id = 193;
+            this.toggleBandedRowsItem1.Id = 166;
             this.toggleBandedRowsItem1.Name = "toggleBandedRowsItem1";
             // 
             // toggleFirstColumnItem1
             // 
             this.toggleFirstColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleFirstColumnItem1.Id = 194;
+            this.toggleFirstColumnItem1.Id = 167;
             this.toggleFirstColumnItem1.Name = "toggleFirstColumnItem1";
             // 
             // toggleLastColumnItem1
             // 
             this.toggleLastColumnItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleLastColumnItem1.Id = 195;
+            this.toggleLastColumnItem1.Id = 168;
             this.toggleLastColumnItem1.Name = "toggleLastColumnItem1";
             // 
             // toggleBandedColumnsItem1
             // 
             this.toggleBandedColumnsItem1.CheckBoxVisibility = DevExpress.XtraBars.CheckBoxVisibility.BeforeText;
-            this.toggleBandedColumnsItem1.Id = 196;
+            this.toggleBandedColumnsItem1.Id = 169;
             this.toggleBandedColumnsItem1.Name = "toggleBandedColumnsItem1";
             // 
             // galleryChangeTableStyleItem1
@@ -1663,9 +1653,9 @@ namespace StuNote.Student
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup6});
+            galleryItemGroup2});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
-            this.galleryChangeTableStyleItem1.Id = 197;
+            this.galleryChangeTableStyleItem1.Id = 170;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
             this.galleryChangeTableStyleItem1.Name = "galleryChangeTableStyleItem1";
             this.galleryChangeTableStyleItem1.NewItemLink = null;
@@ -1675,7 +1665,7 @@ namespace StuNote.Student
             // 
             this.changeTableBorderLineStyleItem1.Edit = this.repositoryItemBorderLineStyle1;
             this.changeTableBorderLineStyleItem1.EditWidth = 130;
-            this.changeTableBorderLineStyleItem1.Id = 198;
+            this.changeTableBorderLineStyleItem1.Id = 171;
             this.changeTableBorderLineStyleItem1.Name = "changeTableBorderLineStyleItem1";
             // 
             // repositoryItemBorderLineStyle1
@@ -1691,7 +1681,7 @@ namespace StuNote.Student
             this.changeTableBorderLineWeightItem1.Edit = this.repositoryItemBorderLineWeight1;
             this.changeTableBorderLineWeightItem1.EditValue = 20;
             this.changeTableBorderLineWeightItem1.EditWidth = 130;
-            this.changeTableBorderLineWeightItem1.Id = 199;
+            this.changeTableBorderLineWeightItem1.Id = 172;
             this.changeTableBorderLineWeightItem1.Name = "changeTableBorderLineWeightItem1";
             // 
             // repositoryItemBorderLineWeight1
@@ -1704,12 +1694,12 @@ namespace StuNote.Student
             // 
             // changeTableBorderColorItem1
             // 
-            this.changeTableBorderColorItem1.Id = 200;
+            this.changeTableBorderColorItem1.Id = 173;
             this.changeTableBorderColorItem1.Name = "changeTableBorderColorItem1";
             // 
             // changeTableBordersItem1
             // 
-            this.changeTableBordersItem1.Id = 201;
+            this.changeTableBordersItem1.Id = 174;
             this.changeTableBordersItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsBottomBorderItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableCellsTopBorderItem1),
@@ -1726,67 +1716,67 @@ namespace StuNote.Student
             // 
             // toggleTableCellsBottomBorderItem1
             // 
-            this.toggleTableCellsBottomBorderItem1.Id = 202;
+            this.toggleTableCellsBottomBorderItem1.Id = 175;
             this.toggleTableCellsBottomBorderItem1.Name = "toggleTableCellsBottomBorderItem1";
             // 
             // toggleTableCellsTopBorderItem1
             // 
-            this.toggleTableCellsTopBorderItem1.Id = 203;
+            this.toggleTableCellsTopBorderItem1.Id = 176;
             this.toggleTableCellsTopBorderItem1.Name = "toggleTableCellsTopBorderItem1";
             // 
             // toggleTableCellsLeftBorderItem1
             // 
-            this.toggleTableCellsLeftBorderItem1.Id = 204;
+            this.toggleTableCellsLeftBorderItem1.Id = 177;
             this.toggleTableCellsLeftBorderItem1.Name = "toggleTableCellsLeftBorderItem1";
             // 
             // toggleTableCellsRightBorderItem1
             // 
-            this.toggleTableCellsRightBorderItem1.Id = 205;
+            this.toggleTableCellsRightBorderItem1.Id = 178;
             this.toggleTableCellsRightBorderItem1.Name = "toggleTableCellsRightBorderItem1";
             // 
             // resetTableCellsAllBordersItem1
             // 
-            this.resetTableCellsAllBordersItem1.Id = 206;
+            this.resetTableCellsAllBordersItem1.Id = 179;
             this.resetTableCellsAllBordersItem1.Name = "resetTableCellsAllBordersItem1";
             // 
             // toggleTableCellsAllBordersItem1
             // 
-            this.toggleTableCellsAllBordersItem1.Id = 207;
+            this.toggleTableCellsAllBordersItem1.Id = 180;
             this.toggleTableCellsAllBordersItem1.Name = "toggleTableCellsAllBordersItem1";
             // 
             // toggleTableCellsOutsideBorderItem1
             // 
-            this.toggleTableCellsOutsideBorderItem1.Id = 208;
+            this.toggleTableCellsOutsideBorderItem1.Id = 181;
             this.toggleTableCellsOutsideBorderItem1.Name = "toggleTableCellsOutsideBorderItem1";
             // 
             // toggleTableCellsInsideBorderItem1
             // 
-            this.toggleTableCellsInsideBorderItem1.Id = 209;
+            this.toggleTableCellsInsideBorderItem1.Id = 182;
             this.toggleTableCellsInsideBorderItem1.Name = "toggleTableCellsInsideBorderItem1";
             // 
             // toggleTableCellsInsideHorizontalBorderItem1
             // 
-            this.toggleTableCellsInsideHorizontalBorderItem1.Id = 210;
+            this.toggleTableCellsInsideHorizontalBorderItem1.Id = 183;
             this.toggleTableCellsInsideHorizontalBorderItem1.Name = "toggleTableCellsInsideHorizontalBorderItem1";
             // 
             // toggleTableCellsInsideVerticalBorderItem1
             // 
-            this.toggleTableCellsInsideVerticalBorderItem1.Id = 211;
+            this.toggleTableCellsInsideVerticalBorderItem1.Id = 184;
             this.toggleTableCellsInsideVerticalBorderItem1.Name = "toggleTableCellsInsideVerticalBorderItem1";
             // 
             // toggleShowTableGridLinesItem1
             // 
-            this.toggleShowTableGridLinesItem1.Id = 212;
+            this.toggleShowTableGridLinesItem1.Id = 185;
             this.toggleShowTableGridLinesItem1.Name = "toggleShowTableGridLinesItem1";
             // 
             // changeTableCellsShadingItem1
             // 
-            this.changeTableCellsShadingItem1.Id = 213;
+            this.changeTableCellsShadingItem1.Id = 186;
             this.changeTableCellsShadingItem1.Name = "changeTableCellsShadingItem1";
             // 
             // selectTableElementsItem1
             // 
-            this.selectTableElementsItem1.Id = 214;
+            this.selectTableElementsItem1.Id = 187;
             this.selectTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableCellItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.selectTableColumnItem1),
@@ -1796,32 +1786,32 @@ namespace StuNote.Student
             // 
             // selectTableCellItem1
             // 
-            this.selectTableCellItem1.Id = 215;
+            this.selectTableCellItem1.Id = 188;
             this.selectTableCellItem1.Name = "selectTableCellItem1";
             // 
             // selectTableColumnItem1
             // 
-            this.selectTableColumnItem1.Id = 216;
+            this.selectTableColumnItem1.Id = 189;
             this.selectTableColumnItem1.Name = "selectTableColumnItem1";
             // 
             // selectTableRowItem1
             // 
-            this.selectTableRowItem1.Id = 217;
+            this.selectTableRowItem1.Id = 190;
             this.selectTableRowItem1.Name = "selectTableRowItem1";
             // 
             // selectTableItem1
             // 
-            this.selectTableItem1.Id = 218;
+            this.selectTableItem1.Id = 191;
             this.selectTableItem1.Name = "selectTableItem1";
             // 
             // showTablePropertiesFormItem1
             // 
-            this.showTablePropertiesFormItem1.Id = 219;
+            this.showTablePropertiesFormItem1.Id = 192;
             this.showTablePropertiesFormItem1.Name = "showTablePropertiesFormItem1";
             // 
             // deleteTableElementsItem1
             // 
-            this.deleteTableElementsItem1.Id = 220;
+            this.deleteTableElementsItem1.Id = 193;
             this.deleteTableElementsItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.showDeleteTableCellsFormItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.deleteTableColumnsItem1),
@@ -1831,62 +1821,62 @@ namespace StuNote.Student
             // 
             // showDeleteTableCellsFormItem1
             // 
-            this.showDeleteTableCellsFormItem1.Id = 221;
+            this.showDeleteTableCellsFormItem1.Id = 194;
             this.showDeleteTableCellsFormItem1.Name = "showDeleteTableCellsFormItem1";
             // 
             // deleteTableColumnsItem1
             // 
-            this.deleteTableColumnsItem1.Id = 222;
+            this.deleteTableColumnsItem1.Id = 195;
             this.deleteTableColumnsItem1.Name = "deleteTableColumnsItem1";
             // 
             // deleteTableRowsItem1
             // 
-            this.deleteTableRowsItem1.Id = 223;
+            this.deleteTableRowsItem1.Id = 196;
             this.deleteTableRowsItem1.Name = "deleteTableRowsItem1";
             // 
             // deleteTableItem1
             // 
-            this.deleteTableItem1.Id = 224;
+            this.deleteTableItem1.Id = 197;
             this.deleteTableItem1.Name = "deleteTableItem1";
             // 
             // insertTableRowAboveItem1
             // 
-            this.insertTableRowAboveItem1.Id = 225;
+            this.insertTableRowAboveItem1.Id = 198;
             this.insertTableRowAboveItem1.Name = "insertTableRowAboveItem1";
             // 
             // insertTableRowBelowItem1
             // 
-            this.insertTableRowBelowItem1.Id = 226;
+            this.insertTableRowBelowItem1.Id = 199;
             this.insertTableRowBelowItem1.Name = "insertTableRowBelowItem1";
             // 
             // insertTableColumnToLeftItem1
             // 
-            this.insertTableColumnToLeftItem1.Id = 227;
+            this.insertTableColumnToLeftItem1.Id = 200;
             this.insertTableColumnToLeftItem1.Name = "insertTableColumnToLeftItem1";
             // 
             // insertTableColumnToRightItem1
             // 
-            this.insertTableColumnToRightItem1.Id = 228;
+            this.insertTableColumnToRightItem1.Id = 201;
             this.insertTableColumnToRightItem1.Name = "insertTableColumnToRightItem1";
             // 
             // mergeTableCellsItem1
             // 
-            this.mergeTableCellsItem1.Id = 229;
+            this.mergeTableCellsItem1.Id = 202;
             this.mergeTableCellsItem1.Name = "mergeTableCellsItem1";
             // 
             // showSplitTableCellsForm1
             // 
-            this.showSplitTableCellsForm1.Id = 230;
+            this.showSplitTableCellsForm1.Id = 203;
             this.showSplitTableCellsForm1.Name = "showSplitTableCellsForm1";
             // 
             // splitTableItem1
             // 
-            this.splitTableItem1.Id = 231;
+            this.splitTableItem1.Id = 204;
             this.splitTableItem1.Name = "splitTableItem1";
             // 
             // toggleTableAutoFitItem1
             // 
-            this.toggleTableAutoFitItem1.Id = 232;
+            this.toggleTableAutoFitItem1.Id = 205;
             this.toggleTableAutoFitItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitContentsItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.toggleTableAutoFitWindowItem1),
@@ -1895,84 +1885,84 @@ namespace StuNote.Student
             // 
             // toggleTableAutoFitContentsItem1
             // 
-            this.toggleTableAutoFitContentsItem1.Id = 233;
+            this.toggleTableAutoFitContentsItem1.Id = 206;
             this.toggleTableAutoFitContentsItem1.Name = "toggleTableAutoFitContentsItem1";
             // 
             // toggleTableAutoFitWindowItem1
             // 
-            this.toggleTableAutoFitWindowItem1.Id = 234;
+            this.toggleTableAutoFitWindowItem1.Id = 207;
             this.toggleTableAutoFitWindowItem1.Name = "toggleTableAutoFitWindowItem1";
             // 
             // toggleTableFixedColumnWidthItem1
             // 
-            this.toggleTableFixedColumnWidthItem1.Id = 235;
+            this.toggleTableFixedColumnWidthItem1.Id = 208;
             this.toggleTableFixedColumnWidthItem1.Name = "toggleTableFixedColumnWidthItem1";
             // 
             // toggleTableCellsTopLeftAlignmentItem1
             // 
-            this.toggleTableCellsTopLeftAlignmentItem1.Id = 236;
+            this.toggleTableCellsTopLeftAlignmentItem1.Id = 209;
             this.toggleTableCellsTopLeftAlignmentItem1.Name = "toggleTableCellsTopLeftAlignmentItem1";
             // 
             // toggleTableCellsMiddleLeftAlignmentItem1
             // 
-            this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 237;
+            this.toggleTableCellsMiddleLeftAlignmentItem1.Id = 210;
             this.toggleTableCellsMiddleLeftAlignmentItem1.Name = "toggleTableCellsMiddleLeftAlignmentItem1";
             // 
             // toggleTableCellsBottomLeftAlignmentItem1
             // 
-            this.toggleTableCellsBottomLeftAlignmentItem1.Id = 238;
+            this.toggleTableCellsBottomLeftAlignmentItem1.Id = 211;
             this.toggleTableCellsBottomLeftAlignmentItem1.Name = "toggleTableCellsBottomLeftAlignmentItem1";
             // 
             // toggleTableCellsTopCenterAlignmentItem1
             // 
-            this.toggleTableCellsTopCenterAlignmentItem1.Id = 239;
+            this.toggleTableCellsTopCenterAlignmentItem1.Id = 212;
             this.toggleTableCellsTopCenterAlignmentItem1.Name = "toggleTableCellsTopCenterAlignmentItem1";
             // 
             // toggleTableCellsMiddleCenterAlignmentItem1
             // 
-            this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 240;
+            this.toggleTableCellsMiddleCenterAlignmentItem1.Id = 213;
             this.toggleTableCellsMiddleCenterAlignmentItem1.Name = "toggleTableCellsMiddleCenterAlignmentItem1";
             // 
             // toggleTableCellsBottomCenterAlignmentItem1
             // 
-            this.toggleTableCellsBottomCenterAlignmentItem1.Id = 241;
+            this.toggleTableCellsBottomCenterAlignmentItem1.Id = 214;
             this.toggleTableCellsBottomCenterAlignmentItem1.Name = "toggleTableCellsBottomCenterAlignmentItem1";
             // 
             // toggleTableCellsTopRightAlignmentItem1
             // 
-            this.toggleTableCellsTopRightAlignmentItem1.Id = 242;
+            this.toggleTableCellsTopRightAlignmentItem1.Id = 215;
             this.toggleTableCellsTopRightAlignmentItem1.Name = "toggleTableCellsTopRightAlignmentItem1";
             // 
             // toggleTableCellsMiddleRightAlignmentItem1
             // 
-            this.toggleTableCellsMiddleRightAlignmentItem1.Id = 243;
+            this.toggleTableCellsMiddleRightAlignmentItem1.Id = 216;
             this.toggleTableCellsMiddleRightAlignmentItem1.Name = "toggleTableCellsMiddleRightAlignmentItem1";
             // 
             // toggleTableCellsBottomRightAlignmentItem1
             // 
-            this.toggleTableCellsBottomRightAlignmentItem1.Id = 244;
+            this.toggleTableCellsBottomRightAlignmentItem1.Id = 217;
             this.toggleTableCellsBottomRightAlignmentItem1.Name = "toggleTableCellsBottomRightAlignmentItem1";
             // 
             // showTableOptionsFormItem1
             // 
-            this.showTableOptionsFormItem1.Id = 245;
+            this.showTableOptionsFormItem1.Id = 218;
             this.showTableOptionsFormItem1.Name = "showTableOptionsFormItem1";
             // 
             // changeFloatingObjectFillColorItem1
             // 
-            this.changeFloatingObjectFillColorItem1.Id = 246;
+            this.changeFloatingObjectFillColorItem1.Id = 219;
             this.changeFloatingObjectFillColorItem1.Name = "changeFloatingObjectFillColorItem1";
             // 
             // changeFloatingObjectOutlineColorItem1
             // 
-            this.changeFloatingObjectOutlineColorItem1.Id = 247;
+            this.changeFloatingObjectOutlineColorItem1.Id = 220;
             this.changeFloatingObjectOutlineColorItem1.Name = "changeFloatingObjectOutlineColorItem1";
             // 
             // changeFloatingObjectOutlineWeightItem1
             // 
             this.changeFloatingObjectOutlineWeightItem1.Edit = this.repositoryItemFloatingObjectOutlineWeight1;
             this.changeFloatingObjectOutlineWeightItem1.EditValue = 20;
-            this.changeFloatingObjectOutlineWeightItem1.Id = 248;
+            this.changeFloatingObjectOutlineWeightItem1.Id = 221;
             this.changeFloatingObjectOutlineWeightItem1.Name = "changeFloatingObjectOutlineWeightItem1";
             // 
             // repositoryItemFloatingObjectOutlineWeight1
@@ -1985,7 +1975,7 @@ namespace StuNote.Student
             // 
             // changeFloatingObjectTextWrapTypeItem1
             // 
-            this.changeFloatingObjectTextWrapTypeItem1.Id = 249;
+            this.changeFloatingObjectTextWrapTypeItem1.Id = 222;
             this.changeFloatingObjectTextWrapTypeItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectInlineTextWrapTypeItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectSquareTextWrapTypeItem1),
@@ -1998,42 +1988,42 @@ namespace StuNote.Student
             // 
             // setFloatingObjectInlineTextWrapTypeItem1
             // 
-            this.setFloatingObjectInlineTextWrapTypeItem1.Id = 250;
+            this.setFloatingObjectInlineTextWrapTypeItem1.Id = 223;
             this.setFloatingObjectInlineTextWrapTypeItem1.Name = "setFloatingObjectInlineTextWrapTypeItem1";
             // 
             // setFloatingObjectSquareTextWrapTypeItem1
             // 
-            this.setFloatingObjectSquareTextWrapTypeItem1.Id = 251;
+            this.setFloatingObjectSquareTextWrapTypeItem1.Id = 224;
             this.setFloatingObjectSquareTextWrapTypeItem1.Name = "setFloatingObjectSquareTextWrapTypeItem1";
             // 
             // setFloatingObjectTightTextWrapTypeItem1
             // 
-            this.setFloatingObjectTightTextWrapTypeItem1.Id = 252;
+            this.setFloatingObjectTightTextWrapTypeItem1.Id = 225;
             this.setFloatingObjectTightTextWrapTypeItem1.Name = "setFloatingObjectTightTextWrapTypeItem1";
             // 
             // setFloatingObjectThroughTextWrapTypeItem1
             // 
-            this.setFloatingObjectThroughTextWrapTypeItem1.Id = 253;
+            this.setFloatingObjectThroughTextWrapTypeItem1.Id = 226;
             this.setFloatingObjectThroughTextWrapTypeItem1.Name = "setFloatingObjectThroughTextWrapTypeItem1";
             // 
             // setFloatingObjectTopAndBottomTextWrapTypeItem1
             // 
-            this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 254;
+            this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Id = 227;
             this.setFloatingObjectTopAndBottomTextWrapTypeItem1.Name = "setFloatingObjectTopAndBottomTextWrapTypeItem1";
             // 
             // setFloatingObjectBehindTextWrapTypeItem1
             // 
-            this.setFloatingObjectBehindTextWrapTypeItem1.Id = 255;
+            this.setFloatingObjectBehindTextWrapTypeItem1.Id = 228;
             this.setFloatingObjectBehindTextWrapTypeItem1.Name = "setFloatingObjectBehindTextWrapTypeItem1";
             // 
             // setFloatingObjectInFrontOfTextWrapTypeItem1
             // 
-            this.setFloatingObjectInFrontOfTextWrapTypeItem1.Id = 256;
+            this.setFloatingObjectInFrontOfTextWrapTypeItem1.Id = 229;
             this.setFloatingObjectInFrontOfTextWrapTypeItem1.Name = "setFloatingObjectInFrontOfTextWrapTypeItem1";
             // 
             // changeFloatingObjectAlignmentItem1
             // 
-            this.changeFloatingObjectAlignmentItem1.Id = 257;
+            this.changeFloatingObjectAlignmentItem1.Id = 230;
             this.changeFloatingObjectAlignmentItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopLeftAlignmentItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setFloatingObjectTopCenterAlignmentItem1),
@@ -2048,52 +2038,52 @@ namespace StuNote.Student
             // 
             // setFloatingObjectTopLeftAlignmentItem1
             // 
-            this.setFloatingObjectTopLeftAlignmentItem1.Id = 258;
+            this.setFloatingObjectTopLeftAlignmentItem1.Id = 231;
             this.setFloatingObjectTopLeftAlignmentItem1.Name = "setFloatingObjectTopLeftAlignmentItem1";
             // 
             // setFloatingObjectTopCenterAlignmentItem1
             // 
-            this.setFloatingObjectTopCenterAlignmentItem1.Id = 259;
+            this.setFloatingObjectTopCenterAlignmentItem1.Id = 232;
             this.setFloatingObjectTopCenterAlignmentItem1.Name = "setFloatingObjectTopCenterAlignmentItem1";
             // 
             // setFloatingObjectTopRightAlignmentItem1
             // 
-            this.setFloatingObjectTopRightAlignmentItem1.Id = 260;
+            this.setFloatingObjectTopRightAlignmentItem1.Id = 233;
             this.setFloatingObjectTopRightAlignmentItem1.Name = "setFloatingObjectTopRightAlignmentItem1";
             // 
             // setFloatingObjectMiddleLeftAlignmentItem1
             // 
-            this.setFloatingObjectMiddleLeftAlignmentItem1.Id = 261;
+            this.setFloatingObjectMiddleLeftAlignmentItem1.Id = 234;
             this.setFloatingObjectMiddleLeftAlignmentItem1.Name = "setFloatingObjectMiddleLeftAlignmentItem1";
             // 
             // setFloatingObjectMiddleCenterAlignmentItem1
             // 
-            this.setFloatingObjectMiddleCenterAlignmentItem1.Id = 262;
+            this.setFloatingObjectMiddleCenterAlignmentItem1.Id = 235;
             this.setFloatingObjectMiddleCenterAlignmentItem1.Name = "setFloatingObjectMiddleCenterAlignmentItem1";
             // 
             // setFloatingObjectMiddleRightAlignmentItem1
             // 
-            this.setFloatingObjectMiddleRightAlignmentItem1.Id = 263;
+            this.setFloatingObjectMiddleRightAlignmentItem1.Id = 236;
             this.setFloatingObjectMiddleRightAlignmentItem1.Name = "setFloatingObjectMiddleRightAlignmentItem1";
             // 
             // setFloatingObjectBottomLeftAlignmentItem1
             // 
-            this.setFloatingObjectBottomLeftAlignmentItem1.Id = 264;
+            this.setFloatingObjectBottomLeftAlignmentItem1.Id = 237;
             this.setFloatingObjectBottomLeftAlignmentItem1.Name = "setFloatingObjectBottomLeftAlignmentItem1";
             // 
             // setFloatingObjectBottomCenterAlignmentItem1
             // 
-            this.setFloatingObjectBottomCenterAlignmentItem1.Id = 265;
+            this.setFloatingObjectBottomCenterAlignmentItem1.Id = 238;
             this.setFloatingObjectBottomCenterAlignmentItem1.Name = "setFloatingObjectBottomCenterAlignmentItem1";
             // 
             // setFloatingObjectBottomRightAlignmentItem1
             // 
-            this.setFloatingObjectBottomRightAlignmentItem1.Id = 266;
+            this.setFloatingObjectBottomRightAlignmentItem1.Id = 239;
             this.setFloatingObjectBottomRightAlignmentItem1.Name = "setFloatingObjectBottomRightAlignmentItem1";
             // 
             // floatingObjectBringForwardSubItem1
             // 
-            this.floatingObjectBringForwardSubItem1.Id = 267;
+            this.floatingObjectBringForwardSubItem1.Id = 240;
             this.floatingObjectBringForwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringForwardItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectBringToFrontItem1),
@@ -2102,22 +2092,22 @@ namespace StuNote.Student
             // 
             // floatingObjectBringForwardItem1
             // 
-            this.floatingObjectBringForwardItem1.Id = 268;
+            this.floatingObjectBringForwardItem1.Id = 241;
             this.floatingObjectBringForwardItem1.Name = "floatingObjectBringForwardItem1";
             // 
             // floatingObjectBringToFrontItem1
             // 
-            this.floatingObjectBringToFrontItem1.Id = 269;
+            this.floatingObjectBringToFrontItem1.Id = 242;
             this.floatingObjectBringToFrontItem1.Name = "floatingObjectBringToFrontItem1";
             // 
             // floatingObjectBringInFrontOfTextItem1
             // 
-            this.floatingObjectBringInFrontOfTextItem1.Id = 270;
+            this.floatingObjectBringInFrontOfTextItem1.Id = 243;
             this.floatingObjectBringInFrontOfTextItem1.Name = "floatingObjectBringInFrontOfTextItem1";
             // 
             // floatingObjectSendBackwardSubItem1
             // 
-            this.floatingObjectSendBackwardSubItem1.Id = 271;
+            this.floatingObjectSendBackwardSubItem1.Id = 244;
             this.floatingObjectSendBackwardSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendBackwardItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.floatingObjectSendToBackItem1),
@@ -2126,17 +2116,17 @@ namespace StuNote.Student
             // 
             // floatingObjectSendBackwardItem1
             // 
-            this.floatingObjectSendBackwardItem1.Id = 272;
+            this.floatingObjectSendBackwardItem1.Id = 245;
             this.floatingObjectSendBackwardItem1.Name = "floatingObjectSendBackwardItem1";
             // 
             // floatingObjectSendToBackItem1
             // 
-            this.floatingObjectSendToBackItem1.Id = 273;
+            this.floatingObjectSendToBackItem1.Id = 246;
             this.floatingObjectSendToBackItem1.Name = "floatingObjectSendToBackItem1";
             // 
             // floatingObjectSendBehindTextItem1
             // 
-            this.floatingObjectSendBehindTextItem1.Id = 274;
+            this.floatingObjectSendBehindTextItem1.Id = 247;
             this.floatingObjectSendBehindTextItem1.Name = "floatingObjectSendBehindTextItem1";
             // 
             // headerFooterToolsRibbonPageCategory1
@@ -2276,8 +2266,7 @@ namespace StuNote.Student
             this.floatingPictureToolsRibbonPageCategory1.Control = this.richEditControl1;
             this.floatingPictureToolsRibbonPageCategory1.Name = "floatingPictureToolsRibbonPageCategory1";
             this.floatingPictureToolsRibbonPageCategory1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.floatingPictureToolsFormatPage1,
-            this.ribbonPage2});
+            this.floatingPictureToolsFormatPage1});
             // 
             // floatingPictureToolsFormatPage1
             // 
@@ -2301,18 +2290,6 @@ namespace StuNote.Student
             this.floatingPictureToolsArrangePageGroup1.ItemLinks.Add(this.floatingObjectSendBackwardSubItem1, "AE");
             this.floatingPictureToolsArrangePageGroup1.Name = "floatingPictureToolsArrangePageGroup1";
             // 
-            // ribbonPage2
-            // 
-            this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2});
-            this.ribbonPage2.Name = "ribbonPage2";
-            this.ribbonPage2.Text = "ribbonPage2";
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
-            // 
             // fileRibbonPage1
             // 
             this.fileRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -2325,10 +2302,12 @@ namespace StuNote.Student
             this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
             // 
             // infoRibbonPageGroup1
@@ -2345,12 +2324,12 @@ namespace StuNote.Student
             this.stylesRibbonPageGroup1,
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation3.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation3.GroupName = null;
-            reduceOperation3.ItemLinkIndex = 0;
-            reduceOperation3.ItemLinksCount = 0;
-            reduceOperation3.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation3);
+            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation1.GroupName = null;
+            reduceOperation1.ItemLinkIndex = 0;
+            reduceOperation1.ItemLinksCount = 0;
+            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
             // 
             // clipboardRibbonPageGroup1
             // 
@@ -2534,6 +2513,8 @@ namespace StuNote.Student
             // 
             // documentTrackingRibbonPageGroup1
             // 
+            this.documentTrackingRibbonPageGroup1.ItemLinks.Add(this.changeCommentItem1);
+            this.documentTrackingRibbonPageGroup1.ItemLinks.Add(this.reviewersItem1);
             this.documentTrackingRibbonPageGroup1.ItemLinks.Add(this.reviewingPaneItem1);
             this.documentTrackingRibbonPageGroup1.Name = "documentTrackingRibbonPageGroup1";
             // 
@@ -2564,24 +2545,72 @@ namespace StuNote.Student
             this.zoomRibbonPageGroup1.ItemLinks.Add(this.zoomInItem1);
             this.zoomRibbonPageGroup1.Name = "zoomRibbonPageGroup1";
             // 
-            // ribbonPage1
+            // accordionControl1
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accMyCourses});
+            this.accordionControl1.Location = new System.Drawing.Point(0, 192);
+            this.accordionControl1.Name = "accordionControl1";
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
+            this.accordionControl1.Size = new System.Drawing.Size(260, 467);
+            this.accordionControl1.TabIndex = 1;
+            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+            this.accordionControl1.ElementClick += new DevExpress.XtraBars.Navigation.ElementClickEventHandler(this.NavigationMenu_ElementClick);
             // 
-            // ribbonPageGroup1
+            // accMyCourses
             // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.accMyCourses.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accMyCourses.ImageOptions.Image")));
+            this.accMyCourses.Name = "accMyCourses";
+            this.accMyCourses.Text = "My Courses";
+            // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.barButtonItem1,
+            this.barButtonItem2,
+            this.barButtonItem3});
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1294, 40);
+            this.fluentDesignFormControl1.TabIndex = 2;
+            this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem2);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem3);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Set Lecture Window";
+            this.barButtonItem1.Id = 0;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ButtonScreenShot_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Capture Screen Shot";
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCaptureScreenShot_ItemClick);
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Capture Screen Shot/Text";
+            this.barButtonItem3.Id = 2;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.buttonCaptureText_ItemClick);
             // 
             // richEditBarController1
             // 
             this.richEditBarController1.BarItems.Add(this.undoItem1);
             this.richEditBarController1.BarItems.Add(this.redoItem1);
             this.richEditBarController1.BarItems.Add(this.fileNewItem1);
+            this.richEditBarController1.BarItems.Add(this.fileOpenItem1);
             this.richEditBarController1.BarItems.Add(this.fileSaveItem1);
+            this.richEditBarController1.BarItems.Add(this.fileSaveAsItem1);
             this.richEditBarController1.BarItems.Add(this.quickPrintItem1);
             this.richEditBarController1.BarItems.Add(this.printItem1);
             this.richEditBarController1.BarItems.Add(this.printPreviewItem1);
@@ -2714,6 +2743,8 @@ namespace StuNote.Student
             this.richEditBarController1.BarItems.Add(this.deleteCommentsItem1);
             this.richEditBarController1.BarItems.Add(this.previousCommentItem1);
             this.richEditBarController1.BarItems.Add(this.nextCommentItem1);
+            this.richEditBarController1.BarItems.Add(this.changeCommentItem1);
+            this.richEditBarController1.BarItems.Add(this.reviewersItem1);
             this.richEditBarController1.BarItems.Add(this.reviewingPaneItem1);
             this.richEditBarController1.BarItems.Add(this.switchToSimpleViewItem1);
             this.richEditBarController1.BarItems.Add(this.switchToDraftViewItem1);
@@ -2816,37 +2847,31 @@ namespace StuNote.Student
             this.richEditBarController1.BarItems.Add(this.floatingObjectSendBackwardSubItem1);
             this.richEditBarController1.Control = this.richEditControl1;
             // 
-            // fluentDesignFormContainer1
-            // 
-            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(322, 0);
-            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(575, 517);
-            this.fluentDesignFormContainer1.TabIndex = 5;
-            // 
-            // FMain
+            // FMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 517);
+            this.ClientSize = new System.Drawing.Size(1294, 659);
             this.ControlContainer = this.fluentDesignFormContainer1;
-            this.Controls.Add(this.richEditControl1);
-            this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.fluentDesignFormContainer1);
-            this.Controls.Add(this.NavigationMenu);
-            this.Name = "FMain";
-            this.NavigationControl = this.NavigationMenu;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Controls.Add(this.accordionControl1);
+            this.Controls.Add(this.ribbonControl1);
+            this.Controls.Add(this.fluentDesignFormControl1);
+            this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Name = "FMain1";
+            this.NavigationControl = this.accordionControl1;
             this.Text = "StuNote 21";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.NavigationMenu)).EndInit();
+            this.fluentDesignFormContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichEditFontSizeEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineStyle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemBorderLineWeight1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFloatingObjectOutlineWeight1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2854,18 +2879,21 @@ namespace StuNote.Student
         }
 
         #endregion
-        private DevExpress.XtraBars.Navigation.AccordionControl NavigationMenu;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accMyCourses;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraRichEdit.UI.UndoItem undoItem1;
         private DevExpress.XtraRichEdit.UI.RedoItem redoItem1;
         private DevExpress.XtraRichEdit.UI.FileNewItem fileNewItem1;
+        private DevExpress.XtraRichEdit.UI.FileOpenItem fileOpenItem1;
         private DevExpress.XtraRichEdit.UI.FileSaveItem fileSaveItem1;
+        private DevExpress.XtraRichEdit.UI.FileSaveAsItem fileSaveAsItem1;
         private DevExpress.XtraRichEdit.UI.QuickPrintItem quickPrintItem1;
         private DevExpress.XtraRichEdit.UI.PrintItem printItem1;
         private DevExpress.XtraRichEdit.UI.PrintPreviewItem printPreviewItem1;
-        //private DevExpress.XtraRichEdit.UI.EncryptDocumentItem encryptDocumentItem1;
         private DevExpress.XtraRichEdit.UI.ShowDocumentPropertiesFormItem showDocumentPropertiesFormItem1;
         private DevExpress.XtraRichEdit.UI.PasteItem pasteItem1;
         private DevExpress.XtraRichEdit.UI.CutItem cutItem1;
@@ -2900,14 +2928,9 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.ToggleBulletedListItem toggleBulletedListItem1;
         private DevExpress.XtraRichEdit.UI.ToggleNumberingListItem toggleNumberingListItem1;
         private DevExpress.XtraRichEdit.UI.ToggleMultiLevelListItem toggleMultiLevelListItem1;
-        //private DevExpress.XtraRichEdit.UI.RtlToggleBulletedListItem rtlToggleBulletedListItem1;
-        //private DevExpress.XtraRichEdit.UI.RtlToggleNumberingListItem rtlToggleNumberingListItem1;
-        //private DevExpress.XtraRichEdit.UI.RtlToggleMultiLevelListItem rtlToggleMultiLevelListItem1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup5;
         private DevExpress.XtraRichEdit.UI.DecreaseIndentItem decreaseIndentItem1;
         private DevExpress.XtraRichEdit.UI.IncreaseIndentItem increaseIndentItem1;
-        //private DevExpress.XtraRichEdit.UI.RtlDecreaseIndentItem rtlDecreaseIndentItem1;
-        //private DevExpress.XtraRichEdit.UI.RtlIncreaseIndentItem rtlIncreaseIndentItem1;
         private DevExpress.XtraRichEdit.UI.ToggleParagraphLeftToRightItem toggleParagraphLeftToRightItem1;
         private DevExpress.XtraRichEdit.UI.ToggleParagraphRightToLeftItem toggleParagraphRightToLeftItem1;
         private DevExpress.XtraRichEdit.UI.ToggleShowWhitespaceItem toggleShowWhitespaceItem1;
@@ -2916,13 +2939,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentCenterItem toggleParagraphAlignmentCenterItem1;
         private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentRightItem toggleParagraphAlignmentRightItem1;
         private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentJustifyItem toggleParagraphAlignmentJustifyItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentArabicJustifyGroupItem toggleParagraphAlignmentArabicJustifyGroupItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentArabicJustifyItem toggleParagraphAlignmentArabicJustifyItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentJustifyLowItem toggleParagraphAlignmentJustifyLowItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentJustifyMediumItem toggleParagraphAlignmentJustifyMediumItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentJustifyHighItem toggleParagraphAlignmentJustifyHighItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentDistributeItem toggleParagraphAlignmentDistributeItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleParagraphAlignmentThaiDistributeItem toggleParagraphAlignmentThaiDistributeItem1;
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup7;
         private DevExpress.XtraRichEdit.UI.ChangeParagraphLineSpacingItem changeParagraphLineSpacingItem1;
         private DevExpress.XtraRichEdit.UI.SetSingleParagraphSpacingItem setSingleParagraphSpacingItem1;
@@ -2947,7 +2963,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.InsertPageNumberItem insertPageNumberItem1;
         private DevExpress.XtraRichEdit.UI.InsertPageCountItem insertPageCountItem1;
         private DevExpress.XtraRichEdit.UI.InsertTextBoxItem insertTextBoxItem1;
-        //private DevExpress.XtraRichEdit.UI.InsertObjectItem insertObjectItem1;
         private DevExpress.XtraRichEdit.UI.InsertSymbolItem insertSymbolItem1;
         private DevExpress.XtraRichEdit.UI.ChangeSectionPageMarginsItem changeSectionPageMarginsItem1;
         private DevExpress.XtraRichEdit.UI.SetNormalSectionPageMarginsItem setNormalSectionPageMarginsItem1;
@@ -2978,10 +2993,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.SetSectionLineNumberingRestartNewSectionItem setSectionLineNumberingRestartNewSectionItem1;
         private DevExpress.XtraRichEdit.UI.ToggleParagraphSuppressLineNumbersItem toggleParagraphSuppressLineNumbersItem1;
         private DevExpress.XtraRichEdit.UI.ShowLineNumberingFormItem showLineNumberingFormItem1;
-        //private DevExpress.XtraRichEdit.UI.ChangeHyphenationOptionsItem changeHyphenationOptionsItem1;
-        //private DevExpress.XtraRichEdit.UI.SetHyphenateDocumentNoneItem setHyphenateDocumentNoneItem1;
-        //private DevExpress.XtraRichEdit.UI.SetHyphenateDocumentAutomaticItem setHyphenateDocumentAutomaticItem1;
-        //private DevExpress.XtraRichEdit.UI.ShowHyphenationOptionsFormItem showHyphenationOptionsFormItem1;
         private DevExpress.XtraRichEdit.UI.ChangePageColorItem changePageColorItem1;
         private DevExpress.XtraRichEdit.UI.InsertTableOfContentsItem insertTableOfContentsItem1;
         private DevExpress.XtraRichEdit.UI.UpdateTableOfContentsItem updateTableOfContentsItem1;
@@ -3005,10 +3016,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.InsertTableOfTablesItems insertTableOfTablesItems1;
         private DevExpress.XtraRichEdit.UI.InsertTableOfEquationsItems insertTableOfEquationsItems1;
         private DevExpress.XtraRichEdit.UI.UpdateTableOfFiguresItem updateTableOfFiguresItem1;
-        //private DevExpress.XtraRichEdit.UI.InsertFootnoteItem insertFootnoteItem1;
-        //private DevExpress.XtraRichEdit.UI.InsertEndnoteItem insertEndnoteItem1;
-        //private DevExpress.XtraRichEdit.UI.NavigationNotesItem navigationNotesItem1;
-        //private DevExpress.XtraRichEdit.UI.ShowNotesItem showNotesItem1;
         private DevExpress.XtraRichEdit.UI.InsertMergeFieldItem insertMergeFieldItem1;
         private DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem showAllFieldCodesItem1;
         private DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem showAllFieldResultsItem1;
@@ -3025,15 +3032,9 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.DeleteAllCommentsItem deleteAllCommentsItem1;
         private DevExpress.XtraRichEdit.UI.PreviousCommentItem previousCommentItem1;
         private DevExpress.XtraRichEdit.UI.NextCommentItem nextCommentItem1;
-        //private DevExpress.XtraRichEdit.UI.ToggleTrackChangesBarItem toggleTrackChangesBarItem1;
-        //private DevExpress.XtraRichEdit.UI.ChangeDisplayForReviewModeItem changeDisplayForReviewModeItem1;
-        //private DevExpress.XtraRichEdit.UI.DisplayForReviewModeComboBox displayForReviewModeComboBox1;
-        //private DevExpress.XtraRichEdit.UI.ShowMarkupSubItem showMarkupSubItem1;
+        private DevExpress.XtraRichEdit.UI.ChangeCommentItem changeCommentItem1;
+        private DevExpress.XtraRichEdit.UI.ReviewersItem reviewersItem1;
         private DevExpress.XtraRichEdit.UI.ReviewingPaneItem reviewingPaneItem1;
-        //private DevExpress.XtraRichEdit.UI.AcceptAndMoveToNextSubItem acceptAndMoveToNextSubItem1;
-        //private DevExpress.XtraRichEdit.UI.RejectAndMoveToNextSubItem rejectAndMoveToNextSubItem1;
-        //private DevExpress.XtraRichEdit.UI.PreviousChangeItem previousChangeItem1;
-        //private DevExpress.XtraRichEdit.UI.NextChangeItem nextChangeItem1;
         private DevExpress.XtraRichEdit.UI.SwitchToSimpleViewItem switchToSimpleViewItem1;
         private DevExpress.XtraRichEdit.UI.SwitchToDraftViewItem switchToDraftViewItem1;
         private DevExpress.XtraRichEdit.UI.SwitchToPrintLayoutViewItem switchToPrintLayoutViewItem1;
@@ -3179,7 +3180,6 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.ReferencesRibbonPage referencesRibbonPage1;
         private DevExpress.XtraRichEdit.UI.TableOfContentsRibbonPageGroup tableOfContentsRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.CaptionsRibbonPageGroup captionsRibbonPageGroup1;
-        //private DevExpress.XtraRichEdit.UI.NotesRibbonPageGroup notesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.MailingsRibbonPage mailingsRibbonPage1;
         private DevExpress.XtraRichEdit.UI.MailMergeRibbonPageGroup mailMergeRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ReviewRibbonPage reviewRibbonPage1;
@@ -3187,19 +3187,13 @@ namespace StuNote.Student
         private DevExpress.XtraRichEdit.UI.DocumentProtectionRibbonPageGroup documentProtectionRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.DocumentCommentRibbonPageGroup documentCommentRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.DocumentTrackingRibbonPageGroup documentTrackingRibbonPageGroup1;
-        //private DevExpress.XtraRichEdit.UI.DocumentChangesRibbonPageGroup documentChangesRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ViewRibbonPage viewRibbonPage1;
         private DevExpress.XtraRichEdit.UI.DocumentViewsRibbonPageGroup documentViewsRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ShowRibbonPageGroup showRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.ZoomRibbonPageGroup zoomRibbonPageGroup1;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarButtonItem ButtonScreenShot;
-        private DevExpress.XtraBars.BarButtonItem buttonCaptureScreenShot;
-        private DevExpress.XtraBars.BarButtonItem buttonCaptureText;
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }

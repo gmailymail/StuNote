@@ -47,7 +47,7 @@ namespace StuNote.Teacher
             var services = serviceScop.ServiceProvider;
 
             //Get FMain     
-            FMain fMain = services.GetRequiredService<FMain>();
+            FMain2 fMain = services.GetRequiredService<FMain2>();
 
             Application.Run(fMain);
         }

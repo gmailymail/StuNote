@@ -10,6 +10,11 @@ using System.Threading.Tasks;
 using NAudio.Wave;
 using Microsoft.AspNet.SignalR.Client;
 using StuNote.Domain.Btos.Survey;
+using Microsoft.Extensions.DependencyInjection;
+using StuNote.Student.UIControl;
+using StuNote.Domain.Btos.Infrastructure;
+using StuNote.Domain.Services.Infrastructure;
+using System.Drawing;
 
 namespace StuNote.Student
 {
@@ -21,10 +26,14 @@ namespace StuNote.Student
         private readonly IStorageLocatorFactoryService _storageFactory;
         private readonly ISurveyResponseService _surveyResponse;
         private readonly FormSurveyAnswer _fSurvAnswer;
+        private readonly IServiceProvider _services;
+        private readonly IScreenSelectorService _screenSelectorService;
+        private readonly ICaptureScreenService _captureScreenService;
+        private readonly IImageToTextService _imageToText;
         private readonly string _appName;
         private bool _saving = false;
         AccordionControlElement element;
-
+        private WindowSelectorBto SelectedLectureWindow;
         /// <summary>
         /// Required instances for Mic capture.
         /// </summary>
@@ -49,14 +58,23 @@ namespace StuNote.Student
                      IStorageLocatorFactoryService storageFactory,
                      ISurveyResponseService surveyResponse,
                      FormSurveyAnswer fSurvAnswer,
-                     IQuestionResponseService questionResponse)
+                     IQuestionResponseService questionResponse,
+                     IServiceProvider services,
+                     IScreenSelectorService screenSelectorService,
+                     ICaptureScreenService captureScreenService,
+                     IImageToTextService imageToText)
         {
+            
             InitializeComponent();
             _logger = logger;
             _courseService = courseService;
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
             _fSurvAnswer = fSurvAnswer;
+            _services = services;
+            _screenSelectorService = screenSelectorService;
+            _captureScreenService = captureScreenService;
+            _imageToText = imageToText;
             _appName = configuration.GetValue<string>("Title");
             //implement Audio feature
             //initAudio();
@@ -69,7 +87,12 @@ namespace StuNote.Student
                 {
                     StudentId = "email.com",
                     SelectedAnswer = 1
-                }) ;
+                });
+            };
+            screenSelectorService.OnSelectedScreenChanged += (s, e) =>
+            {
+                SelectedLectureWindow = e;
+                initAudio();
             };
         }
 
@@ -218,12 +241,12 @@ namespace StuNote.Student
         #region Audio Recognition
         private void initAudio()
         //private void StartBtn_Click(object sender, EventArgs e)
-        {
+        {            
             if (waveIn != null)
                 return;
 
             // create wave input from mic
-            waveIn = new WaveIn(this.Handle);
+            waveIn = new WaveIn(SelectedLectureWindow.HandleWindow);
             waveIn.BufferMilliseconds = 25;
             //waveIn.RecordingStopped += waveIn_RecordingStopped;
             waveIn.DataAvailable += waveIn_DataAvailable;
@@ -246,7 +269,8 @@ namespace StuNote.Student
         {
             // add received data to waveProvider buffer
             if (waveProvider != null)
-                waveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
+                _logger.LogInformation($"Audio is being monitored on {DateTime.Now}");
+                //waveProvider.AddSamples(e.Buffer, 0, e.BytesRecorded);
         }
 
         private void StopBtn_Click(object sender, EventArgs e)
@@ -287,6 +311,50 @@ namespace StuNote.Student
         }
         #endregion Audio Recognition
 
+        private async Task ShowWindowSelector()
+        {
+            var formWindowSelector = _services.GetRequiredService<FormWindowSelector>();
+            formWindowSelector.Show();
+            await formWindowSelector.LoadOpenWindowsAsync();
+        }
+
+        private Image CaptureScreen()
+        {
+            var image = _captureScreenService.CaptureScreen(SelectedLectureWindow.HandleWindow);           
+            return image;
+        }
+
         #endregion Helper Methods
+
+        private async void ButtonScreenShot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            await ShowWindowSelector();
+        }
+
+        private async void buttonCaptureScreenShot_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (SelectedLectureWindow is null)
+                await ShowWindowSelector();
+            else
+            {
+                var image = CaptureScreen();
+                var pos = richEditControl1.Document.CaretPosition;
+                richEditControl1.Document.Images.Insert(pos, image);
+            }
+        }
+
+        private async void buttonCaptureText_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
+            richEditControl1.Document.ContentChanged -= RichEditControl1_ContentChanged;
+            var image = CaptureScreen();
+            var text = _imageToText.ReadText(image);
+            var pos = richEditControl1.Document.CaretPosition;
+            richEditControl1.Document.Images.Insert(pos, image);
+            pos = richEditControl1.Document.CaretPosition;
+            richEditControl1.Document.InsertText(pos, text);
+            await SaveNotes(element);
+            richEditControl1.Document.ContentChanged += RichEditControl1_ContentChanged;
+        }
     }
 }

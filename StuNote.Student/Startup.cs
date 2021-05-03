@@ -1,11 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using StuNote.Domain.Services;
+using StuNote.Domain.Services.Infrastructure;
 using StuNote.Infrastructure;
 using StuNote.Infrastructure.Storage;
 using StuNote.Logic.Course;
 using StuNote.Logic.Question;
 using StuNote.Logic.Survey;
+using StuNote.Student.Services;
+using StuNote.Student.UIControl;
 
 namespace StuNote.Student
 {
@@ -36,8 +39,9 @@ namespace StuNote.Student
         /// <param name="services"></param>
         private static void RegisterForms(IServiceCollection services)
         {
-            services.AddScoped<FMain>();
+            services.AddSingleton<FMain>();
             services.AddScoped<FormSurveyAnswer>();
+            services.AddSingleton<FormWindowSelector>();
         }
 
         /// <summary>
@@ -51,6 +55,9 @@ namespace StuNote.Student
             services.AddScoped<IStorageService, LocalFileStorageService>(s=>s.GetRequiredService<LocalFileStorageService>());
             services.AddScoped<IStorageService, AzureStorageService>(s => s.GetRequiredService<AzureStorageService>());
             services.AddScoped<IStorageLocatorFactoryService, StorageLocatorFactoryService>();
+            services.AddScoped<IScreenSelectorService, ScreenSelectorService>();
+            services.AddScoped<ICaptureScreenService, CaptureScreenService>();
+            services.AddScoped<IImageToTextService, ImageToTextService>();
         }
 
         /// <summary>

@@ -22,7 +22,7 @@ namespace StuNote.Teacher
             InitializeComponent();
             _uControlCreateSurvey = uControlCreateSurvey;
             _questionRequest = questionRequest;
-            _surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
+            //_surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
             
             questionRequest.AnswerReceived += (s, e) =>
             {

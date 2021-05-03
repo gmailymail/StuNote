@@ -69,6 +69,9 @@
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="IronOcr, Version=2021.2.1.0, Culture=neutral, PublicKeyToken=c2cbcea5ea3f6d8d, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronOcr.2021.2.1\lib\net40\IronOcr.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
     </Reference>
@@ -182,6 +185,7 @@
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0-preview.2.21154.6\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -271,7 +275,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\CaptureScreenService.cs" />
+    <Compile Include="Services\ImageToTextService.cs" />
+    <Compile Include="Services\ScreenSelectorService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="UIControl\FormWindowSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIControl\FormWindowSelector.Designer.cs">
+      <DependentUpon>FormWindowSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\UControlAnswerSurvey.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +307,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIControl\FormWindowSelector.resx">
+      <DependentUpon>FormWindowSelector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UControlAnswerSurvey.resx">
       <DependentUpon>UControlAnswerSurvey.cs</DependentUpon>
     </EmbeddedResource>

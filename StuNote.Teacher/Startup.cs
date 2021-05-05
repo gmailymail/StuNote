@@ -37,6 +37,7 @@ namespace StuNote.Teacher
         {
             services.AddScoped<FMain2>();
             services.AddScoped<UControlCreateSurvey>();
+            services.AddScoped<UControlCreateQandA>();
         }
 
         /// <summary>

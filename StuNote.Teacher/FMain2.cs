@@ -11,16 +11,18 @@ namespace StuNote.Teacher
     public partial class FMain2 : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
     {
         private readonly UControlCreateSurvey _uControlCreateSurvey;
+        private readonly UControlCreateQandA _uControlCreateQandA;
         private readonly IQuestionRequestService _questionRequest;
         private List<SurveyResponseBto> _studentResponses = new List<SurveyResponseBto>();
 
         public FMain2(
             ISurveyRequestService surveyRequest,
-            UControlCreateSurvey uControlCreateSurvey,
+            UControlCreateSurvey uControlCreateSurvey, UControlCreateQandA uControlCreateQandA,
             IQuestionRequestService questionRequest)
         {
             InitializeComponent();
             _uControlCreateSurvey = uControlCreateSurvey;
+            _uControlCreateQandA = uControlCreateQandA;
             _questionRequest = questionRequest;
             //_surveyRequest.ResponseReceived += _surveyRequest_ResponseReceived;
 
@@ -46,20 +48,20 @@ namespace StuNote.Teacher
 
         private void elementSignedStudents_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-        private async void elementQuestionAnswers_Click(object sender, EventArgs e)
+        private void elementQuestionAnswers_Click(object sender, EventArgs e)
         {
-            await _questionRequest.SendAsync(new Domain.Btos.Question.QuestionRequestBto
+            var controls = MainContainer.Controls.Find("UControlCreateQandA", true);
+
+            if (controls.Count() is 0)
             {
-                Question = "What is 2 + 2",
-                Answer1 = "6",
-                Answer2 = "3",
-                Answer3 = "4",
-                Answer4 = "8",
-                CorrectAnswer = 2
-            });
+                MainContainer.Controls.Add(_uControlCreateQandA);
+                _uControlCreateSurvey.Dock = DockStyle.Fill;
+            }
+
+            MainContainer.Controls.SetChildIndex(_uControlCreateQandA, 0);
         }
     }
 }

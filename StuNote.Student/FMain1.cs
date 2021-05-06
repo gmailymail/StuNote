@@ -8,6 +8,7 @@ using NAudio.Wave;
 using StuNote.Domain;
 using StuNote.Domain.Btos.Course;
 using StuNote.Domain.Btos.Infrastructure;
+using StuNote.Domain.Btos.Question;
 using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using StuNote.Domain.Services.Infrastructure;
@@ -32,7 +33,9 @@ namespace StuNote.Student
         private readonly ICourseService _courseService;
         private readonly IStorageLocatorFactoryService _storageFactory;
         private readonly ISurveyResponseService _surveyResponse;
+        private readonly IQuestionResponseService _questionResponse;
         private readonly FormSurveyAnswer _fSurvAnswer;
+        private readonly FormQuestionAnswer _fQuestAnswer;
         private readonly IServiceProvider _services;
         private readonly IScreenSelectorService _screenSelectorService;
         private readonly ICaptureScreenService _captureScreenService;
@@ -59,12 +62,16 @@ namespace StuNote.Student
         /// </summary>
         DelReceivedSurvey _receivedSurvey;
 
+        private delegate void DelReceivedQuestion(QuestionRequestBto question);
+        DelReceivedQuestion _receivedQuestion;
+
         public FMain1(ILogger<FMain1> logger,
                      ICourseService courseService,
                      IConfiguration configuration,
                      IStorageLocatorFactoryService storageFactory,
                      ISurveyResponseService surveyResponse,
                      FormSurveyAnswer fSurvAnswer,
+                     FormQuestionAnswer fQuestAnswer,
                      IQuestionResponseService questionResponse,
                      IServiceProvider services,
                      IScreenSelectorService screenSelectorService,
@@ -78,29 +85,41 @@ namespace StuNote.Student
             _storageFactory = storageFactory;
             _surveyResponse = surveyResponse;
             _fSurvAnswer = fSurvAnswer;
+            _fQuestAnswer = fQuestAnswer;
             _services = services;
             _screenSelectorService = screenSelectorService;
             _captureScreenService = captureScreenService;
             _imageToText = imageToText;
             _appName = configuration.GetValue<string>("Title");
+            _questionResponse = questionResponse;
             //implement Audio feature
             //initAudio();
             _receivedSurvey = HandleReceivedSurvey;
+            _receivedQuestion = HandleReceivedQuestion;
             richEditControl1.ContentChanged += RichEditControl1_ContentChanged;
             _surveyResponse.SurveyReceived += surveyReceived;
-            questionResponse.QuestionReceived += async (s, e) =>
-            {
-                await questionResponse.SendAsync(new Domain.Btos.Question.QuestionResponseBto
-                {
-                    StudentId = "email.com",
-                    SelectedAnswer = 1
-                });
-            };
-            screenSelectorService.OnSelectedScreenChanged += (s, e) =>
-            {
-                SelectedLectureWindow = e;
-                initAudio();
-            };
+            _questionResponse.QuestionReceived += questionReceived;
+            //questionResponse.QuestionReceived += async (s, e) =>
+            //{
+            //    await questionResponse.SendAsync(new Domain.Btos.Question.QuestionResponseBto
+            //    {
+            //        StudentId = Program.Username,//"email.com",
+            //        SelectedAnswer = 1
+            //    });
+            //};
+            //screenSelectorService.OnSelectedScreenChanged += (s, e) =>
+            //{
+            //    SelectedLectureWindow = e;
+            //    initAudio();
+            //};
+        }
+
+        private void questionReceived(object sender, QuestionRequestBto e)
+        {
+            // _logger.LogInformation($"Received a Survey : {e.Question}");
+             if (InvokeRequired)
+              Invoke(_receivedQuestion, e);
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -248,6 +267,14 @@ namespace StuNote.Student
             if (_fSurvAnswer.Visible is false)
                 _fSurvAnswer.ShowDialog(this);
         }
+
+        private void HandleReceivedQuestion(QuestionRequestBto survey)
+        {
+            if (_fQuestAnswer.Visible is false)
+                _fQuestAnswer.ShowDialog(this);
+        }
+
+
         #region Audio Recognition
         private void initAudio()
         //private void StartBtn_Click(object sender, EventArgs e)

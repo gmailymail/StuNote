@@ -13,6 +13,8 @@ namespace StuNote.Student
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        public static string Username { get; set; } = "test user";
         [STAThread]
         static void Main()
         {            
@@ -50,7 +52,7 @@ namespace StuNote.Student
             //Get FMain     
             FMain1 fMain = services.GetRequiredService<FMain1>();
             
-            Application.Run(fMain);             
+            Application.Run(fMain);
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

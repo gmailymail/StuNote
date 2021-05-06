@@ -41,6 +41,7 @@ namespace StuNote.Student
         {
             services.AddSingleton<FMain1>();
             services.AddScoped<FormSurveyAnswer>();
+            services.AddScoped<FormQuestionAnswer>();
             services.AddSingleton<FormWindowSelector>();
         }
 

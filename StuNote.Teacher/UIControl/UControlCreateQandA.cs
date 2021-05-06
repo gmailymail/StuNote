@@ -20,6 +20,15 @@ namespace StuNote.Teacher.UIControl
         {
             InitializeComponent();
             _questionRequest = questionRequest;
+            _questionRequest.AnswerReceived += _questionRequest_AnswerReceived;
+        }
+
+        private void _questionRequest_AnswerReceived(object sender, QuestionResponseBto e)
+        {
+            QuestionResponseBto questResponse = new QuestionResponseBto() { 
+             SelectedAnswer = e.SelectedAnswer,
+             StudentId = e.StudentId
+            };
         }
 
         private async void simpleBtnSubmit_Click(object sender, EventArgs e)

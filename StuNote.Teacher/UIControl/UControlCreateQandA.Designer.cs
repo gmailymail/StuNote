@@ -190,28 +190,28 @@ namespace StuNote.Teacher.UIControl
             // 
             this.txtEditAnswer1Count.Location = new System.Drawing.Point(594, 638);
             this.txtEditAnswer1Count.Name = "txtEditAnswer1Count";
-            this.txtEditAnswer1Count.Size = new System.Drawing.Size(76, 52);
+            this.txtEditAnswer1Count.Size = new System.Drawing.Size(76, 28);
             this.txtEditAnswer1Count.TabIndex = 18;
             // 
             // txtEditAnswer2Count
             // 
             this.txtEditAnswer2Count.Location = new System.Drawing.Point(594, 706);
             this.txtEditAnswer2Count.Name = "txtEditAnswer2Count";
-            this.txtEditAnswer2Count.Size = new System.Drawing.Size(76, 52);
+            this.txtEditAnswer2Count.Size = new System.Drawing.Size(76, 28);
             this.txtEditAnswer2Count.TabIndex = 19;
             // 
             // txtEditAnswer3Count
             // 
             this.txtEditAnswer3Count.Location = new System.Drawing.Point(594, 772);
             this.txtEditAnswer3Count.Name = "txtEditAnswer3Count";
-            this.txtEditAnswer3Count.Size = new System.Drawing.Size(76, 52);
+            this.txtEditAnswer3Count.Size = new System.Drawing.Size(76, 28);
             this.txtEditAnswer3Count.TabIndex = 20;
             // 
             // txtEditAnswer4Count
             // 
             this.txtEditAnswer4Count.Location = new System.Drawing.Point(594, 839);
             this.txtEditAnswer4Count.Name = "txtEditAnswer4Count";
-            this.txtEditAnswer4Count.Size = new System.Drawing.Size(76, 52);
+            this.txtEditAnswer4Count.Size = new System.Drawing.Size(76, 28);
             this.txtEditAnswer4Count.TabIndex = 21;
             // 
             // lblControlAnsCount1

@@ -40,6 +40,7 @@ namespace StuNote.Student
             // 
             // memoEditStuQuestion
             // 
+            this.memoEditStuQuestion.Enabled = false;
             this.memoEditStuQuestion.Location = new System.Drawing.Point(234, 37);
             this.memoEditStuQuestion.Name = "memoEditStuQuestion";
             this.memoEditStuQuestion.Size = new System.Drawing.Size(314, 75);

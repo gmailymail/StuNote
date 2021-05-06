@@ -13,9 +13,11 @@ namespace StuNote.Student
 {
     public partial class FormLoginStudent : DevExpress.XtraEditors.XtraForm
     {
-        public FormLoginStudent()
+        private readonly FMain1 _fMain1;
+        public FormLoginStudent(FMain1 fMain1)
         {
             InitializeComponent();
+            _fMain1 = fMain1;
         }
 
         private void simpleButtonOK_Click(object sender, EventArgs e)
@@ -26,6 +28,11 @@ namespace StuNote.Student
             if (!string.IsNullOrEmpty(userName))
             {
                 Program.Username = userName;
+                Hide();
+                if (_fMain1.Visible is false)
+                    //this.Close();
+                    _fMain1.ShowDialog(this);
+                    
             }
              
         }

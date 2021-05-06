@@ -44,12 +44,12 @@ namespace StuNote.Student
 
         private async void simpBtnQuestAnsSubmit_Click(object sender, EventArgs e)
         {
-            var answer = radioGroupStuAnswerSection.Properties.Items[radioGroupStuAnswerSection.SelectedIndex].Value;
-
+            var answer = int.Parse(radioGroupStuAnswerSection.Properties.Items[radioGroupStuAnswerSection.SelectedIndex].Value.ToString());
+            Hide();
             await _question.SendAsync(new()
             {
-                SelectedAnswer = 1,
-                StudentId = Program.Username,//"email.com",
+                SelectedAnswer = answer,
+                StudentId = Program.Username
             });
         }
     }

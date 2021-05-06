@@ -119,7 +119,6 @@ namespace StuNote.Student
             // _logger.LogInformation($"Received a Survey : {e.Question}");
              if (InvokeRequired)
               Invoke(_receivedQuestion, e);
-            throw new NotImplementedException();
         }
 
         /// <summary>

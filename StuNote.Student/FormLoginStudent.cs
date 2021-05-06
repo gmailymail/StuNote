@@ -22,6 +22,18 @@ namespace StuNote.Student
         {
             string userName = textEditUName.Text.Trim();
             string password = textEditPassword.Text.Trim();
+
+            if (!string.IsNullOrEmpty(userName))
+            {
+                Program.Username = userName;
+            }
+             
+        }
+
+        private void simpleButtonCancel_Click(object sender, EventArgs e)
+        {
+            textEditUName.Text = "";
+            textEditPassword.Text = "";
         }
     }
 }

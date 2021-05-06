@@ -85,6 +85,7 @@ namespace StuNote.Student
             this.simpleButtonCancel.Size = new System.Drawing.Size(145, 57);
             this.simpleButtonCancel.TabIndex = 5;
             this.simpleButtonCancel.Text = "Cancel";
+            this.simpleButtonCancel.Click += new System.EventHandler(this.simpleButtonCancel_Click);
             // 
             // FormLoginStudent
             // 

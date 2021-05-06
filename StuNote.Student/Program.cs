@@ -51,8 +51,9 @@ namespace StuNote.Student
 
             //Get FMain     
             FMain1 fMain = services.GetRequiredService<FMain1>();
-            
-            Application.Run(fMain);
+            FormLoginStudent fLoginStudent = services.GetRequiredService<FormLoginStudent>();
+            //Application.Run(fMain);
+            Application.Run(fLoginStudent);
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

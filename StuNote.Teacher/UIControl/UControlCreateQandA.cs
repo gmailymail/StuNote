@@ -16,6 +16,8 @@ namespace StuNote.Teacher.UIControl
     public partial class UControlCreateQandA : DevExpress.XtraEditors.XtraUserControl
     {
         private readonly IQuestionRequestService _questionRequest;
+
+        List<QuestionResponseBto> QuestionAnswerList = new List<QuestionResponseBto>();
         public UControlCreateQandA(IQuestionRequestService questionRequest)
         {
             InitializeComponent();
@@ -25,16 +27,28 @@ namespace StuNote.Teacher.UIControl
 
         private void _questionRequest_AnswerReceived(object sender, QuestionResponseBto e)
         {
-            QuestionResponseBto questResponse = new QuestionResponseBto() { 
-             SelectedAnswer = e.SelectedAnswer,
-             StudentId = e.StudentId
+            QuestionResponseBto questResponse = new QuestionResponseBto()
+            {
+                SelectedAnswer = e.SelectedAnswer,
+                StudentId = e.StudentId
             };
+            QuestionAnswerList.Add(questResponse);
+
+            if (InvokeRequired)
+                Invoke((Action)delegate ()
+                {
+                    updateQuestionAnswerDashBoard(QuestionAnswerList);
+                });
+            else
+                updateQuestionAnswerDashBoard(QuestionAnswerList);
+
         }
 
         private async void simpleBtnSubmit_Click(object sender, EventArgs e)
         {
             if (ValidateControllers())
             {
+                ClearAnswers();
                 QuestionRequestBto question = new QuestionRequestBto()
                 {
                     Question = memoEditQuestion.Text.Trim(),
@@ -52,6 +66,7 @@ namespace StuNote.Teacher.UIControl
         private void simpleBtnClear_Click(object sender, EventArgs e)
         {
             ClearControllers();
+            ClearAnswers();
         }
 
         private void ClearControllers()
@@ -61,6 +76,7 @@ namespace StuNote.Teacher.UIControl
             memoEditAnswer2.Text = "";
             memoEditAnswer3.Text = "";
             memoEditAnswer4.Text = "";
+
         }
 
         private bool ValidateControllers()
@@ -81,6 +97,44 @@ namespace StuNote.Teacher.UIControl
                 return false;
             }
             return true;
+        }
+
+        private void updateQuestionAnswerDashBoard(List<QuestionResponseBto> QuestionAnswerList)
+        {
+            try {
+                if (QuestionAnswerList.Count > 0)
+                { 
+                    int Answer1Count = QuestionAnswerList.Count(x => x.SelectedAnswer == 0);
+                    int Answer2Count = QuestionAnswerList.Count(x => x.SelectedAnswer == 1);
+                    int Answer3Count = QuestionAnswerList.Count(x => x.SelectedAnswer == 2);
+                    int Answer4Count = QuestionAnswerList.Count(x => x.SelectedAnswer == 3);
+
+                    txtEditAnswer1Count.Text = Answer1Count.ToString();
+                    txtEditAnswer2Count.Text = Answer2Count.ToString();
+                    txtEditAnswer3Count.Text = Answer3Count.ToString();
+                    txtEditAnswer4Count.Text = Answer4Count.ToString();
+
+                    List<string> answerStringList = new List<string>();
+                    foreach (QuestionResponseBto response in QuestionAnswerList)
+                    {
+                        string isCorrect = int.Parse(radioGroupCorrectAns.Properties.Items[radioGroupCorrectAns.SelectedIndex].Value.ToString()) == response.SelectedAnswer ? "Correct" : "Wrong"; 
+                        string tempLine = "Student :" + response.StudentId + ", Answer :" + response.SelectedAnswer + ", " + isCorrect;
+                        answerStringList.Add(tempLine);
+                    }
+                    lBoxConAnswer.DataSource = answerStringList;
+                }
+            }
+            catch (Exception ex) { }
+        }
+
+        private void ClearAnswers()
+        {
+            txtEditAnswer1Count.Text = "";
+            txtEditAnswer2Count.Text = "";
+            txtEditAnswer3Count.Text = "";
+            txtEditAnswer4Count.Text = "";
+            lBoxConAnswer.Items.Clear();
+            QuestionAnswerList.Clear();
         }
     }
 }

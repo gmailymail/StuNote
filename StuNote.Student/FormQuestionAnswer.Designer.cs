@@ -86,7 +86,7 @@ namespace StuNote.Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 444);
+            this.ClientSize = new System.Drawing.Size(610, 438);
             this.Controls.Add(this.simpBtnQuestAnsSubmit);
             this.Controls.Add(this.radioGroupStuAnswerSection);
             this.Controls.Add(this.labelControlStuSelectAnswer);

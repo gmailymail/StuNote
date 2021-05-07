@@ -32,7 +32,10 @@ namespace StuNote.Student
                 if (_fMain1.Visible is false)
                     //this.Close();
                     _fMain1.ShowDialog(this);
-                    
+            }
+            else
+            {
+                XtraMessageBox.Show("User name or password cannot be empty.");
             }
              
         }

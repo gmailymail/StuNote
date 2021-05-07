@@ -366,9 +366,10 @@ namespace StuNote.Student
             // 
             this.fluentDesignFormContainer1.Controls.Add(this.richEditControl1);
             this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 192);
+            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(390, 279);
+            this.fluentDesignFormContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1034, 467);
+            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(1551, 684);
             this.fluentDesignFormContainer1.TabIndex = 0;
             // 
             // richEditControl1
@@ -377,9 +378,10 @@ namespace StuNote.Student
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.LayoutUnit = DevExpress.XtraRichEdit.DocumentLayoutUnit.Pixel;
             this.richEditControl1.Location = new System.Drawing.Point(0, 0);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1034, 467);
+            this.richEditControl1.Size = new System.Drawing.Size(1551, 684);
             this.richEditControl1.TabIndex = 4;
             // 
             // ribbonControl1
@@ -634,7 +636,8 @@ namespace StuNote.Student
             this.floatingObjectSendBackwardItem1,
             this.floatingObjectSendToBackItem1,
             this.floatingObjectSendBehindTextItem1});
-            this.ribbonControl1.Location = new System.Drawing.Point(0, 40);
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 59);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl1.MaxItemId = 248;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -656,7 +659,7 @@ namespace StuNote.Student
             this.repositoryItemBorderLineStyle1,
             this.repositoryItemBorderLineWeight1,
             this.repositoryItemFloatingObjectOutlineWeight1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1294, 152);
+            this.ribbonControl1.Size = new System.Drawing.Size(1941, 220);
             this.ribbonControl1.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // undoItem1
@@ -2550,10 +2553,11 @@ namespace StuNote.Student
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accMyCourses});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 192);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 279);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 467);
+            this.accordionControl1.Size = new System.Drawing.Size(390, 684);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             this.accordionControl1.ElementClick += new DevExpress.XtraBars.Navigation.ElementClickEventHandler(this.NavigationMenu_ElementClick);
@@ -2573,9 +2577,10 @@ namespace StuNote.Student
             this.barButtonItem2,
             this.barButtonItem3});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1294, 40);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1941, 59);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
@@ -2849,18 +2854,19 @@ namespace StuNote.Student
             // 
             // FMain1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1294, 659);
+            this.ClientSize = new System.Drawing.Size(1941, 963);
             this.ControlContainer = this.fluentDesignFormContainer1;
             this.Controls.Add(this.fluentDesignFormContainer1);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.ribbonControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FMain1";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "StuNote 21";
+            this.Text = "StuNote 21 -Student View";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMain_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);

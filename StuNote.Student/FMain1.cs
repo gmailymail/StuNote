@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraBars;
-using DevExpress.XtraBars.Navigation;
+﻿using DevExpress.XtraBars.Navigation;
 using DevExpress.XtraRichEdit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,15 +12,9 @@ using StuNote.Domain.Services;
 using StuNote.Domain.Services.Infrastructure;
 using StuNote.Student.UIControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StuNote.Student
 {

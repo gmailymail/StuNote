@@ -76,7 +76,8 @@ namespace StuNote.Student
                      IServiceProvider services,
                      IScreenSelectorService screenSelectorService,
                      ICaptureScreenService captureScreenService,
-                     IImageToTextService imageToText)
+                     IImageToTextService imageToText,
+                     IServiceProvider serviceProvider)
         {
 
             InitializeComponent();
@@ -112,7 +113,13 @@ namespace StuNote.Student
             //    SelectedLectureWindow = e;
             //    initAudio();
             //};
-        }
+            this.FormClosed += (s,e)=>
+            {
+                var fLogin = serviceProvider.GetRequiredService<FormLoginStudent>();                
+                fLogin.Close();
+                Application.Exit();
+            };
+        }        
 
         private void questionReceived(object sender, QuestionRequestBto e)
         {

@@ -50,7 +50,7 @@ namespace StuNote.Student
             var services = serviceScop.ServiceProvider;
 
             //Get FMain     
-            FMain1 fMain = services.GetRequiredService<FMain1>();
+            //FMain1 fMain = services.GetRequiredService<FMain1>();
             FormLoginStudent fLoginStudent = services.GetRequiredService<FormLoginStudent>();
             //Application.Run(fMain);
             Application.Run(fLoginStudent);

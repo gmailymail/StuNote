@@ -46,7 +46,9 @@
     <Reference Include="DevExpress.XtraBars.v18.2" />
     <Reference Include="DevExpress.Sparkline.v18.2.Core" />
     <Reference Include="DevExpress.XtraEditors.v18.2" />
+    <Reference Include="DevExpress.XtraGrid.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.2, Version=18.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.4.1\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
     </Reference>
@@ -232,6 +234,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="UIControl\UControlCreateQandA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIControl\UControlCreateQandA.Designer.cs">
+      <DependentUpon>UControlCreateQandA.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIControl\UControlCreateSurvey.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +265,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UIControl\UControlCreateQandA.resx">
+      <DependentUpon>UControlCreateQandA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIControl\UControlCreateSurvey.resx">
       <DependentUpon>UControlCreateSurvey.cs</DependentUpon>
     </EmbeddedResource>

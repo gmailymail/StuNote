@@ -274,6 +274,18 @@
     <Compile Include="FMain1.Designer.cs">
       <DependentUpon>FMain1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLoginStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginStudent.Designer.cs">
+      <DependentUpon>FormLoginStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuestionAnswer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuestionAnswer.Designer.cs">
+      <DependentUpon>FormQuestionAnswer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSurveyAnswer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +315,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain1.resx">
       <DependentUpon>FMain1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginStudent.resx">
+      <DependentUpon>FormLoginStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuestionAnswer.resx">
+      <DependentUpon>FormQuestionAnswer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSurveyAnswer.resx">
       <DependentUpon>FormSurveyAnswer.cs</DependentUpon>

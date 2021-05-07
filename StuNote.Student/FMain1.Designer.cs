@@ -30,10 +30,10 @@ namespace StuNote.Student
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMain1));
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation2 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -1050,7 +1050,7 @@ namespace StuNote.Student
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1});
+            galleryItemGroup3});
             this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeStyleItem1.Id = 64;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
@@ -1656,7 +1656,7 @@ namespace StuNote.Student
             // 
             this.galleryChangeTableStyleItem1.Gallery.ColumnCount = 3;
             this.galleryChangeTableStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
+            galleryItemGroup4});
             this.galleryChangeTableStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.galleryChangeTableStyleItem1.Id = 170;
             this.galleryChangeTableStyleItem1.ModifyItemLink = null;
@@ -2327,12 +2327,12 @@ namespace StuNote.Student
             this.stylesRibbonPageGroup1,
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation1.GroupName = null;
-            reduceOperation1.ItemLinkIndex = 0;
-            reduceOperation1.ItemLinksCount = 0;
-            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
+            reduceOperation2.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation2.GroupName = null;
+            reduceOperation2.ItemLinkIndex = 0;
+            reduceOperation2.ItemLinksCount = 0;
+            reduceOperation2.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation2);
             // 
             // clipboardRibbonPageGroup1
             // 
@@ -2866,7 +2866,7 @@ namespace StuNote.Student
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FMain1";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "StuNote 21 -Student View";
+            this.Text = "StuNote 21 - Student View";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FMain_Load);
             this.fluentDesignFormContainer1.ResumeLayout(false);

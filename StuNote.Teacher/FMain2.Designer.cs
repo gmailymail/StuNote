@@ -44,7 +44,7 @@ namespace StuNote.Teacher
             // 
             this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainContainer.Location = new System.Drawing.Point(390, 59);
-            this.MainContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MainContainer.Margin = new System.Windows.Forms.Padding(4);
             this.MainContainer.Name = "MainContainer";
             this.MainContainer.Size = new System.Drawing.Size(646, 632);
             this.MainContainer.TabIndex = 0;
@@ -55,7 +55,7 @@ namespace StuNote.Teacher
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
             this.accordionControl1.Location = new System.Drawing.Point(0, 59);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(390, 632);
@@ -99,7 +99,7 @@ namespace StuNote.Teacher
             this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1036, 59);
@@ -116,10 +116,10 @@ namespace StuNote.Teacher
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FMain2";
             this.NavigationControl = this.accordionControl1;
-            this.Text = "FMain2";
+            this.Text = "StuNote 21 - Teacher View";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             this.ResumeLayout(false);

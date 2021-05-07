@@ -16,6 +16,7 @@ using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace StuNote.Student
 {
@@ -110,7 +111,7 @@ namespace StuNote.Student
             {
                 var fLogin = serviceProvider.GetRequiredService<FormLoginStudent>();                
                 fLogin.Close();
-                //Application.Exit();
+                Application.Exit();
                 
             };
         }        

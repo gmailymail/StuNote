@@ -32,10 +32,10 @@ namespace StuNote.Teacher
             this.MainContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.elementSignedStudents = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.elementPublishSurveys = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.elementQuestionAnswers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +43,10 @@ namespace StuNote.Teacher
             // MainContainer
             // 
             this.MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainContainer.Location = new System.Drawing.Point(260, 40);
+            this.MainContainer.Location = new System.Drawing.Point(390, 59);
+            this.MainContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MainContainer.Name = "MainContainer";
-            this.MainContainer.Size = new System.Drawing.Size(431, 433);
+            this.MainContainer.Size = new System.Drawing.Size(646, 632);
             this.MainContainer.TabIndex = 0;
             // 
             // accordionControl1
@@ -53,10 +54,11 @@ namespace StuNote.Teacher
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 40);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 59);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 433);
+            this.accordionControl1.Size = new System.Drawing.Size(390, 632);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -70,22 +72,12 @@ namespace StuNote.Teacher
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "Menu";
             // 
-            // fluentDesignFormControl1
-            // 
-            this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.fluentDesignFormControl1.FluentDesignForm = this;
-            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(691, 40);
-            this.fluentDesignFormControl1.TabIndex = 2;
-            this.fluentDesignFormControl1.TabStop = false;
-            // 
             // elementSignedStudents
             // 
             this.elementSignedStudents.Name = "elementSignedStudents";
             this.elementSignedStudents.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.elementSignedStudents.Text = "Signed Students";
+            this.elementSignedStudents.Visible = false;
             this.elementSignedStudents.Click += new System.EventHandler(this.elementSignedStudents_Click);
             // 
             // elementPublishSurveys
@@ -102,16 +94,29 @@ namespace StuNote.Teacher
             this.elementQuestionAnswers.Text = "Question and Answers";
             this.elementQuestionAnswers.Click += new System.EventHandler(this.elementQuestionAnswers_Click);
             // 
+            // fluentDesignFormControl1
+            // 
+            this.fluentDesignFormControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.fluentDesignFormControl1.FluentDesignForm = this;
+            this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
+            this.fluentDesignFormControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1036, 59);
+            this.fluentDesignFormControl1.TabIndex = 2;
+            this.fluentDesignFormControl1.TabStop = false;
+            // 
             // FMain2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 473);
+            this.ClientSize = new System.Drawing.Size(1036, 691);
             this.ControlContainer = this.MainContainer;
             this.Controls.Add(this.MainContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FMain2";
             this.NavigationControl = this.accordionControl1;
             this.Text = "FMain2";

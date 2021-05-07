@@ -110,7 +110,8 @@ namespace StuNote.Student
             {
                 var fLogin = serviceProvider.GetRequiredService<FormLoginStudent>();                
                 fLogin.Close();
-                Application.Exit();
+                //Application.Exit();
+                
             };
         }        
 

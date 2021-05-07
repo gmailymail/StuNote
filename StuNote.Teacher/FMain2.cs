@@ -54,11 +54,10 @@ namespace StuNote.Teacher
         private void elementQuestionAnswers_Click(object sender, EventArgs e)
         {
             var controls = MainContainer.Controls.Find("UControlCreateQandA", true);
-
+            _uControlCreateQandA.Dock = DockStyle.Fill;
             if (controls.Count() is 0)
             {
-                MainContainer.Controls.Add(_uControlCreateQandA);
-                _uControlCreateSurvey.Dock = DockStyle.Fill;
+                MainContainer.Controls.Add(_uControlCreateQandA);                
             }
 
             MainContainer.Controls.SetChildIndex(_uControlCreateQandA, 0);

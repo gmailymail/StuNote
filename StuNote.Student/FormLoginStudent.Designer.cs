@@ -51,14 +51,14 @@ namespace StuNote.Student
             // 
             this.textEditUName.Location = new System.Drawing.Point(116, 12);
             this.textEditUName.Name = "textEditUName";
-            this.textEditUName.Size = new System.Drawing.Size(227, 52);
+            this.textEditUName.Size = new System.Drawing.Size(227, 28);
             this.textEditUName.TabIndex = 1;
             // 
             // textEditPassword
             // 
             this.textEditPassword.Location = new System.Drawing.Point(116, 76);
             this.textEditPassword.Name = "textEditPassword";
-            this.textEditPassword.Size = new System.Drawing.Size(232, 52);
+            this.textEditPassword.Size = new System.Drawing.Size(232, 28);
             this.textEditPassword.TabIndex = 2;
             // 
             // lblControlPassword
@@ -101,6 +101,7 @@ namespace StuNote.Student
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLoginStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoginStudent";
             ((System.ComponentModel.ISupportInitialize)(this.textEditUName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).EndInit();

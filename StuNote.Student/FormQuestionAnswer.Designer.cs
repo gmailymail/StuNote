@@ -95,7 +95,7 @@ namespace StuNote.Student
             this.Controls.Add(this.memoEditStuQuestion);
             this.Name = "FormQuestionAnswer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormQuestionAnswer";
+            this.Text = "StuNote 21 - QuestionAnswer";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.memoEditStuQuestion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupStuAnswerSection.Properties)).EndInit();

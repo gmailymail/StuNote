@@ -102,7 +102,7 @@ namespace StuNote.Student
             this.MinimizeBox = false;
             this.Name = "FormLoginStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLoginStudent";
+            this.Text = "StuNote 21 - Login Student";
             ((System.ComponentModel.ISupportInitialize)(this.textEditUName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEditPassword.Properties)).EndInit();
             this.ResumeLayout(false);

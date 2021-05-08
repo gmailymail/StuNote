@@ -37,6 +37,8 @@ namespace StuNote.Student
             this.radioGroupStuAnswerSectionitem = new DevExpress.XtraLayout.LayoutControlItem();
             this.memoEditStuQuestionitem = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpBtnQuestAnsSubmititem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditStuQuestion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupStuAnswerSection.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FormQuestionAnswerlayoutControl1ConvertedLayout)).BeginInit();
@@ -45,6 +47,8 @@ namespace StuNote.Student
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupStuAnswerSectionitem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditStuQuestionitem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpBtnQuestAnsSubmititem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // memoEditStuQuestion
@@ -52,26 +56,28 @@ namespace StuNote.Student
             this.memoEditStuQuestion.Enabled = false;
             this.memoEditStuQuestion.Location = new System.Drawing.Point(89, 12);
             this.memoEditStuQuestion.Name = "memoEditStuQuestion";
-            this.memoEditStuQuestion.Size = new System.Drawing.Size(822, 213);
+            this.memoEditStuQuestion.Size = new System.Drawing.Size(822, 207);
             this.memoEditStuQuestion.StyleController = this.FormQuestionAnswerlayoutControl1ConvertedLayout;
             this.memoEditStuQuestion.TabIndex = 0;
             // 
             // radioGroupStuAnswerSection
             // 
-            this.radioGroupStuAnswerSection.Location = new System.Drawing.Point(89, 229);
+            this.radioGroupStuAnswerSection.Location = new System.Drawing.Point(89, 223);
             this.radioGroupStuAnswerSection.Name = "radioGroupStuAnswerSection";
             this.radioGroupStuAnswerSection.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Answer1"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Answer2"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "Answer3"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "Answer4")});
-            this.radioGroupStuAnswerSection.Size = new System.Drawing.Size(822, 180);
+            this.radioGroupStuAnswerSection.Size = new System.Drawing.Size(822, 166);
             this.radioGroupStuAnswerSection.StyleController = this.FormQuestionAnswerlayoutControl1ConvertedLayout;
             this.radioGroupStuAnswerSection.TabIndex = 3;
             // 
             // simpBtnQuestAnsSubmit
             // 
-            this.simpBtnQuestAnsSubmit.Location = new System.Drawing.Point(12, 413);
+            this.simpBtnQuestAnsSubmit.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.simpBtnQuestAnsSubmit.Appearance.Options.UseBackColor = true;
+            this.simpBtnQuestAnsSubmit.Location = new System.Drawing.Point(12, 403);
             this.simpBtnQuestAnsSubmit.Name = "simpBtnQuestAnsSubmit";
             this.simpBtnQuestAnsSubmit.Size = new System.Drawing.Size(899, 47);
             this.simpBtnQuestAnsSubmit.StyleController = this.FormQuestionAnswerlayoutControl1ConvertedLayout;
@@ -98,7 +104,9 @@ namespace StuNote.Student
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.radioGroupStuAnswerSectionitem,
             this.memoEditStuQuestionitem,
-            this.simpBtnQuestAnsSubmititem});
+            this.simpBtnQuestAnsSubmititem,
+            this.emptySpaceItem1,
+            this.emptySpaceItem2});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
             this.layoutControlGroup1.Size = new System.Drawing.Size(923, 472);
             this.layoutControlGroup1.TextVisible = false;
@@ -106,9 +114,9 @@ namespace StuNote.Student
             // radioGroupStuAnswerSectionitem
             // 
             this.radioGroupStuAnswerSectionitem.Control = this.radioGroupStuAnswerSection;
-            this.radioGroupStuAnswerSectionitem.Location = new System.Drawing.Point(0, 217);
+            this.radioGroupStuAnswerSectionitem.Location = new System.Drawing.Point(0, 211);
             this.radioGroupStuAnswerSectionitem.Name = "radioGroupStuAnswerSectionitem";
-            this.radioGroupStuAnswerSectionitem.Size = new System.Drawing.Size(903, 184);
+            this.radioGroupStuAnswerSectionitem.Size = new System.Drawing.Size(903, 170);
             this.radioGroupStuAnswerSectionitem.Text = "Answers ";
             this.radioGroupStuAnswerSectionitem.TextLocation = DevExpress.Utils.Locations.Left;
             this.radioGroupStuAnswerSectionitem.TextSize = new System.Drawing.Size(65, 19);
@@ -118,7 +126,7 @@ namespace StuNote.Student
             this.memoEditStuQuestionitem.Control = this.memoEditStuQuestion;
             this.memoEditStuQuestionitem.Location = new System.Drawing.Point(0, 0);
             this.memoEditStuQuestionitem.Name = "memoEditStuQuestionitem";
-            this.memoEditStuQuestionitem.Size = new System.Drawing.Size(903, 217);
+            this.memoEditStuQuestionitem.Size = new System.Drawing.Size(903, 211);
             this.memoEditStuQuestionitem.Text = "Question";
             this.memoEditStuQuestionitem.TextLocation = DevExpress.Utils.Locations.Left;
             this.memoEditStuQuestionitem.TextSize = new System.Drawing.Size(65, 19);
@@ -126,11 +134,27 @@ namespace StuNote.Student
             // simpBtnQuestAnsSubmititem
             // 
             this.simpBtnQuestAnsSubmititem.Control = this.simpBtnQuestAnsSubmit;
-            this.simpBtnQuestAnsSubmititem.Location = new System.Drawing.Point(0, 401);
+            this.simpBtnQuestAnsSubmititem.Location = new System.Drawing.Point(0, 391);
             this.simpBtnQuestAnsSubmititem.Name = "simpBtnQuestAnsSubmititem";
             this.simpBtnQuestAnsSubmititem.Size = new System.Drawing.Size(903, 51);
             this.simpBtnQuestAnsSubmititem.TextSize = new System.Drawing.Size(0, 0);
             this.simpBtnQuestAnsSubmititem.TextVisible = false;
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 381);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(903, 10);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 442);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(903, 10);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // FormQuestionAnswer
             // 
@@ -138,6 +162,7 @@ namespace StuNote.Student
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 472);
             this.Controls.Add(this.FormQuestionAnswerlayoutControl1ConvertedLayout);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormQuestionAnswer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "StuNote 21 - QuestionAnswer";
@@ -150,6 +175,8 @@ namespace StuNote.Student
             ((System.ComponentModel.ISupportInitialize)(this.radioGroupStuAnswerSectionitem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditStuQuestionitem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpBtnQuestAnsSubmititem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -164,5 +191,7 @@ namespace StuNote.Student
         private DevExpress.XtraLayout.LayoutControlItem radioGroupStuAnswerSectionitem;
         private DevExpress.XtraLayout.LayoutControlItem memoEditStuQuestionitem;
         private DevExpress.XtraLayout.LayoutControlItem simpBtnQuestAnsSubmititem;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }

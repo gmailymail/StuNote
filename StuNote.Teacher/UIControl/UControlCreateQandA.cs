@@ -133,8 +133,8 @@ namespace StuNote.Teacher.UIControl
             txtEditAnswer2Count.Text = "";
             txtEditAnswer3Count.Text = "";
             txtEditAnswer4Count.Text = "";
-            lBoxConAnswer.Items.Clear();
             QuestionAnswerList.Clear();
+            lBoxConAnswer.Items.Clear();     
         }
     }
 }

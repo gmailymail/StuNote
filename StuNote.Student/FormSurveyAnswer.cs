@@ -1,4 +1,5 @@
-﻿using StuNote.Domain.Btos.Survey;
+﻿using DevExpress.XtraEditors;
+using StuNote.Domain.Btos.Survey;
 using StuNote.Domain.Services;
 using System;
 
@@ -28,18 +29,24 @@ namespace StuNote.Student
 
         private async void buttonSubmit_Click(object sender, EventArgs e)
         {
-            var answer = radioGroupStudentAnswer
+            if (radioGroupStudentAnswer.SelectedIndex != -1)
+            {
+                var answer = radioGroupStudentAnswer
                 .Properties
                 .Items[radioGroupStudentAnswer.SelectedIndex]
                 .Description
                 .Trim();
 
-            Hide();
+                Hide();
 
-            await _survey.SendAsync(new()
-            {
-                Answer = answer
-            });
+                await _survey.SendAsync(new()
+                {
+                    Answer = answer
+                });
+            }
+            else {
+                XtraMessageBox.Show("Please select answer before submit.");
+            }
         }
 
         #region Helper Methods

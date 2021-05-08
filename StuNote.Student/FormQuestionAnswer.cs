@@ -44,13 +44,19 @@ namespace StuNote.Student
 
         private async void simpBtnQuestAnsSubmit_Click(object sender, EventArgs e)
         {
-            var answer = int.Parse(radioGroupStuAnswerSection.Properties.Items[radioGroupStuAnswerSection.SelectedIndex].Value.ToString());
-            Hide();
-            await _question.SendAsync(new()
+            if (radioGroupStuAnswerSection.SelectedIndex != -1)
             {
-                SelectedAnswer = answer,
-                StudentId = Program.Username
-            });
+                var answer = int.Parse(radioGroupStuAnswerSection.Properties.Items[radioGroupStuAnswerSection.SelectedIndex].Value.ToString());
+                Hide();
+                await _question.SendAsync(new()
+                {
+                    SelectedAnswer = answer,
+                    StudentId = Program.Username
+                });
+            }
+            else {
+                XtraMessageBox.Show("Please select answer before submit.");
+            }
         }
     }
 }

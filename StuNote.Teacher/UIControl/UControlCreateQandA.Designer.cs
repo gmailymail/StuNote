@@ -30,19 +30,19 @@ namespace StuNote.Teacher.UIControl
         private void InitializeComponent()
         {
             this.memoEditQuestion = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEditAnswer1 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEditAnswer2 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEditAnswer3 = new DevExpress.XtraEditors.MemoEdit();
-            this.memoEditAnswer4 = new DevExpress.XtraEditors.MemoEdit();
-            this.simpleBtnSubmit = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleBtnClear = new DevExpress.XtraEditors.SimpleButton();
-            this.radioGroupCorrectAns = new DevExpress.XtraEditors.RadioGroup();
-            this.lBoxConAnswer = new DevExpress.XtraEditors.ListBoxControl();
-            this.txtEditAnswer1Count = new DevExpress.XtraEditors.TextEdit();
-            this.txtEditAnswer2Count = new DevExpress.XtraEditors.TextEdit();
-            this.txtEditAnswer3Count = new DevExpress.XtraEditors.TextEdit();
-            this.txtEditAnswer4Count = new DevExpress.XtraEditors.TextEdit();
             this.UControlCreateQandAlayoutControl1ConvertedLayout = new DevExpress.XtraLayout.LayoutControl();
+            this.txtEditAnswer4Count = new DevExpress.XtraEditors.TextEdit();
+            this.txtEditAnswer3Count = new DevExpress.XtraEditors.TextEdit();
+            this.txtEditAnswer2Count = new DevExpress.XtraEditors.TextEdit();
+            this.txtEditAnswer1Count = new DevExpress.XtraEditors.TextEdit();
+            this.radioGroupCorrectAns = new DevExpress.XtraEditors.RadioGroup();
+            this.memoEditAnswer4 = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditAnswer3 = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditAnswer2 = new DevExpress.XtraEditors.MemoEdit();
+            this.memoEditAnswer1 = new DevExpress.XtraEditors.MemoEdit();
+            this.lBoxConAnswer = new DevExpress.XtraEditors.ListBoxControl();
+            this.simpleBtnClear = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleBtnSubmit = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.txtEditAnswer4Countitem = new DevExpress.XtraLayout.LayoutControlItem();
             this.txtEditAnswer3Countitem = new DevExpress.XtraLayout.LayoutControlItem();
@@ -54,22 +54,22 @@ namespace StuNote.Teacher.UIControl
             this.memoEditAnswer2item = new DevExpress.XtraLayout.LayoutControlItem();
             this.memoEditAnswer1item = new DevExpress.XtraLayout.LayoutControlItem();
             this.memoEditQuestionitem = new DevExpress.XtraLayout.LayoutControlItem();
-            this.lBoxConAnsweritem = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleBtnClearitem = new DevExpress.XtraLayout.LayoutControlItem();
             this.simpleBtnSubmititem = new DevExpress.XtraLayout.LayoutControlItem();
+            this.lBoxConAnsweritem = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditQuestion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupCorrectAns.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnswer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer1Count.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer2Count.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Count.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Count.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UControlCreateQandAlayoutControl1ConvertedLayout)).BeginInit();
             this.UControlCreateQandAlayoutControl1ConvertedLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Count.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Count.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer2Count.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer1Count.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupCorrectAns.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnswer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Countitem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Countitem)).BeginInit();
@@ -81,126 +81,18 @@ namespace StuNote.Teacher.UIControl
             ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1item)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditQuestionitem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnsweritem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleBtnClearitem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleBtnSubmititem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnsweritem)).BeginInit();
             this.SuspendLayout();
             // 
             // memoEditQuestion
             // 
-            this.memoEditQuestion.Location = new System.Drawing.Point(149, 12);
+            this.memoEditQuestion.Location = new System.Drawing.Point(140, 12);
             this.memoEditQuestion.Name = "memoEditQuestion";
-            this.memoEditQuestion.Size = new System.Drawing.Size(755, 59);
+            this.memoEditQuestion.Size = new System.Drawing.Size(764, 101);
             this.memoEditQuestion.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
             this.memoEditQuestion.TabIndex = 8;
-            // 
-            // memoEditAnswer1
-            // 
-            this.memoEditAnswer1.Location = new System.Drawing.Point(149, 75);
-            this.memoEditAnswer1.Name = "memoEditAnswer1";
-            this.memoEditAnswer1.Size = new System.Drawing.Size(755, 79);
-            this.memoEditAnswer1.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.memoEditAnswer1.TabIndex = 9;
-            // 
-            // memoEditAnswer2
-            // 
-            this.memoEditAnswer2.Location = new System.Drawing.Point(149, 158);
-            this.memoEditAnswer2.Name = "memoEditAnswer2";
-            this.memoEditAnswer2.Size = new System.Drawing.Size(755, 79);
-            this.memoEditAnswer2.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.memoEditAnswer2.TabIndex = 10;
-            // 
-            // memoEditAnswer3
-            // 
-            this.memoEditAnswer3.Location = new System.Drawing.Point(149, 241);
-            this.memoEditAnswer3.Name = "memoEditAnswer3";
-            this.memoEditAnswer3.Size = new System.Drawing.Size(755, 82);
-            this.memoEditAnswer3.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.memoEditAnswer3.TabIndex = 11;
-            // 
-            // memoEditAnswer4
-            // 
-            this.memoEditAnswer4.Location = new System.Drawing.Point(149, 327);
-            this.memoEditAnswer4.Name = "memoEditAnswer4";
-            this.memoEditAnswer4.Size = new System.Drawing.Size(755, 83);
-            this.memoEditAnswer4.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.memoEditAnswer4.TabIndex = 12;
-            // 
-            // simpleBtnSubmit
-            // 
-            this.simpleBtnSubmit.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.simpleBtnSubmit.Appearance.Options.UseBackColor = true;
-            this.simpleBtnSubmit.Location = new System.Drawing.Point(12, 506);
-            this.simpleBtnSubmit.Name = "simpleBtnSubmit";
-            this.simpleBtnSubmit.Size = new System.Drawing.Size(284, 47);
-            this.simpleBtnSubmit.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.simpleBtnSubmit.TabIndex = 13;
-            this.simpleBtnSubmit.Text = "Submit";
-            this.simpleBtnSubmit.Click += new System.EventHandler(this.simpleBtnSubmit_Click);
-            // 
-            // simpleBtnClear
-            // 
-            this.simpleBtnClear.Location = new System.Drawing.Point(300, 506);
-            this.simpleBtnClear.Name = "simpleBtnClear";
-            this.simpleBtnClear.Size = new System.Drawing.Size(280, 47);
-            this.simpleBtnClear.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.simpleBtnClear.TabIndex = 14;
-            this.simpleBtnClear.Text = "Clear";
-            this.simpleBtnClear.Click += new System.EventHandler(this.simpleBtnClear_Click);
-            // 
-            // radioGroupCorrectAns
-            // 
-            this.radioGroupCorrectAns.Location = new System.Drawing.Point(149, 414);
-            this.radioGroupCorrectAns.Name = "radioGroupCorrectAns";
-            this.radioGroupCorrectAns.Properties.Columns = 2;
-            this.radioGroupCorrectAns.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Answer 1"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Answer 3"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Answer 2"),
-            new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "Answer 4")});
-            this.radioGroupCorrectAns.Size = new System.Drawing.Size(755, 88);
-            this.radioGroupCorrectAns.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.radioGroupCorrectAns.TabIndex = 15;
-            // 
-            // lBoxConAnswer
-            // 
-            this.lBoxConAnswer.Location = new System.Drawing.Point(12, 634);
-            this.lBoxConAnswer.Name = "lBoxConAnswer";
-            this.lBoxConAnswer.Size = new System.Drawing.Size(892, 261);
-            this.lBoxConAnswer.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.lBoxConAnswer.TabIndex = 17;
-            // 
-            // txtEditAnswer1Count
-            // 
-            this.txtEditAnswer1Count.Location = new System.Drawing.Point(721, 506);
-            this.txtEditAnswer1Count.Name = "txtEditAnswer1Count";
-            this.txtEditAnswer1Count.Size = new System.Drawing.Size(183, 28);
-            this.txtEditAnswer1Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.txtEditAnswer1Count.TabIndex = 18;
-            // 
-            // txtEditAnswer2Count
-            // 
-            this.txtEditAnswer2Count.Location = new System.Drawing.Point(721, 538);
-            this.txtEditAnswer2Count.Name = "txtEditAnswer2Count";
-            this.txtEditAnswer2Count.Size = new System.Drawing.Size(183, 28);
-            this.txtEditAnswer2Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.txtEditAnswer2Count.TabIndex = 19;
-            // 
-            // txtEditAnswer3Count
-            // 
-            this.txtEditAnswer3Count.Location = new System.Drawing.Point(721, 570);
-            this.txtEditAnswer3Count.Name = "txtEditAnswer3Count";
-            this.txtEditAnswer3Count.Size = new System.Drawing.Size(183, 28);
-            this.txtEditAnswer3Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.txtEditAnswer3Count.TabIndex = 20;
-            // 
-            // txtEditAnswer4Count
-            // 
-            this.txtEditAnswer4Count.Location = new System.Drawing.Point(721, 602);
-            this.txtEditAnswer4Count.Name = "txtEditAnswer4Count";
-            this.txtEditAnswer4Count.Size = new System.Drawing.Size(183, 28);
-            this.txtEditAnswer4Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
-            this.txtEditAnswer4Count.TabIndex = 21;
             // 
             // UControlCreateQandAlayoutControl1ConvertedLayout
             // 
@@ -224,6 +116,114 @@ namespace StuNote.Teacher.UIControl
             this.UControlCreateQandAlayoutControl1ConvertedLayout.Root = this.layoutControlGroup1;
             this.UControlCreateQandAlayoutControl1ConvertedLayout.Size = new System.Drawing.Size(916, 907);
             this.UControlCreateQandAlayoutControl1ConvertedLayout.TabIndex = 26;
+            // 
+            // txtEditAnswer4Count
+            // 
+            this.txtEditAnswer4Count.Location = new System.Drawing.Point(712, 620);
+            this.txtEditAnswer4Count.Name = "txtEditAnswer4Count";
+            this.txtEditAnswer4Count.Size = new System.Drawing.Size(192, 28);
+            this.txtEditAnswer4Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.txtEditAnswer4Count.TabIndex = 21;
+            // 
+            // txtEditAnswer3Count
+            // 
+            this.txtEditAnswer3Count.Location = new System.Drawing.Point(712, 588);
+            this.txtEditAnswer3Count.Name = "txtEditAnswer3Count";
+            this.txtEditAnswer3Count.Size = new System.Drawing.Size(192, 28);
+            this.txtEditAnswer3Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.txtEditAnswer3Count.TabIndex = 20;
+            // 
+            // txtEditAnswer2Count
+            // 
+            this.txtEditAnswer2Count.Location = new System.Drawing.Point(712, 556);
+            this.txtEditAnswer2Count.Name = "txtEditAnswer2Count";
+            this.txtEditAnswer2Count.Size = new System.Drawing.Size(192, 28);
+            this.txtEditAnswer2Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.txtEditAnswer2Count.TabIndex = 19;
+            // 
+            // txtEditAnswer1Count
+            // 
+            this.txtEditAnswer1Count.Location = new System.Drawing.Point(712, 524);
+            this.txtEditAnswer1Count.Name = "txtEditAnswer1Count";
+            this.txtEditAnswer1Count.Size = new System.Drawing.Size(192, 28);
+            this.txtEditAnswer1Count.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.txtEditAnswer1Count.TabIndex = 18;
+            // 
+            // radioGroupCorrectAns
+            // 
+            this.radioGroupCorrectAns.Location = new System.Drawing.Point(140, 414);
+            this.radioGroupCorrectAns.Name = "radioGroupCorrectAns";
+            this.radioGroupCorrectAns.Properties.Columns = 2;
+            this.radioGroupCorrectAns.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(0, "Answer 1"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Answer 3"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Answer 2"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(3, "Answer 4")});
+            this.radioGroupCorrectAns.Size = new System.Drawing.Size(764, 106);
+            this.radioGroupCorrectAns.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.radioGroupCorrectAns.TabIndex = 15;
+            // 
+            // memoEditAnswer4
+            // 
+            this.memoEditAnswer4.Location = new System.Drawing.Point(140, 327);
+            this.memoEditAnswer4.Name = "memoEditAnswer4";
+            this.memoEditAnswer4.Size = new System.Drawing.Size(764, 83);
+            this.memoEditAnswer4.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.memoEditAnswer4.TabIndex = 12;
+            // 
+            // memoEditAnswer3
+            // 
+            this.memoEditAnswer3.Location = new System.Drawing.Point(140, 257);
+            this.memoEditAnswer3.Name = "memoEditAnswer3";
+            this.memoEditAnswer3.Size = new System.Drawing.Size(764, 66);
+            this.memoEditAnswer3.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.memoEditAnswer3.TabIndex = 11;
+            // 
+            // memoEditAnswer2
+            // 
+            this.memoEditAnswer2.Location = new System.Drawing.Point(140, 181);
+            this.memoEditAnswer2.Name = "memoEditAnswer2";
+            this.memoEditAnswer2.Size = new System.Drawing.Size(764, 72);
+            this.memoEditAnswer2.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.memoEditAnswer2.TabIndex = 10;
+            // 
+            // memoEditAnswer1
+            // 
+            this.memoEditAnswer1.Location = new System.Drawing.Point(140, 117);
+            this.memoEditAnswer1.Name = "memoEditAnswer1";
+            this.memoEditAnswer1.Size = new System.Drawing.Size(764, 60);
+            this.memoEditAnswer1.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.memoEditAnswer1.TabIndex = 9;
+            // 
+            // lBoxConAnswer
+            // 
+            this.lBoxConAnswer.Location = new System.Drawing.Point(12, 652);
+            this.lBoxConAnswer.Name = "lBoxConAnswer";
+            this.lBoxConAnswer.Size = new System.Drawing.Size(892, 243);
+            this.lBoxConAnswer.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.lBoxConAnswer.TabIndex = 17;
+            // 
+            // simpleBtnClear
+            // 
+            this.simpleBtnClear.Location = new System.Drawing.Point(300, 524);
+            this.simpleBtnClear.Name = "simpleBtnClear";
+            this.simpleBtnClear.Size = new System.Drawing.Size(280, 47);
+            this.simpleBtnClear.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.simpleBtnClear.TabIndex = 14;
+            this.simpleBtnClear.Text = "Clear";
+            this.simpleBtnClear.Click += new System.EventHandler(this.simpleBtnClear_Click);
+            // 
+            // simpleBtnSubmit
+            // 
+            this.simpleBtnSubmit.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
+            this.simpleBtnSubmit.Appearance.Options.UseBackColor = true;
+            this.simpleBtnSubmit.Location = new System.Drawing.Point(12, 524);
+            this.simpleBtnSubmit.Name = "simpleBtnSubmit";
+            this.simpleBtnSubmit.Size = new System.Drawing.Size(284, 47);
+            this.simpleBtnSubmit.StyleController = this.UControlCreateQandAlayoutControl1ConvertedLayout;
+            this.simpleBtnSubmit.TabIndex = 13;
+            this.simpleBtnSubmit.Text = "Submit";
+            this.simpleBtnSubmit.Click += new System.EventHandler(this.simpleBtnSubmit_Click);
             // 
             // layoutControlGroup1
             // 
@@ -250,7 +250,7 @@ namespace StuNote.Teacher.UIControl
             // txtEditAnswer4Countitem
             // 
             this.txtEditAnswer4Countitem.Control = this.txtEditAnswer4Count;
-            this.txtEditAnswer4Countitem.Location = new System.Drawing.Point(572, 590);
+            this.txtEditAnswer4Countitem.Location = new System.Drawing.Point(572, 608);
             this.txtEditAnswer4Countitem.Name = "txtEditAnswer4Countitem";
             this.txtEditAnswer4Countitem.Size = new System.Drawing.Size(324, 32);
             this.txtEditAnswer4Countitem.Text = "Answer 4 Count :";
@@ -260,7 +260,7 @@ namespace StuNote.Teacher.UIControl
             // txtEditAnswer3Countitem
             // 
             this.txtEditAnswer3Countitem.Control = this.txtEditAnswer3Count;
-            this.txtEditAnswer3Countitem.Location = new System.Drawing.Point(572, 558);
+            this.txtEditAnswer3Countitem.Location = new System.Drawing.Point(572, 576);
             this.txtEditAnswer3Countitem.Name = "txtEditAnswer3Countitem";
             this.txtEditAnswer3Countitem.Size = new System.Drawing.Size(324, 32);
             this.txtEditAnswer3Countitem.Text = "Answer 3 Count :";
@@ -270,7 +270,7 @@ namespace StuNote.Teacher.UIControl
             // txtEditAnswer2Countitem
             // 
             this.txtEditAnswer2Countitem.Control = this.txtEditAnswer2Count;
-            this.txtEditAnswer2Countitem.Location = new System.Drawing.Point(572, 526);
+            this.txtEditAnswer2Countitem.Location = new System.Drawing.Point(572, 544);
             this.txtEditAnswer2Countitem.Name = "txtEditAnswer2Countitem";
             this.txtEditAnswer2Countitem.Size = new System.Drawing.Size(324, 32);
             this.txtEditAnswer2Countitem.Text = "Answer 2 Count :";
@@ -280,7 +280,7 @@ namespace StuNote.Teacher.UIControl
             // txtEditAnswer1Countitem
             // 
             this.txtEditAnswer1Countitem.Control = this.txtEditAnswer1Count;
-            this.txtEditAnswer1Countitem.Location = new System.Drawing.Point(572, 494);
+            this.txtEditAnswer1Countitem.Location = new System.Drawing.Point(572, 512);
             this.txtEditAnswer1Countitem.Name = "txtEditAnswer1Countitem";
             this.txtEditAnswer1Countitem.Size = new System.Drawing.Size(324, 32);
             this.txtEditAnswer1Countitem.Text = "Answer 1 Count :";
@@ -292,7 +292,7 @@ namespace StuNote.Teacher.UIControl
             this.radioGroupCorrectAnsitem.Control = this.radioGroupCorrectAns;
             this.radioGroupCorrectAnsitem.Location = new System.Drawing.Point(0, 402);
             this.radioGroupCorrectAnsitem.Name = "radioGroupCorrectAnsitem";
-            this.radioGroupCorrectAnsitem.Size = new System.Drawing.Size(896, 92);
+            this.radioGroupCorrectAnsitem.Size = new System.Drawing.Size(896, 110);
             this.radioGroupCorrectAnsitem.Text = "Correct Answer";
             this.radioGroupCorrectAnsitem.TextLocation = DevExpress.Utils.Locations.Left;
             this.radioGroupCorrectAnsitem.TextSize = new System.Drawing.Size(125, 19);
@@ -310,9 +310,9 @@ namespace StuNote.Teacher.UIControl
             // memoEditAnswer3item
             // 
             this.memoEditAnswer3item.Control = this.memoEditAnswer3;
-            this.memoEditAnswer3item.Location = new System.Drawing.Point(0, 229);
+            this.memoEditAnswer3item.Location = new System.Drawing.Point(0, 245);
             this.memoEditAnswer3item.Name = "memoEditAnswer3item";
-            this.memoEditAnswer3item.Size = new System.Drawing.Size(896, 86);
+            this.memoEditAnswer3item.Size = new System.Drawing.Size(896, 70);
             this.memoEditAnswer3item.Text = "Answer 3";
             this.memoEditAnswer3item.TextLocation = DevExpress.Utils.Locations.Left;
             this.memoEditAnswer3item.TextSize = new System.Drawing.Size(125, 19);
@@ -320,9 +320,9 @@ namespace StuNote.Teacher.UIControl
             // memoEditAnswer2item
             // 
             this.memoEditAnswer2item.Control = this.memoEditAnswer2;
-            this.memoEditAnswer2item.Location = new System.Drawing.Point(0, 146);
+            this.memoEditAnswer2item.Location = new System.Drawing.Point(0, 169);
             this.memoEditAnswer2item.Name = "memoEditAnswer2item";
-            this.memoEditAnswer2item.Size = new System.Drawing.Size(896, 83);
+            this.memoEditAnswer2item.Size = new System.Drawing.Size(896, 76);
             this.memoEditAnswer2item.Text = "Answer 2";
             this.memoEditAnswer2item.TextLocation = DevExpress.Utils.Locations.Left;
             this.memoEditAnswer2item.TextSize = new System.Drawing.Size(125, 19);
@@ -330,9 +330,9 @@ namespace StuNote.Teacher.UIControl
             // memoEditAnswer1item
             // 
             this.memoEditAnswer1item.Control = this.memoEditAnswer1;
-            this.memoEditAnswer1item.Location = new System.Drawing.Point(0, 63);
+            this.memoEditAnswer1item.Location = new System.Drawing.Point(0, 105);
             this.memoEditAnswer1item.Name = "memoEditAnswer1item";
-            this.memoEditAnswer1item.Size = new System.Drawing.Size(896, 83);
+            this.memoEditAnswer1item.Size = new System.Drawing.Size(896, 64);
             this.memoEditAnswer1item.Text = "Answer 1";
             this.memoEditAnswer1item.TextLocation = DevExpress.Utils.Locations.Left;
             this.memoEditAnswer1item.TextSize = new System.Drawing.Size(125, 19);
@@ -342,24 +342,15 @@ namespace StuNote.Teacher.UIControl
             this.memoEditQuestionitem.Control = this.memoEditQuestion;
             this.memoEditQuestionitem.Location = new System.Drawing.Point(0, 0);
             this.memoEditQuestionitem.Name = "memoEditQuestionitem";
-            this.memoEditQuestionitem.Size = new System.Drawing.Size(896, 63);
+            this.memoEditQuestionitem.Size = new System.Drawing.Size(896, 105);
             this.memoEditQuestionitem.Text = "Question";
             this.memoEditQuestionitem.TextLocation = DevExpress.Utils.Locations.Left;
             this.memoEditQuestionitem.TextSize = new System.Drawing.Size(125, 19);
             // 
-            // lBoxConAnsweritem
-            // 
-            this.lBoxConAnsweritem.Control = this.lBoxConAnswer;
-            this.lBoxConAnsweritem.Location = new System.Drawing.Point(0, 622);
-            this.lBoxConAnsweritem.Name = "lBoxConAnsweritem";
-            this.lBoxConAnsweritem.Size = new System.Drawing.Size(896, 265);
-            this.lBoxConAnsweritem.TextSize = new System.Drawing.Size(0, 0);
-            this.lBoxConAnsweritem.TextVisible = false;
-            // 
             // simpleBtnClearitem
             // 
             this.simpleBtnClearitem.Control = this.simpleBtnClear;
-            this.simpleBtnClearitem.Location = new System.Drawing.Point(288, 494);
+            this.simpleBtnClearitem.Location = new System.Drawing.Point(288, 512);
             this.simpleBtnClearitem.Name = "simpleBtnClearitem";
             this.simpleBtnClearitem.Size = new System.Drawing.Size(284, 128);
             this.simpleBtnClearitem.TextSize = new System.Drawing.Size(0, 0);
@@ -368,11 +359,20 @@ namespace StuNote.Teacher.UIControl
             // simpleBtnSubmititem
             // 
             this.simpleBtnSubmititem.Control = this.simpleBtnSubmit;
-            this.simpleBtnSubmititem.Location = new System.Drawing.Point(0, 494);
+            this.simpleBtnSubmititem.Location = new System.Drawing.Point(0, 512);
             this.simpleBtnSubmititem.Name = "simpleBtnSubmititem";
             this.simpleBtnSubmititem.Size = new System.Drawing.Size(288, 128);
             this.simpleBtnSubmititem.TextSize = new System.Drawing.Size(0, 0);
             this.simpleBtnSubmititem.TextVisible = false;
+            // 
+            // lBoxConAnsweritem
+            // 
+            this.lBoxConAnsweritem.Control = this.lBoxConAnswer;
+            this.lBoxConAnsweritem.Location = new System.Drawing.Point(0, 640);
+            this.lBoxConAnsweritem.Name = "lBoxConAnsweritem";
+            this.lBoxConAnsweritem.Size = new System.Drawing.Size(896, 247);
+            this.lBoxConAnsweritem.TextSize = new System.Drawing.Size(0, 0);
+            this.lBoxConAnsweritem.TextVisible = false;
             // 
             // UControlCreateQandA
             // 
@@ -382,18 +382,18 @@ namespace StuNote.Teacher.UIControl
             this.Name = "UControlCreateQandA";
             this.Size = new System.Drawing.Size(916, 907);
             ((System.ComponentModel.ISupportInitialize)(this.memoEditQuestion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radioGroupCorrectAns.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnswer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer1Count.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer2Count.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Count.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Count.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UControlCreateQandAlayoutControl1ConvertedLayout)).EndInit();
             this.UControlCreateQandAlayoutControl1ConvertedLayout.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Count.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Count.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer2Count.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer1Count.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroupCorrectAns.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnswer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer4Countitem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEditAnswer3Countitem)).EndInit();
@@ -405,9 +405,9 @@ namespace StuNote.Teacher.UIControl
             ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer2item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditAnswer1item)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.memoEditQuestionitem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnsweritem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleBtnClearitem)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleBtnSubmititem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lBoxConAnsweritem)).EndInit();
             this.ResumeLayout(false);
 
         }
